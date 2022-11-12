@@ -14,10 +14,13 @@
     "@astrojs/image": "^0.11.4",
     "@astrojs/prefetch": "^0.1.1",
     "@astrojs/sitemap": "^1.0.0",
+    "alpinejs": "^3.10.5",
     "astro": "^1.6.7",
     "astro-icon": "^0.8.0"
   },
   "devDependencies": {
+    "@unocss/transformer-directives": "^0.46.4",
+    "sass": "^1.56.1",
     "unocss": "^0.46.4"
   }
 }
