@@ -1,50 +1,35 @@
-# Welcome to [Astro](https://astro.build)
+![logo](https://repository-images.githubusercontent.com/302921248/58478900-0adf-11eb-8f0b-74be58a898ef)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/s/github/withastro/astro/tree/latest/examples/basics)
+# 11ty Sass Skeleton
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Featuring absolutely nothing beyond a base HTML5 template and the essential setup to watch and compile your Sass alongside 11ty.
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+Includes minifiying and autoprefixing of styles **during development and on build** using [Lightning CSS](https://lightningcss.dev/). The v3 update ensures processing also occurs during development.
 
+If you have different preferred browser targets, be sure to modify the package `browserslist` or use a `.browserslistrc`.
 
-## 🚀 Project Structure
+> **Note** > **As of v3**, Sass + LightningCSS processing now provided [via the standalone plugin](https://github.com/5t3ph/eleventy-plugin-sass-lightningcss) which you can use to add this functionality to an existing 11ty project!
 
-Inside of your Astro project, you'll see the following folders and files:
+<small>Created by [@5t3ph](https://front-end.social/@5t3ph)</small>
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Development Scripts
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+**`npm start`**
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+> Run 11ty with hot reload at localhost:8080, including reload based on Sass changes
 
-Any static assets, like images, can be placed in the `public/` directory.
+**`npm run build`**
 
-## 🧞 Commands
+> Production build includes minified, autoprefixed CSS
 
-All commands are run from the root of the project, from a terminal:
+Use this as the "Publish command" if needed by hosting such as Netlify.
 
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `npm install`          | Installs dependencies                              |
-| `npm run dev`          | Starts local dev server at `localhost:3000`        |
-| `npm run build`        | Build your production site to `./dist/`            |
-| `npm run preview`      | Preview your build locally, before deploying       |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `npm run astro --help` | Get help using the Astro CLI                       |
+## Resources to extend this and learn 11ty
 
-## 👀 Want to learn more?
+**A variety of tips, tutorials and resources** on [11ty Rocks!](https://11ty.rocks)
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+**Ensure accessible colors** by adding my [a11y-color-tokens package](https://www.npmjs.com/package/a11y-color-tokens)
+
+**Learn to build an 11ty site in 20 mins** with my [egghead video course](https://5t3ph.dev/learn-11ty) and see how to add a blog and custom data.
+
+**Explore advanced setup of custom data** through my [tutorial on building a community site](https://css-tricks.com/a-community-driven-site-with-eleventy-building-the-site/)

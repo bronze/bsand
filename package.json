@@ -1,26 +1,38 @@
 {
-  "name": "@example/basics",
-  "type": "module",
-  "version": "0.0.1",
-  "private": true,
+  "name": "11ty-sass-skeleton",
+  "version": "3.0.1",
+  "description": "Featuring absolutely nothing beyond a base HTML5 template and the essential setup to watch and compile your Sass alongside 11ty.",
+  "main": "index.html",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preinstall": "npx only-allow pnpm",
+    "dev": "eleventy --serve",
+    "start": "eleventy --serve",
+    "build": "eleventy"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5t3ph/11ty-sass-skeleton.git"
+  },
+  "author": "5t3ph",
+  "license": "ISC",
   "dependencies": {
-    "@astrojs/image": "^0.11.4",
-    "@astrojs/prefetch": "^0.1.1",
-    "@astrojs/sitemap": "^1.0.0",
-    "alpinejs": "^3.10.5",
-    "astro": "^1.6.7",
-    "astro-icon": "^0.8.0"
+    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy-img": "^3.1.0",
+    "@11ty/eleventy-plugin-bundle": "^1.0.4",
+    "@11ty/eleventy-plugin-webc": "^0.10.1",
+    "@11ty/is-land": "^4.0.0",
+    "@11tyrocks/eleventy-plugin-sass-lightningcss": "^1.0.2",
+    "clean-css": "^5.3.2",
+    "eleventy-critical-css": "^1.1.0"
   },
+  "browserslist": [
+    "> 0.2%",
+    "not dead"
+  ],
   "devDependencies": {
-    "@unocss/transformer-directives": "^0.46.4",
-    "sass": "^1.56.1",
-    "unocss": "^0.46.4"
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "browserslist": "^4.21.5",
+    "lightningcss": "^1.19.0",
+    "sass": "^1.60.0"
   }
 }

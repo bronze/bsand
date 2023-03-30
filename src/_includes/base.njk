@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <meta name="generator" content="{{ eleventy.generator }}">
+  {#-
+  CSS bundles are provided via the `eleventy-plugin-bundle` plugin:
+  1. You can add to them using `{% css %}`
+  2. You can get from them using `{% getBundle "css" %}` or `{% getBundleFileUrl "css" %}`
+  3. You can do the same for JS: {% js %}{% endjs %} and <script>{% getBundle "js" %}</script>
+  4. Learn more: https://github.com/11ty/eleventy-plugin-bundle
+  #}
+  {#- Add the contents of a file to the bundle #}
+  {%- css %}{% renderFile "src/css/style.scss"  %}{% endcss %}
+  {# <link rel="stylesheet" href="{{ '/css/style.css' | url }}" /> #}
+  {% js "head" %}{% include "src/main.js" %}{% endjs %}
+  {# <script src="/main.js" ></script> #}
+  <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
+  <script src="{% getBundleFileUrl 'js', 'head' %}"></script>
+  {#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
+  <style>{% getBundle "css", "head" %}</style>
+</head>
+<body>
+  <header>
+    {# {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }} #}
+    {% set navPages = collections.all | eleventyNavigation %}
+    <ul>
+    {%- for entry in navPages %}
+      <li{% if entry.url == page.url %} class="active"{% endif %}>
+        <a href="{{ entry.url }}">{{ entry.title }}</a>
+      </li>
+    {%- endfor %}
+    </ul>
+    <h1>{{ title }}</h1>
+  </header>
+  <main>
+  {{ content | safe }}
+  </main>
+
+  {% css "head" %}em { font-style: italic; }{% endcss %}
+  {% js %}console.log("not deferred");{% endjs %}
+  {% js "defer" %}console.log("defered");{% endjs %}
+  {% css %}
+    {% renderTemplate "scss" %}
+    h1 { .test { color: red; } }
+    ul {
+      list-style: none;
+      li {
+        position:relative;
+        float:left;
+        a {text-decoration:none;font-weight:700;}
+        &:not(:first-child) { margin-left:10px;}
+        }
+        .active a {text-decoration:underline;}
+
+    }
+
+
+    {% endrenderTemplate %}
+  {% endcss %}
+
+  <script>{% getBundle "js", "default" %}</script>
+  <script defer>{% getBundle "js", "defer" %}</script>
+</body>
+</html>
