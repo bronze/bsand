@@ -67,5 +67,7 @@
   {% if meta.env == 'dev' %}
   // analytics here
   {% endif %}
+  {% js "quicklinks" %}{% include "./quicklinks.njk" %}{% endjs %}
+  <script src="{% getBundleFileUrl 'js', 'quicklinks' %}"></script>
 </body>
 </html>
