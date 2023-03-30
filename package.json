@@ -5,9 +5,9 @@
   "main": "index.html",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "dev": "eleventy --serve",
-    "start": "eleventy --serve",
-    "build": "eleventy"
+    "dev": "cross-env ELEVENTY_ENV=dev eleventy --serve",
+    "start": "cross-env ELEVENTY_ENV=dev eleventy --serve",
+    "build": "cross-env ELEVENTY_ENV=prod eleventy"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,8 @@
   "devDependencies": {
     "@11ty/eleventy-navigation": "^0.3.5",
     "browserslist": "^4.21.5",
+    "cross-env": "^7.0.3",
+    "html-minifier": "^4.0.0",
     "lightningcss": "^1.19.0",
     "sass": "^1.60.0"
   }

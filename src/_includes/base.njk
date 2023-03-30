@@ -63,5 +63,9 @@
 
   <script>{% getBundle "js", "default" %}</script>
   <script defer>{% getBundle "js", "defer" %}</script>
+
+  {% if meta.env == 'dev' %}
+  // analytics here
+  {% endif %}
 </body>
 </html>

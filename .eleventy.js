@@ -6,6 +6,7 @@ const criticalCss=require("eleventy-critical-css");
 const bundlerPlugin=require("@11ty/eleventy-plugin-bundle");
 const {EleventyRenderPlugin}=require("@11ty/eleventy");
 const CleanCSS=require("clean-css");
+const htmlmin=require("html-minifier");
 
 
 module.exports=function (eleventyConfig) {
@@ -47,11 +48,26 @@ module.exports=function (eleventyConfig) {
   // eleventyConfig.addPlugin(criticalCss);
   eleventyConfig.addPassthroughCopy("src/main.js");
   eleventyConfig.addPassthroughCopy("public");
+  if (process.env.ELEVENTY_ENV!='dev') {
+    eleventyConfig.addTransform("htmlmin", function (content) {
+      // Prior to Eleventy 2.0: use this.outputPath instead
+      if (this.page.outputPath&&this.page.outputPath.endsWith(".html")) {
+        let minified=htmlmin.minify(content, {
+          useShortDoctype: true,
+          removeComments: true,
+          collapseWhitespace: true
+        });
+        return minified;
+      }
 
+      return content;
+    });
+  }
   return {
     dir: {
       input: "src",
       output: "dist",
+      data: "_data" // ⚠️ This value is relative to your input directory.
     },
   };
 

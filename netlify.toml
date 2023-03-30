@@ -1,0 +1,34 @@
+[build.environment]
+  NODE_VERSION = "16"
+
+# Settings in the [build] context are global and are applied to
+# all contexts unless otherwise overridden by more specific contexts.
+[build]
+  publish = "dist"
+  command = "pnpm build || ( npm install pnpm && pnpm build )"
+
+[dev]
+  autoLaunch = false
+  command = "pnpm run dev"
+
+# Production context: all deploys from the Production branch
+# set in your site’s Branches settings in the UI will inherit
+# these settings. You can define environment variables
+# here but we recommend using the Netlify UI for sensitive
+# values to keep them out of your source repository.
+[context.production]
+  publish = "dist/"
+  command = "pnpm build || ( npm install pnpm && pnpm build )"
+
+# Dev context: environment variables set here
+# are available for local development environments
+# run using Netlify Dev. These values can be
+# overwritten on branches that have a more specific
+# branch context configured.
+[context.dev.environment]
+  NODE_ENV = "development"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
