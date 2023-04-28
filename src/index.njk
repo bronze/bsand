@@ -10,3 +10,44 @@ url: {{ meta.url }}
 sitename: {{ meta.siteName }}
 <br>
 {{ meta.env }} {{ env }}
+<br/>
+
+<code>
+  	&#123;&#37; image "./cat.jpg", "A possum parent and two possum kids hanging from the iconic red balloon", [250,500] ,"(min-width: 30em) 50vw, 100vw" 	&#37;&#125;
+</code><br/>
+
+<div class="bg-indigo-300">
+  <figure class="object-cover">
+  {% image "./cat.jpg", "A possum parent and two possum kids hanging from the iconic red balloon", [360,720] ,"(min-width: 30em) 50vw, 100vw" %}
+  <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Image caption</figcaption>
+</figure>
+</div>
+
+<div class="h-auto max-w-full">
+{% image "./cat.jpg", "A possum parent and two possum kids hanging from the iconic red balloon", [360,720] ,"(min-width: 30em) 50vw, 100vw" %}
+</div>
+<br/>
+<eleventy-image src="cat.jpg" alt="My ugly mug" formats="png,webp" width="100,200,auto" sizes="100vw"></eleventy-image>
+
+<br/>
+<img webc:is="eleventy-image" src="src/cat.jpg" alt="photo of my tabby cat">
+<eleventy-image src="/src/cat.jpg" alt="photo of my tabby cat"></eleventy-image>
+<eleventy-image src="./src/cat.jpg" alt="photo of my tabby cat"></eleventy-image>
+<eleventy-image src="src/cat.jpg" alt="photo of my tabby cat"></eleventy-image>
+<eleventy-image src="./cat.jpg" alt="photo of my tabby cat"></eleventy-image>
+<eleventy-image src="/cat.jpg" alt="photo of my tabby cat"></eleventy-image>
+<eleventy-image src="cat.jpg" alt="photo of my tabby cat"></eleventy-image>
+<eleventy-image src="/cat.jpg" alt="photo of my tabby cat"></eleventy-image>
+
+<!-- Specify widths: -->
+<img webc:is="eleventy-image" width="100, 200"    src="./cat.jpg" alt="photo of my tabby cat" >
+<img webc:is="eleventy-image" :width="[100, 200]" src="cat.jpg" alt="photo of my tabby cat">
+
+<!-- Specify formats (overriding defaults set via the configuration) -->
+<img webc:is="eleventy-image" formats="avif, png"        src="./cat.jpg" alt="photo of my tabby cat">
+<img webc:is="eleventy-image" :formats="['avif', 'png']" src="cat.jpg" alt="photo of my tabby cat">
+
+<!-- Change the url path or output dir (overriding defaults set via the configuration above) -->
+<img webc:is="eleventy-image" url-path="/some-dir/" output-dir="dist/some-dir/" src="cat.jpg" alt="photo of my tabby cat">
+
+<br/>

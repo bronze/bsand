@@ -15,6 +15,7 @@
   {#- Add the contents of a file to the bundle #}
   {%- css %}{% renderFile "src/css/style.scss"  %}{% endcss %}
   {# <link rel="stylesheet" href="{{ '/css/style.css' | url }}" /> #}
+  <link rel="stylesheet" href="{{ '/css/base.css' | url }}" />
   {% js "head" %}{% include "src/main.js" %}{% endjs %}
   {# <script src="/main.js" ></script> #}
   <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">

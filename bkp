@@ -1,15 +1,13 @@
 const eleventySass=require("@11tyrocks/eleventy-plugin-sass-lightningcss");
 const eleventyWebcPlugin=require("@11ty/eleventy-plugin-webc");
 const {eleventyImagePlugin}=require("@11ty/eleventy-img");
+const Image=require("@11ty/eleventy-img");
 const eleventyNavigationPlugin=require("@11ty/eleventy-navigation");
 const criticalCss=require("eleventy-critical-css");
+const bundlerPlugin=require("@11ty/eleventy-plugin-bundle");
 const {EleventyRenderPlugin}=require("@11ty/eleventy");
 const CleanCSS=require("clean-css");
 const htmlmin=require("html-minifier");
-
-const pluginImages=require("./eleventy.config.images.js");
-const {EleventyHtmlBasePlugin}=require("@11ty/eleventy");
-const pluginBundle=require("@11ty/eleventy-plugin-bundle");
 
 
 module.exports=function (eleventyConfig) {
@@ -17,14 +15,8 @@ module.exports=function (eleventyConfig) {
   eleventyConfig.addFilter("cssmin", function (code) {
     return new CleanCSS({}).minify(code).styles;
   });
-  // App plugins
-  eleventyConfig.addPlugin(pluginImages);
-
-  // Official plugins
-  eleventyConfig.addPlugin(eleventyNavigationPlugin); //Nav
-  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-  eleventyConfig.addPlugin(pluginBundle);
-
+  // Nav
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
   // WebC
   eleventyConfig.addPlugin(eleventyWebcPlugin, {
     components: [
@@ -33,12 +25,27 @@ module.exports=function (eleventyConfig) {
       "npm:@11ty/eleventy-img/*.webc",
     ]
   });
+  eleventyConfig.addShortcode("image", async function (src, alt, sizes) {
+    let metadata=await Image(src, {
+      widths: [300, 600],
+      formats: ["avif", "jpeg"]
+    });
+
+    let imageAttributes={
+      alt,
+      sizes,
+      loading: "lazy",
+      decoding: "async",
+    };
+
+    // You bet we throw an error on a missing alt (alt="" works okay)
+    return Image.generateHTML(metadata, imageAttributes);
+  });
   // Image plugin
   eleventyConfig.addPlugin(eleventyImagePlugin, {
     // Set global default options
     formats: ["avif", "webp", "jpeg", "png"],
-    urlPath: "",
-    outputDir: "dist/img/",
+    urlPath: "/img/",
 
     // Notably `outputDir` is resolved automatically
     // to the project output directory
@@ -51,7 +58,8 @@ module.exports=function (eleventyConfig) {
 
   // SASS
   eleventyConfig.addPlugin(eleventySass);
-
+  // BUNDLER
+  eleventyConfig.addPlugin(bundlerPlugin);
   // CRITICAL
   // eleventyConfig.addPlugin(criticalCss);
   eleventyConfig.addPassthroughCopy("src/main.js");
@@ -71,11 +79,6 @@ module.exports=function (eleventyConfig) {
       return content;
     });
   }
-  // Run Eleventy when these files change:
-  // https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
-
-  // Watch content images for the image pipeline.
-  eleventyConfig.addWatchTarget("src/**/*.{svg,webp,png,jpeg}");
   return {
     dir: {
       input: "src",
