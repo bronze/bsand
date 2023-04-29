@@ -33,7 +33,14 @@ webc:
 <body>
   <!-- Built on {{config.now}} by Eleventy -->
   {% include "../_includes/site-menu.njk" %}
+  {% js "async" %}
+    const button = document.querySelector('#menu-button')
+    const menu = document.querySelector('#menu')
 
+    button.addEventListener('click', () => {
+      menu.classList.toggle('hidden')
+    })
+  {% endjs %}
 
   <header>
     <h1>{{ title }}</h1>
