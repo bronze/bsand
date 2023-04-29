@@ -1,4 +1,23 @@
 https://github.com/dawaltconley/responsive-images/
+<img webc:is="eleventy-image" src="src/cat.jpg" alt="photo of my tabby cat">
+<eleventy-image src="/src/cat.jpg" alt="photo of my tabby cat"></eleventy-image>
+<eleventy-image src="./src/cat.jpg" alt="photo of my tabby cat"></eleventy-image>
+<eleventy-image src="src/cat.jpg" alt="photo of my tabby cat"></eleventy-image>
+<eleventy-image src="./cat.jpg" alt="photo of my tabby cat"></eleventy-image>
+<eleventy-image src="/cat.jpg" alt="photo of my tabby cat"></eleventy-image>
+<eleventy-image src="cat.jpg" alt="photo of my tabby cat"></eleventy-image>
+<eleventy-image src="/cat.jpg" alt="photo of my tabby cat"></eleventy-image>
+
+  <!-- Specify widths: -->
+  <img webc:is="eleventy-image" width="100, 200"    src="./cat.jpg" alt="photo of my tabby cat" >
+  <img webc:is="eleventy-image" :width="[100, 200]" src="cat.jpg" alt="photo of my tabby cat">
+
+  <!-- Specify formats (overriding defaults set via the configuration) -->
+  <img webc:is="eleventy-image" formats="avif, png"        src="./cat.jpg" alt="photo of my tabby cat">
+  <img webc:is="eleventy-image" :formats="['avif', 'png']" src="cat.jpg" alt="photo of my tabby cat">
+
+  <!-- Change the url path or output dir (overriding defaults set via the configuration above) -->
+  <img webc:is="eleventy-image" url-path="/some-dir/" output-dir="dist/some-dir/" src="cat.jpg" alt="photo of my tabby cat">
 
 ![logo](https://repository-images.githubusercontent.com/302921248/58478900-0adf-11eb-8f0b-74be58a898ef)
 

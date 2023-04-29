@@ -28,16 +28,16 @@ module.exports=function (eleventyConfig) {
   // WebC
   eleventyConfig.addPlugin(eleventyWebcPlugin, {
     components: [
-      // …
-      // Add as a global WebC component
+      "./src/_components/**/*.webc",
       "npm:@11ty/eleventy-img/*.webc",
+      "npm:@11ty/is-land/*.webc"
     ]
   });
   // Image plugin
   eleventyConfig.addPlugin(eleventyImagePlugin, {
     // Set global default options
-    formats: ["avif", "webp", "jpeg", "png"],
-    urlPath: "",
+    formats: ["webp", "jpeg", "png"],
+    urlPath: "/img/",
     outputDir: "dist/img/",
 
     // Notably `outputDir` is resolved automatically
@@ -80,6 +80,7 @@ module.exports=function (eleventyConfig) {
     dir: {
       input: "src",
       output: "dist",
+      layouts: '_layouts',
       data: "_data" // ⚠️ This value is relative to your input directory.
     },
   };

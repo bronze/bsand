@@ -13,54 +13,26 @@
   4. Learn more: https://github.com/11ty/eleventy-plugin-bundle
   #}
   {#- Add the contents of a file to the bundle #}
-  {%- css %}{% renderFile "src/css/style.scss"  %}{% renderFile "src/css/tailwind.scss"  %}{% endcss %}
-  {# <link rel="stylesheet" href="{{ '/css/style.css' | url }}" /> #}
+  {%- css %}
+  {% renderFile "src/css/style.scss"  %}
+
+  {% endcss %}
+    {# <link rel="stylesheet" href="{{ '/css/style.css' | url }}" /> #}
   <link rel="stylesheet" href="{{ '/css/base.css' | url }}" />
+  <link rel="stylesheet" href="{{ '/css/tailwind.css' | url }}" />
+
+
   {% js "head" %}{% include "src/main.js" %}{% endjs %}
   {# <script src="/main.js" ></script> #}
   <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
-  <script src="{% getBundleFileUrl 'js', 'head' %}"></script>
+  <script src="{% getBundleFileUrl 'js', 'default' %}"></script>
   {#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
   <style>{% getBundle "css", "head" %}</style>
 </head>
 <body>
-  <header>
-    {# {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }} #}
-    {% set navPages = collections.all | eleventyNavigation %}
-    <ul>
-    {%- for entry in navPages %}
-      <li{% if entry.url == page.url %} class="active"{% endif %}>
-        <a href="{{ entry.url }}">{{ entry.title }}</a>
-      </li>
-    {%- endfor %}
-    </ul>
-    <h1>{{ title }}</h1>
-  </header>
-  <main>
+  <!-- Built on {{config.now}} by Eleventy -->
+
   {{ content | safe }}
-  </main>
-
-  {% css "head" %}em { font-style: italic; }{% endcss %}
-  {% js %}console.log("not deferred");{% endjs %}
-  {% js "defer" %}console.log("defered");{% endjs %}
-  {% css %}
-    {% renderTemplate "scss" %}
-    h1 { .test { color: red; } }
-    ul {
-      list-style: none;
-      li {
-        position:relative;
-        float:left;
-        a {text-decoration:none;font-weight:700;}
-        &:not(:first-child) { margin-left:10px;}
-        }
-        .active a {text-decoration:underline;}
-
-    }
-
-
-    {% endrenderTemplate %}
-  {% endcss %}
 
   <script>{% getBundle "js", "default" %}</script>
   <script defer>{% getBundle "js", "defer" %}</script>
@@ -68,7 +40,8 @@
   {% if meta.env == 'dev' %}
   // analytics here
   {% endif %}
-  {% js "quicklinks" %}{% include "./quicklinks.njk" %}{% endjs %}
+  {% js "quicklinks" %}{% include "../_includes/quicklinks.njk" %}{% endjs %}
   <script src="{% getBundleFileUrl 'js', 'quicklinks' %}"></script>
+  <script type="module" src="{% getBundleFileUrl 'js', 'async' %}"></script>
 </body>
 </html>

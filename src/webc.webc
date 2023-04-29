@@ -1,0 +1,36 @@
+---javascript
+// <script>
+let layout = "layouts/main.njk";
+let logoLink = "/docs/";
+
+let useWebCBundle = true;
+let skipLegacyBundle = true;
+
+// Update the emoji in CSS
+// let logoLink = "/blog/eleventy-v2/"
+// let logoContent = "<span class='elv-hero-content'>2.0</span>"
+
+let ignoreGitHubButtons = true;
+let ignoreSupporters = true;
+let searchTitle = "Eleventy, a simpler static site generator";
+let skipAuth = true;
+
+let eleventyImport = {
+	collections: ["blog"]
+};
+
+let eleventyComputed = {
+	social: {
+		description: () => "Eleventy, a simpler static site generator."
+	},
+};
+// </script>
+---
+
+hahaha
+
+<eleventy-image
+  src="src/cat.jpg"
+  :width="[300, 600]"
+  sizes="(min-width: 30em) 50vw, 100vw"
+  alt="photo of my tabby cat"></eleventy-image>
