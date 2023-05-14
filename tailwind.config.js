@@ -1,6 +1,6 @@
 module.exports={
   content: [
-    "./src/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug}",
+    "./src/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug,scss}",
     "./src/_includes/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug}",
     "./src/blog/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug}",
     "./src/pages/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug}",

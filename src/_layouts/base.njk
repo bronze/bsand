@@ -14,12 +14,15 @@
   #}
   {#- Add the contents of a file to the bundle #}
   {%- css %}
+
+  {% renderFile "src/css/tailwind.css"  %}
   {% renderFile "src/css/style.scss"  %}
+  {% renderFile "src/css/base.css"  %}
 
   {% endcss %}
-    {# <link rel="stylesheet" href="{{ '/css/style.css' | url }}" /> #}
-  <link rel="stylesheet" href="{{ '/css/base.css' | url }}" />
-  <link rel="stylesheet" href="{{ '/css/tailwind.css' | url }}" />
+  {# <link rel="stylesheet" href="{{ '/css/style.css' | url }}" /> #}
+  {# <link rel="stylesheet" href="{{ '/css/base.css' | url }}" /> #}
+  {# <link rel="stylesheet" href="{{ '/css/tailwind.css' | url }}" /> #}
 
 
   {% js "head" %}{% include "src/main.js" %}{% endjs %}
