@@ -18,6 +18,7 @@ dist/
 # Misc
 .DS_Store
 .env
+.jampack
 
 # Local Netlify folder
 .netlify

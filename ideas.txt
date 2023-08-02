@@ -7,3 +7,8 @@ https://pagefind.app/
 - https://cloudcannon.com/blog/introducing-pagefind/
 
 https://jampack.divriots.com/
+
+
+alpinejs scrolling
+- https://codepen.io/jwssnr/pen/MWVRzap
+- https://www.thiscodeworks.com/set-boolean-to-true-after-scrolling-on-page-using-alpine-js-html/6047c854b5a8500014ae3562
