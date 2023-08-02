@@ -32,25 +32,17 @@ module.exports=function (eleventyConfig) {
 
     // Vite options (equal to vite.config.js inside project root)
     viteOptions: {
-      publicDir: 'public',
-      clearScreen: false,
-      server: {
-        mode: 'development',
-        middlewareMode: true,
-      },
-      appType: 'custom',
-      assetsInclude: ['**/*.xml', '**/*.txt'],
       build: {
         mode: 'production',
         sourcemap: 'true',
         manifest: true,
         // This puts CSS and JS in subfolders – remove if you want all of it to be in /assets instead
         rollupOptions: {
-          output: {
-            assetFileNames: 'assets/css/main.[hash].css',
-            chunkFileNames: 'assets/js/[name].[hash].js',
-            entryFileNames: 'assets/js/[name].[hash].js'
-          },
+          // output: {
+          //   assetFileNames: 'assets/css/main.[hash].css',
+          //   chunkFileNames: 'assets/js/[name].[hash].js',
+          //   entryFileNames: 'assets/js/[name].[hash].js'
+          // },
           plugins: [rollupPluginCritical({
             criticalUrl: './dist/',
             criticalBase: './dist/',
