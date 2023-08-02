@@ -1,0 +1,9 @@
+lighthouse:
+- https://github.com/stefanfrede/11st-starter-kit
+- https://github.com/11ty/eleventy-base-blog/blob/main/netlify.toml
+
+https://pagefind.app/
+- https://rknight.me/using-pagefind-with-eleventy-for-search/
+- https://cloudcannon.com/blog/introducing-pagefind/
+
+https://jampack.divriots.com/

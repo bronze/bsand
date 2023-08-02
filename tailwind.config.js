@@ -1,11 +1,14 @@
+const defaultTheme=require('tailwindcss/defaultTheme');
+
 module.exports={
-  content: [
-    "./src/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug,scss}",
-    "./src/_includes/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug}",
-    "./src/blog/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug}",
-    "./src/pages/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug}",
-    "./src/index.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug}",
-    "./src/**/*.svg",
-    "./dist/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug}"
-  ]
-}
+  content: ["./src/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug,webc}"],
+  theme: {
+    extend: {
+      // fontFamily: {
+      //   sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      // },
+    },
+  },
+  variants: {},
+  // plugins: [require('@tailwindcss/typography')],
+};

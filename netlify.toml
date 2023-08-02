@@ -1,34 +1,53 @@
-[build.environment]
-  NODE_VERSION = "16"
-
-# Settings in the [build] context are global and are applied to
-# all contexts unless otherwise overridden by more specific contexts.
 [build]
   publish = "dist"
   command = "pnpm build || ( npm install pnpm && pnpm build )"
 
+[context.production]
+  environment = { NODE_VERSION = "16.13.2", RUBY_VERSION = "2.7.1" }
+
+[context.deploy-preview]
+  environment = { NODE_VERSION = "16.13.2", RUBY_VERSION = "2.7.1" }
+
+[context.dev.environment]
+  NODE_ENV = "development"
+
 [dev]
   autoLaunch = false
   command = "pnpm run dev"
+  publish = "build"
+  port = 5173
+  targetPort = 8080
+  framework = "#custom"
 
-# Production context: all deploys from the Production branch
-# set in your site’s Branches settings in the UI will inherit
-# these settings. You can define environment variables
-# here but we recommend using the Netlify UI for sensitive
-# values to keep them out of your source repository.
-[context.production]
-  publish = "dist/"
-  command = "pnpm build || ( npm install pnpm && pnpm build )"
+[[plugins]]
 
-# Dev context: environment variables set here
-# are available for local development environments
-# run using Netlify Dev. These values can be
-# overwritten on branches that have a more specific
-# branch context configured.
-[context.dev.environment]
-  NODE_ENV = "development"
+  # Opt-in to the Netlify Lighthouse plugin (choose one):
+
+  # 1. Go to your site on https://app.netlify.com and navigate to the Integrations tab, search for the `Lighthouse` plugin
+  # 2. Or via `npm install -D @netlify/plugin-lighthouse`
+
+  # Read more: https://github.com/netlify/netlify-plugin-lighthouse
+  package = "@netlify/plugin-lighthouse"
+
+  # optional, fails build when a category is below a threshold
+  [plugins.inputs.thresholds]
+    performance = 1.0
+    accessibility = 1.0
+    best-practices = 1.0
+    seo = 1.0
+
+  [plugins.inputs]
+    output_path = "reports/lighthouse/index.html"
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self' https://rsms.me https://api.netlify.com; style-src 'self' https://rsms.me 'unsafe-inline'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; worker-src 'self' blob:;"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"

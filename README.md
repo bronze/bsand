@@ -1,41 +1,87 @@
-https://github.com/dawaltconley/responsive-images/
+# Eleventy Plus Vite <br>🏃💨
 
-TODO:
-Performance https://jampack.divriots.com/
-Site search: https://pagefind.app/
+A clean and fast Eleventy Starter Project with Vite.
 
-![logo](https://repository-images.githubusercontent.com/302921248/58478900-0adf-11eb-8f0b-74be58a898ef)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ef99b4ea-199f-497b-84c1-48c34355da8a/deploy-status)](https://app.netlify.com/sites/eleventyplusvite/deploys)
+## Features
 
-# 11ty Sass Skeleton
+* Eleventy 2.0.0-canary
+* New Eleventy 2.0 Dev Server with live reload
+* Vite as Middleware in Eleventy Dev Server (uses [eleventy-plugin-vite](https://github.com/11ty/eleventy-plugin-vite/))
+* Eleventy build output is post-processed by [Vite](https://vitejs.dev) (with Rollup)
+* CSS/Sass post-processing with PostCSS incl. [Autoprefixer](https://github.com/postcss/autoprefixer) and cssnano
+* Uses [my own opinionated CSS/Sass structure](https://matthiasott.com/notes/how-i-structure-my-css)
+* Critical CSS, generated and inlined via [rollup-plugin-critical](https://github.com/nystudio107/rollup-plugin-critical). The main CSS file is then loaded asynchronously with [Scott Jehl’s `media` loading strategy](https://www.filamentgroup.com/lab/load-css-simpler/) (adds `media="print"` and swaps to `media="all"` once loaded)
+* Example implementation of a web font loading strategy ([critical FOFT with preload](https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft-preload))
+* Basic fluid typography based on [Utopia](https://utopia.fyi)
+* Basic dark mode support (using `prefers-color-scheme` and CSS Custom Properties)
+* Polyfill for [focus-visible](https://matthiasott.com/notes/focus-visible-is-here)
+* RSS feed 🧡
+* XML sitemap
+* Four Hundos Lighthouse score 💯💯💯💯
 
-Featuring absolutely nothing beyond a base HTML5 template and the essential setup to watch and compile your Sass alongside 11ty.
+## Getting started
 
-Includes minifiying and autoprefixing of styles **during development and on build** using [Lightning CSS](https://lightningcss.dev/). The v3 update ensures processing also occurs during development.
+Start by [generating a new repository based on this project](https://github.com/matthiasott/eleventy-plus-vite/generate).
 
-If you have different preferred browser targets, be sure to modify the package `browserslist` or use a `.browserslistrc`.
+After cloning (or downloading) the repository to your local machine, install all dependencies with the command
 
-> **Note** > **As of v3**, Sass + LightningCSS processing now provided [via the standalone plugin](https://github.com/5t3ph/eleventy-plugin-sass-lightningcss) which you can use to add this functionality to an existing 11ty project!
+```sh
+npm install
+```
 
-<small>Created by [@5t3ph](https://front-end.social/@5t3ph)</small>
+## Run dev server
 
-## Development Scripts
+The project comes with Eleventy’s built-in development server. You can start the server with
 
-**`npm start`**
+```sh
+npm start
+````
 
-> Run 11ty with hot reload at localhost:8080, including reload based on Sass changes
+or
 
-**`npm run build`**
+```sh
+npx @11ty/eleventy --serve
+````
 
-> Production build includes minified, autoprefixed CSS
 
-Use this as the "Publish command" if needed by hosting such as Netlify.
+## Build
 
-## Resources to extend this and learn 11ty
+To trigger a production build, use
 
-**A variety of tips, tutorials and resources** on [11ty Rocks!](https://11ty.rocks)
+```sh
+npm run build
+````
 
-**Ensure accessible colors** by adding my [a11y-color-tokens package](https://www.npmjs.com/package/a11y-color-tokens)
+or
 
-**Learn to build an 11ty site in 20 mins** with my [egghead video course](https://5t3ph.dev/learn-11ty) and see how to add a blog and custom data.
+```sh
+npx @11ty/eleventy
+```
 
-**Explore advanced setup of custom data** through my [tutorial on building a community site](https://css-tricks.com/a-community-driven-site-with-eleventy-building-the-site/)
+## Deploy a fork of this template to Netlify
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/matthiasott/eleventy-plus-vite)
+
+## CSS
+By default, this starter project uses Sass with an opinionated folder structure. Feel free to replace this structure with your own. If you prefer to write standards-compliant, good old plain CSS, this is also supported. Nesting is then possible via the [PostCSS Nesting plugin](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-nesting), following the [CSS Nesting specification](https://drafts.csswg.org/css-nesting-1/). 
+
+[Autoprefixer](https://github.com/postcss/autoprefixer) adds necessary browser prefixes. The [browserslist](https://github.com/browserslist/browserslist) settings can be adjusted in `package.json`.
+
+## Roadmap
+* Add more base styles and a demo page that shows example styles and components
+* Add a toggle button for the dark mode theme
+* More advanced base styles for modern CSS layout
+* Webmention/IndieWeb support
+
+## Feedback
+
+Please provide feedback! 🤗 Ideally by [filing an issue here](https://github.com/matthiasott/eleventy-plus-vite/issues) – or via a pull request.
+## Thank you!
+
+This starter project would not have been possible without the many great sites and projects I was able to learn from, use as inspiration, and shamelessly copy code from:
+
+* Zach Leatherman [zachleat.com](https://github.com/zachleat/zachleat.com)
+* Max Böck’s [Eleventastic](https://github.com/maxboeck/eleventastic)
+* Stephanie Eckles’s [11ty Netlify Jumpstart](https://github.com/5t3ph/11ty-netlify-jumpstart)
+* Miriam Suzanne [miriamsuzanne.com](https://www.miriamsuzanne.com)
