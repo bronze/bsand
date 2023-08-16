@@ -1,0 +1,135 @@
+<header class="transition-all duration-300 ease-in-out py-8  top-0 left-0 z-30 w-full font-lg font-nav uppercase z-200 bg-slate-900 color-primary z-50"
+  x-data="scrollToReveal()"
+  @scroll.window="scroll()"
+  x-bind:class="{
+     'pinned': sticky,
+     '': !sticky
+  }">
+  Hädr - simple
+</header>
+<nav
+  x-data="navbar"
+  x-init="$nextTick(() => { scroll(); })"
+  x-on:scroll.window="atTop = (window.pageYOffset > 90) ? false : true;hideHeader=scrollCheck();"
+  x-bind:class="{ 'md:py-6': hideHeader, 'md:py-16': !hideHeader, '': atTop, 'shadow-lg': !atTop }"
+  class="transition-all duration-300 ease-in-out top-0 left-0 z-30 w-full font-lg font-nav uppercase z-200 bg-slate-900 color-primary ">
+  <div
+    class="container flex items-center max-w-screen-xl mx-auto"
+    x-on:click.away="isOpen = false">lololololos
+    <div
+      class="absolute right-4 flex items-center md:hidden"
+      aria-label="toggle menu"
+      x-on:click="isOpen = !isOpen"></div>
+      <div
+    class="hidden md:hidden"
+    id="mobile-menu"
+    :class="{ 'show': isOpen, 'hidden': !isOpen }"></div>
+  </div>
+</nav>
+<header>
+  <nav id="navbar"
+    class="flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-lg text-gray-700 bg-white">
+    <div>
+      <a href="/"> Bsand </a>
+    </div>
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      id="menu-button"
+      class="h-6 w-6 cursor-pointer md:hidden block"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+
+    <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+      {# {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }} #}
+      {% set navPages = collections.all | eleventyNavigation %}
+      <ul class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0">
+      {%- for entry in navPages %}
+        <li{% if entry.url == page.url %} class="active"{% endif %}>
+          <a class="md:p-4 py-2 block hover:text-purple-400"  href="{{ entry.url }}">{{ entry.title }}</a>
+        </li>
+      {%- endfor %}
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+<script>
+  const button = document.querySelector('#menu-button')
+  const menu = document.querySelector('#menu')
+
+  button.addEventListener('click', () => {
+    menu.classList.toggle('hidden')
+  })
+
+
+window.addEventListener('scroll', function (){
+  var nav = document.querySelector("nav");
+  nav.classList.toggle("sticky", window.scrollY>0);
+
+});
+// https://codepen.io/jwssnr/pen/MWVRzap
+// Yes, I’m am a js rookie 😅
+// And yes, this is a downstripped version of https://codepen.io/skttl/pen/oNXLObp
+
+function scrollToReveal() {
+  return {
+    sticky: false,
+    lastPos: window.scrollY,
+    scroll() {
+      this.sticky = window.scrollY > 0 && this.lastPos > window.scrollY;
+      this.lastPos = window.scrollY;
+    }
+  }
+}
+
+</script>
+<script>
+  document.addEventListener('alpine:init', () => {
+    Alpine.data('navbar', () => ({
+      isOpen: false,
+      atTop: true,
+      hideHeader: false,
+
+      scrollCheck() {
+        // get current position
+        currentPos = window.pageYOffset
+        // only when we scroll up or we are at the top
+        prevPos > currentPos || currentPos == 0
+          ? (result = false)
+          : (result = true)
+        // current position will become previous position
+        prevPos = currentPos
+        return result
+        // console.log(hideHeader);
+      },
+      init() {
+        prevPos = window.pageYOffset
+      },
+    }))
+  })
+</script>
+
+<style>/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.fixed-nav {
+  position: fixed;
+}
+nav {
+  z-index: 1000;
+  transition: all .6s cubic-bezier(.36,.03,0,.91);
+  padding:1.3rem;
+}
+.pinned {
+position: sticky;
+
+
+}
+</style>
