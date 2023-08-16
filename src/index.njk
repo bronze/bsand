@@ -6,11 +6,7 @@ eleventyNavigation:
 ---
 
 <div class="container max-w-lg">
-<p class="text-3xl font-bold underline">
-      Hello world!
-</p>
-<the-fold></the-fold>
-    <h1>Eleventy Plus Vite. Rien n’est plus vite. <br>🏃💨</h1>
+    <h1>Rien n’est plus vite.</h1>
     <p>A simple, fast – and a little bit opinionated – starter project for <a href="https://www.11ty.dev">Eleventy</a>.</p>
     <p>By <a href="https://matthiasott.com">Matthias Ott</a>.</p>
     <p>Code on <a href="http://github.com/matthiasott/eleventy-plus-vite"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -37,8 +33,5 @@ eleventyNavigation:
           <li>Four Hundos Lighthouse score 💯💯💯💯</li>
         </ul>
     </section>
-    {% image "./cat.jpg", "Cat pic" %}
-    <picture>
-      {% image "./cat.jpg", "Cat pic" %}
-    </picture>
+    {% image "cat.jpg", "Cat pic", [300, 600], "(max-width: 500px) 300px, 600px" %}
 </div>

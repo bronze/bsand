@@ -1,5 +1,10 @@
 cloudflare wrangler?
 npx wrangler pages deploy dist --commit-dirty=true
+images:
+
+- https://www.aleksandrhovhannisyan.com/blog/eleventy-image-plugin/#4-returning-a-lesspicturegreater-tag
+- https://gfscott.com/blog/eleventy-img-without-central-image-directory/
+- https://www.zachleat.com/web/fluid-images/
 
 lighthouse:
 

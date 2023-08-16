@@ -1,14 +1,14 @@
-<header class="transition-all duration-300 ease-in-out py-4 top-0 left-0 z-30 w-full font-lg font-nav uppercase bg-white"
+<header class="header-nav transition-all duration-300 ease-in-out py-4 top-0 left-0 z-30 w-full font-lg font-nav uppercase "
   x-data="scrollToReveal()"
   @scroll.window="scroll()"
   x-bind:class="{
      'pinned': sticky,
      '': !sticky
   }">
-  <nav id="navbar"
-    class="flex flex-wrap items-center justify-between w-full md:py-0 px-4 text-lg text-gray-700 container max-w-7xl mx-auto ">
+  <nav id="navbar"  role="navigation" aria-label="Main"
+    class="flex flex-wrap items-center justify-between w-full md:py-0 px-4 text-lg container max-w-7xl mx-auto ">
     <div>
-      <a href="/" class="storysonear"> Bsand </a>
+      <a href="/" class="logo">Brandon Sanderson</a>
     </div>
 
     <svg
@@ -28,10 +28,10 @@
     <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
       {# {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }} #}
       {% set navPages = collections.all | eleventyNavigation %}
-      <ul class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0">
+      <ul class="pt-4 text-base md:flex md:justify-between md:pt-0">
       {%- for entry in navPages %}
         <li{% if entry.url == page.url %} class="active"{% endif %}>
-          <a class="md:p-4 py-2 block hover:text-purple-400"  href="{{ entry.url }}">{{ entry.title }}</a>
+          <a class="md:p-4 py-2 block"  href="{{ entry.url }}">{{ entry.title }}</a>
         </li>
       {%- endfor %}
       </ul>
@@ -75,14 +75,5 @@ function scrollToReveal() {
 </style>
 
 <style>
-header {
-  background-color: rgba(255, 0, 255, 0.2);
-  padding: 2rem;
-  transition: all 0.3s ease;
-  &.pinned {
-    background-color: fuchsia;
-    position: sticky;
-    top: 0;
-  }
-}
+
 </style>

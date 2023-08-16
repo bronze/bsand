@@ -1,0 +1,27 @@
+.header-nav {
+  transition: all 0.3s ease;
+
+  &.pinned {
+    background-color: #3b4252;
+    position: sticky;
+    top: 0;
+  }
+}
+nav {
+  &__container {
+  }
+  .logo {
+    @apply storysonear text-3xl;
+  }
+  .nav--primary {
+    ul {
+      font-size: var(--fluid-2);
+      margin: 0.75rem 0;
+    }
+
+    a {
+      display: block;
+      padding: 0.25em 0;
+    }
+  }
+}
