@@ -1,29 +1,34 @@
 cloudflare wrangler?
 npx wrangler pages deploy dist --commit-dirty=true
-images:
+
+## fonts: the story so near/the story ends
+
+- https://www.fontspring.com/fonts/comicraft/the-story-begins-ends
+
+## images:
 
 - https://www.aleksandrhovhannisyan.com/blog/eleventy-image-plugin/#4-returning-a-lesspicturegreater-tag
 - https://gfscott.com/blog/eleventy-img-without-central-image-directory/
 - https://www.zachleat.com/web/fluid-images/
 
-lighthouse:
+## lighthouse:
 
 - https://github.com/stefanfrede/11st-starter-kit
 - https://github.com/11ty/eleventy-base-blog/blob/main/netlify.toml
 
-https://pagefind.app/
+## https://pagefind.app/
 
 - https://rknight.me/using-pagefind-with-eleventy-for-search/
 - https://cloudcannon.com/blog/introducing-pagefind/
 
-https://jampack.divriots.com/
+## https://jampack.divriots.com/
 
-alpinejs scrolling
+## alpinejs scrolling
 
 - https://codepen.io/jwssnr/pen/MWVRzap
 - https://www.thiscodeworks.com/set-boolean-to-true-after-scrolling-on-page-using-alpine-js-html/6047c854b5a8500014ae3562
 
-alpinejs scroll progress
+## alpinejs scroll progress
 
 - https://github.com/google/eleventy-high-performance-blog#getting-started
 - https://codepen.io/A_kamel/pen/qBmmGKJ
