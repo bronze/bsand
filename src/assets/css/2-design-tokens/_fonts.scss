@@ -8,6 +8,7 @@
     url('/assets/fonts/storysonear/Fontspring-DEMO-ccthestorysonear-regular.woff')
       format('woff');
   unicode-range: U+21-80, U+91-94, U+BF-D6, U+D8-F6, U+F8-122; // U+21-80,U+91-94,U+DF,U+E4,U+F6,U+FC
+  font-display: swap;
 }
 @font-face {
   font-family: 'TheStoryEnds';
@@ -16,6 +17,7 @@
     url('/assets/fonts/storyends/Fontspring-DEMO-ccthestoryends-regular.woff')
       format('woff');
   unicode-range: U+21-80, U+91-94, U+BF-D6, U+D8-F6, U+F8-122; // U+21-80,U+91-94,U+DF,U+E4,U+F6,U+FC
+  font-display: swap;
 }
 
 // /* dm-sans-regular - latin */
@@ -70,9 +72,13 @@ body {
 // .fonts-loaded-2 body {
 //   font-family: 'DM Sans';
 // }
-.storysonear {
-  font-family: 'TheStorySoNear';
+.fonts-loaded-storysonear {
+  .storysonear {
+    font-family: 'TheStorySoNear';
+  }
 }
-.storyends {
-  font-family: 'TheStoryEnds';
+.fonts-loaded-storyends {
+  .storyends {
+    font-family: 'TheStoryEnds';
+  }
 }

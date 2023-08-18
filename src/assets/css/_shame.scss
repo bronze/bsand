@@ -12,8 +12,11 @@
   -----------------------------------------------------------------------------
 */
 
-#main {
+main {
   @apply container max-w-screen-xl mx-auto;
+}
+footer {
+  @apply container max-w-screen-xl mx-auto py-8;
 }
 input {
   color: var(--textColor);
