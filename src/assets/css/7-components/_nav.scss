@@ -1,17 +1,28 @@
 .header-nav {
   transition: all 0.3s ease;
+  background-color: var(--backgroundColor);
 
   &.pinned {
     background-color: #3b4252;
+    & #search-content {
+      background-color: #3b4252;
+    }
     position: sticky;
     top: 0;
   }
+  & #search-content {
+    background-color: var(--backgroundColor);
+  }
 }
+
 nav {
   &__container {
   }
   .logo {
     @apply storysonear text-4xl;
+    & span {
+      @apply storyends;
+    }
   }
   .nav--primary {
     ul {

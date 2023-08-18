@@ -9,6 +9,14 @@
       format('woff');
   unicode-range: U+21-80, U+91-94, U+BF-D6, U+D8-F6, U+F8-122; // U+21-80,U+91-94,U+DF,U+E4,U+F6,U+FC
 }
+@font-face {
+  font-family: 'TheStoryEnds';
+  src: url('/assets/fonts/storyends/Fontspring-DEMO-ccthestoryends-regular.woff2')
+      format('woff2'),
+    url('/assets/fonts/storyends/Fontspring-DEMO-ccthestoryends-regular.woff')
+      format('woff');
+  unicode-range: U+21-80, U+91-94, U+BF-D6, U+D8-F6, U+F8-122; // U+21-80,U+91-94,U+DF,U+E4,U+F6,U+FC
+}
 
 // /* dm-sans-regular - latin */
 // @font-face {
@@ -64,4 +72,7 @@ body {
 // }
 .storysonear {
   font-family: 'TheStorySoNear';
+}
+.storyends {
+  font-family: 'TheStoryEnds';
 }
