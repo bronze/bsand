@@ -3,9 +3,9 @@
   background-color: var(--backgroundColor);
 
   &.pinned {
-    background-color: #3b4252;
+    background-color: var(--backgroundAccentColor);
     & #search-content {
-      background-color: #3b4252;
+      background-color: var(--backgroundAccentColor);
     }
     position: sticky;
     top: 0;

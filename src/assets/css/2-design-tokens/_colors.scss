@@ -3,12 +3,14 @@
   --primaryColor: #5e81ac;
   --focusColor: #7231ff;
   --backgroundColor: #eceff4;
+  --backgroundAccentColor: #e5e9f0;
 }
 :root.dark {
   color-scheme: dark;
-  --backgroundColor: #2e3440;
   --textColor: #e5e9f0;
   --primaryColor: #5e81ac;
+  --backgroundColor: #2e3440;
+  --backgroundAccentColor: #3b4252;
 }
 
 // // Very basic support for a dark color scheme
