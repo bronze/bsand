@@ -66,6 +66,20 @@
 body {
   font-family: sans-serif;
 }
+
+.fonts-loaded-roboto {
+  nav {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+  }
+}
+.roboto {
+  font-family: 'Roboto', sans-serif;
+}
+.roboto-slab {
+  font-family: 'Roboto Slab Variable', sans-serif;
+}
+
 // .fonts-loaded-1 body {
 //   font-family: 'DM Sans Subset';
 // }
