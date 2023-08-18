@@ -42,9 +42,22 @@
   <link rel="stylesheet" href="/assets/css/main.scss">
 </head>
 <body>
+  <nav aria-label="Skip Links">
+    <ul class="off-screen">
+      <li>
+        <a href="#primary_nav" class="skip-link">
+          Skip to Primary Navigation
+        </a>
+      </li>
+      <li>
+        <a href="#primary_content" class="skip-link">
+          Skip to Primary Content
+        </a>
+      </li>
+    </ul>
+  </nav>
   {% include "site-menu.webc" %}
-  <a href="#main" class="skiplink">Skip to main content</a>
-
+  <a id="primary_content">
   <div class="layout" role="document">
     <main id="main" class="main">
         {{ content | safe }}
