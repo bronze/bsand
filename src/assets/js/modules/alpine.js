@@ -26,6 +26,28 @@ document.addEventListener('alpine:init', () => {
       },
     };
   });
+  Alpine.data('darkmode', () => ({
+    // Define darkmode
+    dark:
+      localStorage.theme==='dark'||
+      (!('theme' in localStorage)&&
+        window.matchMedia('(prefers-color-scheme: dark)').matches),
+
+    // Toggle function
+    toggleTheme() {
+      if (window.localStorage.theme!='dark') {
+        document.documentElement.classList.add('dark')
+        localStorage.theme='dark'
+      } else {
+        document.documentElement.classList.remove('dark')
+        document.body.style.backgroundColor=''
+        window.localStorage.theme=null
+      }
+      this.dark=!this.dark
+      console.log('storage: '+window.localStorage.theme+' | dark: '+this.dark);
+    },
+  }))
 });
+
 
 Alpine.start();

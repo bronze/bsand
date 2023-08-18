@@ -11,3 +11,10 @@
 
   -----------------------------------------------------------------------------
 */
+
+#main {
+  @apply container max-w-screen-xl mx-auto;
+}
+input {
+  color: var(--textColor);
+}

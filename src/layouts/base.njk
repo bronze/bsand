@@ -41,7 +41,7 @@
 
   <link rel="stylesheet" href="/assets/css/main.scss">
 </head>
-<body>
+<body x-data="darkmode">
   <nav aria-label="Skip Links">
     <ul class="off-screen">
       <li>
@@ -57,7 +57,7 @@
     </ul>
   </nav>
   {% include "site-menu.webc" %}
-  <a id="primary_content">
+  <a id="primary_content"></a>
   <div class="layout" role="document">
     <main id="main" class="main">
         {{ content | safe }}
