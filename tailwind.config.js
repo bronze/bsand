@@ -1,4 +1,5 @@
 const defaultTheme=require('tailwindcss/defaultTheme');
+const colors=require('tailwindcss/colors')
 
 module.exports={
   content: ["./src/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug,webc}"],

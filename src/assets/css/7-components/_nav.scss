@@ -1,5 +1,4 @@
 .header-nav {
-  transition: all 0.3s ease;
   background-color: var(--backgroundMutedColor);
 
   &.pinned {
@@ -17,7 +16,7 @@
     top: 0;
   }
   & #search-content {
-    background-color: var(--backgroundColor);
+    background-color: var(--backgroundMutedColor);
   }
 }
 
@@ -25,20 +24,29 @@ nav {
   &__container {
   }
   .logo {
+    &:hover {
+    }
     @apply storysonear;
     & span {
       @apply storyends;
     }
   }
-  .nav--primary {
-    ul {
-      font-size: var(--fluid-2);
-      margin: 0.75rem 0;
-    }
-
+  #menu {
     a {
-      display: block;
-      padding: 0.25em 0;
+      &:hover {
+        @apply color-text--primary;
+      }
     }
   }
+  // .nav--primary {
+  //   ul {
+  //     font-size: var(--fluid-2);
+  //     margin: 0.75rem 0;
+  //   }
+
+  //   a {
+  //     display: block;
+  //     padding: 0.25em 0;
+  //   }
+  // }
 }
