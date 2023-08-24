@@ -13,11 +13,24 @@
 */
 
 main {
-  @apply container max-w-screen-xl mx-auto;
+  @apply container mx-auto max-w-screen-xl;
 }
 footer {
-  @apply container max-w-screen-xl mx-auto py-8;
+  @apply container mx-auto max-w-screen-xl py-8;
 }
 input {
   color: var(--textColor);
+}
+.hero {
+  picture,
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    // object-position: left;
+    position: absolute !important;
+    z-index: -1;
+    overflow: hidden;
+  }
 }

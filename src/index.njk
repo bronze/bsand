@@ -1,7 +1,24 @@
 ---
 layout: base
 ---
-<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 my-8">
+<header class="w-full md:py-24 min-h-[400px] relative flex justify-center items-center hero">
+  {% image "img/aba-B00010-ee_1100x.png", "hero bg", [640, 1280], "(max-width: 600px) 640px, 1280px" %}
+  <div class="container container--alt  max-w-screen-lg mx-auto text-slate-100">
+    <div class="product-header__main hidden md:block  md:min-w-[500px] md:w-1/2 bg-slate-900/75 md:p-8 md:float-right ">
+      <h1 class="product-header__header block">
+        <span class="product-header__author block text-2xl mb-3">Jason Garber</span>
+        <span class="product-header__title block text-7xl mb-4">Practical Pair Programming</span>
+      </h1>
+      <h2 class="product-header__byline block text-base mb-4">foreword by <span class="product-header__foreword">Kelly Vaughn</span></h2>
+      <div class="product-header__description block text-xl">
+        <p>Dive into pair programming with confidence and trust.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 my-8 container max-w-screen-lg mx-auto">
     <!--Card 1-->
     <div class="rounded overflow-hidden shadow-lg md:col-span-2 color-background">
       <div class="px-6 py-4">
@@ -49,7 +66,7 @@ layout: base
     </div>
   </div>
 </div>
-<div class="container max-w-screen-lg">
+<div class="container max-w-screen-lg mx-auto">
   <h1 class="roboto text-3xl">Rien n’est plus vite.</h1>
   <h2 class="roboto-slab text-2xl">Test roboto</h2>
   <p>
