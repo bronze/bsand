@@ -1,3 +1,23 @@
+# Deep Directories
+**/dist
+**/smoke
+**/node_modules
+**/fixtures
+**/vendor
+**/.vercel
+examples/docs/**/*.md
+examples/blog/**/*.md
+
+# Directories
+.github
+.changeset
+
+# Files
+README.md
+packages/webapi/mod.d.ts
+pnpm-lock.yaml
+
+
 node_modules
 _site
 dist
