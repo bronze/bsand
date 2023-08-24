@@ -3,10 +3,15 @@
   "[markdown]": {
     "files.trimTrailingWhitespace": false
   },
+  // add njk support in prettier?
+  // https://github.com/prettier/prettier-vscode/issues/1405   Support for additional file types #1405
+  // https://github.com/tailwindlabs/prettier-plugin-tailwindcss/issues/113
+  // https://dev.to/jelhan/format-glimmer-templates-with-prettier-ipa
   "[njk]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "prettier.useEditorConfig": false,
+  "prettier.documentSelectors": ["**/*.njk"],
   // "emmet.preferences": {
   //   "format.noIndentTags": ["html", "script"]
   // },
