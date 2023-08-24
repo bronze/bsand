@@ -8,10 +8,18 @@
   // https://github.com/tailwindlabs/prettier-plugin-tailwindcss/issues/113
   // https://dev.to/jelhan/format-glimmer-templates-with-prettier-ipa
   "[njk]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "okitavera.vscode-nunjucks-formatter"
+  },
+  "files.associations": {
+    "*.webc": "liquid",
+    "*.njk": "html"
   },
   "prettier.useEditorConfig": false,
   "prettier.documentSelectors": ["**/*.njk"],
+  "emmet.includeLanguages": {
+    "njk": "html",
+    "nunjucks": "html"
+  },
   // "emmet.preferences": {
   //   "format.noIndentTags": ["html", "script"]
   // },

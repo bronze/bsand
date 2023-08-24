@@ -37,6 +37,7 @@
     "@11ty/eleventy-plugin-webc": "^0.11.1",
     "@divriots/jampack": "^0.13.0",
     "@netlify/plugin-lighthouse": "^5.0.0",
+    "@shopify/prettier-plugin-liquid": "^1.2.2",
     "autoprefixer": "^10.4.15",
     "cssnano": "^6.0.1",
     "cssremedy": "^0.1.0-beta.2",

@@ -1,8 +1,14 @@
 .header-nav {
   transition: all 0.3s ease;
-  background-color: var(--backgroundColor);
+  background-color: var(--backgroundMutedColor);
 
   &.pinned {
+    // https://lea.verou.me/blog/2020/04/lch-colors-in-css-what-why-and-how/
+    // background-color: color-mix(
+    //   in oklch,
+    //   var(--backgroundAccentColor),
+    //   var(--primaryColor) 1%
+    // );
     background-color: var(--backgroundAccentColor);
     & #search-content {
       background-color: var(--backgroundAccentColor);

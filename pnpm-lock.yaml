@@ -42,6 +42,9 @@ devDependencies:
   '@netlify/plugin-lighthouse':
     specifier: ^5.0.0
     version: 5.0.0
+  '@shopify/prettier-plugin-liquid':
+    specifier: ^1.2.2
+    version: 1.2.2(prettier@3.0.2)
   autoprefixer:
     specifier: ^10.4.15
     version: 10.4.15(postcss@8.4.28)
@@ -101,7 +104,7 @@ devDependencies:
     version: 1.0.0(prettier@3.0.2)
   prettier-plugin-tailwindcss:
     specifier: ^0.5.3
-    version: 0.5.3(prettier-plugin-organize-attributes@1.0.0)(prettier@3.0.2)
+    version: 0.5.3(@shopify/prettier-plugin-liquid@1.2.2)(prettier-plugin-organize-attributes@1.0.0)(prettier@3.0.2)
   rollup-plugin-critical:
     specifier: ^1.0.12
     version: 1.0.12
@@ -834,6 +837,17 @@ packages:
     dependencies:
       '@sentry/types': 6.19.7
       tslib: 1.14.1
+    dev: true
+
+  /@shopify/prettier-plugin-liquid@1.2.2(prettier@3.0.2):
+    resolution: {integrity: sha512-6FlxKWrT02PcyBLd4baU/vdP4BsvmWP5UMcAv+ZUpQ6TZFM6qBtu6Bntd2d6mtjafNaUU7Gnh0v1DonQnDp45A==}
+    peerDependencies:
+      prettier: ^2.0.0 || ^3.0.0
+    dependencies:
+      html-styles: 1.0.0
+      line-column: 1.0.2
+      ohm-js: 16.6.0
+      prettier: 3.0.2
     dev: true
 
   /@sideway/address@4.1.4:
@@ -3965,6 +3979,10 @@ packages:
       uglify-js: 3.17.4
     dev: true
 
+  /html-styles@1.0.0:
+    resolution: {integrity: sha512-cDl5dcj73oI4Hy0DSUNh54CAwslNLJRCCoO+RNkVo+sBrjA/0+7E/xzvj3zH/GxbbBLGJhE0hBe1eg+0FINC6w==}
+    dev: true
+
   /htmlparser2@3.10.1:
     resolution: {integrity: sha512-IgieNijUMbkDovyoKObU1DUhm1iwNYE/fuifEoEHfd1oZKZDaONBSkal7Y01shxsM49R4XaMdGez3WnF9UfiCQ==}
     dependencies:
@@ -4516,6 +4534,13 @@ packages:
     engines: {node: '>=6.0'}
     dev: true
 
+  /isobject@2.1.0:
+    resolution: {integrity: sha512-+OUdGJlgjOBZDfxnDjYYG6zp487z0JGNQq3cYQYg5f5hKR+syHMsaztzGeml/4kGG55CSpKSpWTY+jYGgsHLgA==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      isarray: 1.0.0
+    dev: true
+
   /isobject@3.0.1:
     resolution: {integrity: sha512-WhB9zCku7EGTj/HQQRz5aUQEUeoQZH2bWcltRErOpymJ4boYE6wL9Tbr23krRPSZ+C5zqNSrSw+Cc7sZZ4b7vg==}
     engines: {node: '>=0.10.0'}
@@ -4878,6 +4903,13 @@ packages:
   /lilconfig@2.1.0:
     resolution: {integrity: sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ==}
     engines: {node: '>=10'}
+    dev: true
+
+  /line-column@1.0.2:
+    resolution: {integrity: sha512-Ktrjk5noGYlHsVnYWh62FLVs4hTb8A3e+vucNZMgPeAOITdshMSgv4cCZQeRDjm7+goqmo6+liZwTXo+U3sVww==}
+    dependencies:
+      isarray: 1.0.0
+      isobject: 2.1.0
     dev: true
 
   /lines-and-columns@1.2.4:
@@ -5683,6 +5715,11 @@ packages:
       call-bind: 1.0.2
       define-properties: 1.2.0
       es-abstract: 1.22.1
+    dev: true
+
+  /ohm-js@16.6.0:
+    resolution: {integrity: sha512-X9P4koSGa7swgVQ0gt71UCYtkAQGOjciJPJAz74kDxWt8nXbH5HrDOQG6qBDH7SR40ktNv4x61BwpTDE9q4lRA==}
+    engines: {node: '>=0.12.1'}
     dev: true
 
   /on-finished@2.4.1:
@@ -6565,7 +6602,7 @@ packages:
       prettier: 3.0.2
     dev: true
 
-  /prettier-plugin-tailwindcss@0.5.3(prettier-plugin-organize-attributes@1.0.0)(prettier@3.0.2):
+  /prettier-plugin-tailwindcss@0.5.3(@shopify/prettier-plugin-liquid@1.2.2)(prettier-plugin-organize-attributes@1.0.0)(prettier@3.0.2):
     resolution: {integrity: sha512-M5K80V21yM+CTm/FEFYRv9/9LyInYbCSXpIoPAKMm8zy89IOwdiA2e4JVbcO7tvRtAQWz32zdj7/WKcsmFyAVg==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
@@ -6617,6 +6654,7 @@ packages:
       prettier-plugin-twig-melody:
         optional: true
     dependencies:
+      '@shopify/prettier-plugin-liquid': 1.2.2(prettier@3.0.2)
       prettier: 3.0.2
       prettier-plugin-organize-attributes: 1.0.0(prettier@3.0.2)
     dev: true
