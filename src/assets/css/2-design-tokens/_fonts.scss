@@ -3,7 +3,8 @@
  */
 @font-face {
   font-family: 'TheStorySoNear';
-  src: url('/assets/fonts/storysonear/Fontspring-DEMO-ccthestorysonear-regular.woff2')
+  src:
+    url('/assets/fonts/storysonear/Fontspring-DEMO-ccthestorysonear-regular.woff2')
       format('woff2'),
     url('/assets/fonts/storysonear/Fontspring-DEMO-ccthestorysonear-regular.woff')
       format('woff');
@@ -12,7 +13,8 @@
 }
 @font-face {
   font-family: 'TheStoryEnds';
-  src: url('/assets/fonts/storyends/Fontspring-DEMO-ccthestoryends-regular.woff2')
+  src:
+    url('/assets/fonts/storyends/Fontspring-DEMO-ccthestoryends-regular.woff2')
       format('woff2'),
     url('/assets/fonts/storyends/Fontspring-DEMO-ccthestoryends-regular.woff')
       format('woff');
@@ -67,17 +69,26 @@ body {
   font-family: sans-serif;
 }
 
-.fonts-loaded-roboto {
+.fonts-loaded-2 {
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
   nav {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
   }
-}
-.roboto {
-  font-family: 'Roboto', sans-serif;
-}
-.roboto-slab {
-  font-family: 'Roboto Slab Variable', sans-serif;
+  .roboto {
+    font-family: 'Roboto', sans-serif;
+  }
+  .roboto-slab {
+    font-family: 'Roboto Slab Variable', sans-serif;
+  }
+  .storysonear {
+    font-family: 'TheStorySoNear';
+  }
+  .storyends {
+    font-family: 'TheStoryEnds';
+  }
 }
 
 // .fonts-loaded-1 body {
@@ -86,13 +97,3 @@ body {
 // .fonts-loaded-2 body {
 //   font-family: 'DM Sans';
 // }
-.fonts-loaded-storysonear {
-  .storysonear {
-    font-family: 'TheStorySoNear';
-  }
-}
-.fonts-loaded-storyends {
-  .storyends {
-    font-family: 'TheStoryEnds';
-  }
-}

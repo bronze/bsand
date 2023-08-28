@@ -24,7 +24,12 @@ layout: base
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">Mountain</div>
           <p class="text-base">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, Nonea! Maiores et perferendis eaque, exercitationem praesentium nihil.
+            What to put in this place? Latest YT video link?
+            video: what hes talking
+            progress: what hes writing
+            listening? nah
+            thinking? recent posts below
+
           </p>
         </div>
         <div class="px-6 pt-4 pb-2">
@@ -47,6 +52,8 @@ layout: base
           </div>
         </div>
       </div> #}
+      {# add some iconography behind? top left? #}
+      {# https://icones.js.org/collection/mdi?s=progress #}
       <div class="rounded shadow-lg color-background px-6 py-4 relative border-solid border-t-2 border-primary">
         {# <div class="absolute inset-x-0 -top-2 flex items-center justify-center rounded-lg"><h3 class="center font-bold">Progress Bars</h3></div> #}
         <div>
@@ -81,6 +88,12 @@ layout: base
   </div>
 </div>
 
+
+<div class="container max-w-screen-lg mx-auto">
+  <h1 class="text-5xl roboto">Posts</h1>
+  {% set postslist = collections.posts %} {% include "postslist.njk" %}
+</div>
+
 <div class="container max-w-screen-lg mx-auto">
   <h1 class="roboto text-3xl">Rien n’est plus vite.</h1>
   <h2 class="roboto-slab text-2xl">Test roboto</h2>
@@ -105,73 +118,4 @@ layout: base
       Github
     </a>
   </p>
-  <section class="list">
-    <h2>Features</h2>
-    <ul dir="auto">
-      <li>Eleventy 2.0.0-canary</li>
-      <li>New Eleventy 2.0 Dev Server with live reload</li>
-      <li>
-        Vite 3.0 as Middleware in Eleventy Dev Server (uses
-        <a href="https://github.com/11ty/eleventy-plugin-vite/"
-          >eleventy-plugin-vite</a
-        >)
-      </li>
-      <li>
-        Eleventy build output is post-processed by
-        <a href="https://vitejs.dev" rel="nofollow">Vite</a> (with Rollup)
-      </li>
-      <li>
-        CSS/Sass post-processing with PostCSS incl.
-        <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> and
-        cssnano
-      </li>
-      <li>
-        Uses
-        <a
-          href="https://matthiasott.com/notes/how-i-structure-my-css"
-          rel="nofollow"
-          >my own opinionated CSS/Sass structure</a
-        >
-      </li>
-      <li>
-        Critical CSS, generated and inlined via
-        <a href="https://github.com/nystudio107/rollup-plugin-critical"
-          >rollup-plugin-critical</a
-        >. The main CSS file is then loaded asynchronously with
-        <a
-          href="https://www.filamentgroup.com/lab/load-css-simpler/"
-          rel="nofollow"
-          >Scott Jehl’s <code>media</code> loading strategy</a
-        >
-        (adds <code>media="print"</code> and swaps to
-        <code>media="all"</code> once loaded)
-      </li>
-      <li>
-        Example implementation of a web font loading strategy (<a
-          href="https://www.zachleat.com/web/comprehensive-webfonts/#critical-foft-preload"
-          rel="nofollow"
-          >critical FOFT with preload</a
-        >)
-      </li>
-      <li>
-        Basic fluid typography based on
-        <a href="https://utopia.fyi" rel="nofollow">Utopia</a>
-      </li>
-      <li>
-        Basic dark mode support (using <code>prefers-color-scheme</code> and CSS
-        Custom Properties)
-      </li>
-      <li>
-        Polyfill for
-        <a
-          href="https://matthiasott.com/notes/focus-visible-is-here"
-          rel="nofollow"
-          >focus-visible</a
-        >
-      </li>
-      <li>RSS feed 🧡</li>
-      <li>XML sitemap</li>
-      <li>Four Hundos Lighthouse score 💯💯💯💯</li>
-    </ul>
-  </section>
 </div>
