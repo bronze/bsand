@@ -1,5 +1,6 @@
 ---
 title: Legally Distinct Metallic Tickets + Weekly Update
+description: Hello! Brandon here with your Weekly Update. So, this is a longer one, all right? So settle in. I’ve got a lot of things to cover but we will do the book updates first.
 ---
 
 Hello! Brandon here with your Weekly Update. So, this is a longer one, all right? So settle in. I’ve got a lot of things to cover but we will do the book updates first.
