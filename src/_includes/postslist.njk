@@ -4,8 +4,7 @@
   {% for post in postslist | reverse %}
     <article class="bg-gray-200 p-8 drop-shadow-md relative isolate flex flex-col gap-8 lg:flex-row postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
       <div class="relative aspect-[2/1] lg:h-36 lg:shrink-0">
-        {% image "BS_YT_Weekly-Update_08-01-23_V1.png", "Test", [300, 600], "(max-width: 500px) 300px, 600px"
-    , "absolute inset-0 h-full w-full rounded-2xl bg-grey-50 object-cover" %}
+        {% image "BS_YT_Weekly-Update_08-01-23_V1.png", "Test", [300, 600], "(max-width: 500px) 300px, 600px", "absolute inset-0 h-full w-full rounded-2xl bg-grey-50 object-cover" %}
         <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
       </div>
       <div >
