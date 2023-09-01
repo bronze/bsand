@@ -7,14 +7,12 @@
   {% for post in postslist | reverse %}
     <article class="bg-gray-200 p-8 drop-shadow-md relative isolate flex flex-col gap-8 lg:flex-row postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
       <div class="relative aspect-[2/1] lg:h-36 lg:shrink-0">
-        {% set imgsrc %}/blog/{{ post.fileSlug }}/cover.png{% endset %}
-        <picture>
-            <source srcset="{{ imgsrc | setExt('avif') }}" type="image/avif">
-            <source srcset="{{ imgsrc | setExt('webp') }}" type="image/webp">
-            <source srcset="{{ imgsrc }}" type="image/jpeg">
-            <img src="{{ imgsrc }}" alt="" width="500" height="500" class="featuredpost__image" />
-        </picture>
-        <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+      {# {% set imgsrc %}{{ post.url | url }}cover.png{% endset %}
+      {{ imgsrc }}
+      {{ post.url+"cover.png"}} #}
+        {% image "blog/"+post.fileSlug+"/cover.png", "Cat pic", [300, 600], "(max-width: 500px) 300px, 600px", "absolute inset-0 h-full w-full rounded-lg bg-grey-50 object-cover" %}
+
+        <div class="absolute inset-0 rounded-lg ring-1 ring-inset ring-gray-900/10"></div>
       </div>
       <div >
         <div class="flex items-center gap-4 text-xs">
@@ -26,13 +24,18 @@
 
         </div>
         <div class="relative max-w-xl">
-          <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 brn">
+          <h3 class="mt-3 text-xl font-semibold leading-6 text-gray-900 brn">
             <a href="{{ post.url | url }}" >
             <span class="inset-0 absolute"></span>
             {% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}
             </a>
           </h3>
-          <p class="inset-0 text-sm leading-6 axs text-gray-600">
+          <p class="inset-0 text-lg leading-6 axs text-gray-600 pt-2">
+            {# 1: {{ "test/"+post.url+"cover.png" }}<br/>
+            2: {{ "blog/"+post.fileSlug+"/cover.png"  }}<br/>
+            3: {{ post.filePathStem+"/cover.png" }}<br/>
+            4: {{ post.inputPath+"/cover.png" }}<br/>
+            5: {{ post.outputPath+"/cover.png" }}<br/> #}
             {% if post.data.description %}
                 {{ post.data.description }}
             {% else %}
