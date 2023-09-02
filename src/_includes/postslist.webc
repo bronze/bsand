@@ -1,11 +1,15 @@
+{# image on post list: #}
 {# https://github.com/11ty/eleventy/issues/2428 #}
 {# https://github.com/maxboeck/eleventy-plugin-page-assets #}
 {# https://www.sanity.io/guides/how-to-add-promotional-images-to-the-11ty-blog-starter #}
+{# cards: #}
+{# https://inclusive-components.design/cards/#theredundantclickevent #}
+{# https://css-tricks.com/block-links-the-search-for-a-perfect-solution/#method-4-sprinkle-javascript-on-the-second-method #}
 <div class="container max-w-screen-lg mx-auto">
-  <h1 class="text-5xl roboto">Posts</h1>
+  <h2 class="text-5xl roboto">Posts</h2>
   <div class="flex flex-col space-y-8 mt-8 px-8 lg:px-0">
   {% for post in postslist | reverse %}
-    <article class="bg-gray-200 p-8 drop-shadow-md relative isolate flex flex-col gap-8 lg:flex-row postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+    <article class="card rounded-lg bg-gray-200 p-8 drop-shadow hover:drop-shadow-lg relative isolate flex flex-col gap-8 lg:flex-row postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
       <div class="relative aspect-[2/1] lg:h-36 lg:shrink-0">
       {# {% set imgsrc %}{{ post.url | url }}cover.png{% endset %}
       {{ imgsrc }}
@@ -26,7 +30,7 @@
         <div class="relative max-w-xl">
           <h3 class="mt-3 text-xl font-semibold leading-6 text-gray-900 brn">
             <a href="{{ post.url | url }}" >
-            <span class="inset-0 absolute"></span>
+            {# <span class="inset-0 absolute"></span> #}
             {% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}
             </a>
           </h3>
@@ -62,3 +66,54 @@
   {% endfor %}
   </div>
 </div>
+<style>
+{# .card {
+	cursor: pointer;
+} #}
+.card a:focus {
+  text-decoration: underline;
+}
+
+.card:focus-within {
+  box-shadow: 0 0 0 0.20rem;
+}
+
+.card:focus-within a:focus {
+  text-decoration: none;
+}
+</style>
+<script>
+const cards = document.querySelectorAll('.card');
+Array.prototype.forEach.call(cards, card => {
+    let down, up, link = card.querySelector('h3 a');
+    card.style.cursor = 'pointer';
+    card.onmousedown = () => down = +new Date();
+    card.onmouseup = () => {
+        up = +new Date();
+        if ((up - down) < 200) {
+            link.click();
+        }
+    }
+});
+
+
+{# const card = document.querySelector(".card");
+const mainLink = card.querySelector("h3 a");
+const clickableElements = Array.from(card.querySelectorAll("a")); //we are using 'a' here for simplicity but ideally you should put a class like 'clickable' on every clicable element inside card(a, button) and use that in query selector
+
+clickableElements.forEach((ele) =>
+  ele.addEventListener("click", (e) => e.stopPropagation())
+);
+
+function handleClick(event) {
+  const noTextSelected = !window.getSelection().toString();
+  this.style.cursor = 'pointer';
+  if (noTextSelected) {
+    mainLink.click();
+  }
+}
+
+card.addEventListener("click", handleClick); #}
+
+
+</script>
