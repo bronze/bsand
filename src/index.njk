@@ -39,7 +39,7 @@ permalink: /
       <div class="rounded shadow-lg color-background border-solid border-t-2 border-primary">
         <div class="px-6 py-4">
           <div class="font-bold text-xl mb-2">Latest Video</div>
-          {% image "BS_YT_Weekly-Update_08-01-23_V1.png", "Test", [300, 600, 800], "(max-width: 500px) 300px, 600px, 800px", "aspect-[1.78]" %}
+          {% image "BS_YT_Weekly-Update_08-01-23_V1.png", "Test", [300, 600, 800], "(min-width: 66em) 33vw, (min-width: 44em) 50vw, 100vw", "aspect-[1.78]" %}
         </div>
       </div>
 
@@ -92,7 +92,7 @@ permalink: /
     </div>
   </div>
 </div>
-
+<the-fold></the-fold>
 {% set postslist = collections.posts %} {% include "postslist.webc" %}
 
 <div class="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32 mt-16">
