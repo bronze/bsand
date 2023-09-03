@@ -1,6 +1,6 @@
 [build]
   publish = "dist"
-  command = "pnpm build || ( npm install pnpm && pnpm build )"
+  command = "pnpm run prod || ( npm install pnpm && pnpm run prod )"
 
 [context.production]
   environment = { NODE_VERSION = "16.13.2", RUBY_VERSION = "2.7.1" }
@@ -13,8 +13,8 @@
 
 [dev]
   autoLaunch = false
-  command = "pnpm run dev"
-  publish = "build"
+  command = "pnpm run build"
+  publish = "dist"
   port = 5173
   targetPort = 8080
   framework = "#custom"

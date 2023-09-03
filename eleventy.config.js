@@ -44,11 +44,11 @@ module.exports=function (eleventyConfig) {
           //   entryFileNames: 'assets/js/[name].[hash].js'
           // },
           plugins: [rollupPluginCritical({
-            criticalUrl: './dist/',
+            criticalUrl: './',
             criticalBase: './dist/',
             criticalPages: [
               {uri: 'index.html', template: 'index'},
-              {uri: 'posts/index.html', template: 'posts/index'},
+              {uri: 'blog/index.html', template: 'blog/index'},
               {uri: '404.html', template: '404'},
             ],
             criticalConfig: {
