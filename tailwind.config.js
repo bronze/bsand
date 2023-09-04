@@ -13,7 +13,13 @@ module.exports={
         primary: "rgb(var(--color-primary) / <alpha-value>)",
         accent: "rgb(var(--color-accent) / <alpha-value>)",
         muted: "rgb(var(--color-muted) / <alpha-value>)",
-        background: "rgb(var(--color-background) / <alpha-value>)",
+        background: {
+          DEFAULT: "rgb(var(--color-background-default) / <alpha-value>)",
+          muted: "rgb(var(--color-background-muted) / <alpha-value>)",
+          accent: "rgb(var(--color-background-accent) / <alpha-value>)",
+          light: "rgb(var(--color-background-light) / <alpha-value>)",
+          dark: "rgb(var(--color-background-dark) / <alpha-value>)",
+        },
         text: {
           light: "rgb(var(--color-text-light) / <alpha-value>)",
           DEFAULT: "rgb(var(--color-text-default) / <alpha-value>)",

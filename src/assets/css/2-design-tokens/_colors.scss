@@ -8,9 +8,13 @@
 @layer base {
   :root {
     --color-primary: 128 0 29;
-    --color-accent: 229 233 240;
+    --color-accent: 128 0 29;
     --color-muted: 236 239 244; // nord 6
-    --color-background: 216 222 233; // nord 4
+    --color-background-default: 216 222 233; // nord 4
+    --color-background-light: 245 246 250; // nord 4
+    --color-background-dark: 216 222 233; // nord 4
+    --color-background-muted: 216 222 233; // nord 4
+    --color-background-accent: 216 222 233; // nord 4
     --color-text-default: 76 86 106;
     --color-text-light: 107 114 128;
     --color-text-dark: 46 52 64;
@@ -22,9 +26,13 @@
 
   :root[class~='dark'] {
     --color-primary: 94 129 172;
-    --color-accent: 67 76 94;
+    --color-accent: 94 129 172;
     --color-muted: 46 52 64;
-    --color-background: 17 24 39;
+    --color-background-default: 46 52 64;
+    --color-background-light: 59 66 82; // nord 4
+    --color-background-dark: 36 41 51; // nord 4
+    --color-background-muted: 36 41 51; // nord 4
+    --color-background-accent: 36 41 51; // nord 4
     --color-text-default: 236 239 244;
     --color-text-light: 236 239 244;
     --color-text-dark: 236 239 244;

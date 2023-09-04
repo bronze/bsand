@@ -8,9 +8,9 @@
     //   var(--backgroundAccentColor),
     //   var(--primaryColor) 1%
     // );
-    @apply bg-accent;
+    // @apply bg-background-dark;
     & #search-content {
-      @apply bg-accent;
+      // @apply bg-background-dark;
     }
     position: sticky;
     top: 0;
