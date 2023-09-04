@@ -35,6 +35,8 @@ document.addEventListener('alpine:init', () => {
 
     // Toggle function
     toggleTheme() {
+      // https://stackoverflow.com/questions/62913465/how-to-stop-the-window-scrolling-to-the-top-of-the-page-on-my-navbar-toggle
+      event.preventDefault();
       if (window.localStorage.theme!='dark') {
         document.documentElement.classList.add('dark')
         localStorage.theme='dark'

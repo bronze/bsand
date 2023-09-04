@@ -3,6 +3,7 @@
     "anteprimorac.html-end-tag-labels",
     "dwkns.webc",
     "ronnidc.nunjucks",
-    "okitavera.vscode-nunjucks-formatter"
+    "okitavera.vscode-nunjucks-formatter",
+    "vdanchenkov.tailwind-class-sorter"
   ]
 }

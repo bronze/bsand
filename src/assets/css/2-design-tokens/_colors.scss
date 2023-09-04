@@ -4,49 +4,80 @@
 
 // rgb(245, 245, 241);  netflix
 
-:root {
-  --textColor: #3b4252;
-  --primaryColor: #7f1d1d;
-  --focusColor: #7231ff;
-  --accentColor: #7231ff;
-  --backgroundColor: oklch(0.97 0.01 262); //#f2f4f8;
-  --backgroundMutedColor: oklch(0.95 0.01 262); //#eceff4;
-  --backgroundAccentColor: oklch(0.85 0.01 262); //#e5e9f0;
+// https://tailwindcss.com/docs/customizing-colors#using-css-variables
+@layer base {
+  :root {
+    --color-primary: 128 0 29;
+    --color-accent: 229 233 240;
+    --color-muted: 236 239 244; // nord 6
+    --color-background: 216 222 233; // nord 4
+    --color-text-default: 76 86 106;
+    --color-text-light: 107 114 128;
+    --color-text-dark: 46 52 64;
+    --color-success: 0 200 81;
+    --color-info: 51 181 229;
+    --color-warn: 255 187 51;
+    --color-error: 254 78 78;
+  }
+
+  :root[class~='dark'] {
+    --color-primary: 94 129 172;
+    --color-accent: 67 76 94;
+    --color-muted: 46 52 64;
+    --color-background: 17 24 39;
+    --color-text-default: 236 239 244;
+    --color-text-light: 236 239 244;
+    --color-text-dark: 236 239 244;
+    --color-success: 0 200 81;
+    --color-info: 51 181 229;
+    --color-warn: 255 187 51;
+    --color-error: 254 78 78;
+  }
 }
 
-:root.dark {
-  color-scheme: dark;
-  --textColor: #e5e9f0;
-  --primaryColor: #5e81ac;
-  --accentColor: #5e81ac;
-  --backgroundColor: oklch(0.38 0.03 266); // #3b4252;
-  --backgroundMutedColor: oklch(0.34 0.02 264); //#2e3440;
-  --backgroundAccentColor: oklch(0.5 0.03 264); //#434c5e;
-}
-.color-text {
-  color: var(--textColor);
-}
-.color-text--primary {
-  color: var(--primaryColor);
-}
-.color-text--accent {
-  color: var(--accentColor);
-}
-.color-background {
-  background-color: var(--backgroundColor);
-}
-.color-background--muted {
-  background-color: var(--backgroundMutedColor);
-}
-.color-background--accent {
-  background-color: var(--backgroundAccentColor);
-}
-.color-primary {
-  color: var(--primaryColor);
-}
-.border-primary {
-  border-color: var(--primaryColor);
-}
+// :root {
+//   --textColor: #3b4252;
+//   --primaryColor: #7f1d1d;
+//   --focusColor: #7231ff;
+//   --accentColor: #7231ff;
+//   --backgroundColor: oklch(0.97 0.01 262); //#f2f4f8;
+//   --backgroundMutedColor: oklch(0.95 0.01 262); //#eceff4;
+//   --backgroundAccentColor: oklch(0.85 0.01 262); //#e5e9f0;
+// }
+
+// :root.dark {
+//   color-scheme: dark;
+//   --textColor: #e5e9f0;
+//   --primaryColor: #5e81ac;
+//   --accentColor: #5e81ac;
+//   --backgroundColor: oklch(0.38 0.03 266); // #3b4252;
+//   --backgroundMutedColor: oklch(0.34 0.02 264); //#2e3440;
+//   --backgroundAccentColor: oklch(0.5 0.03 264); //#434c5e;
+// }
+// .color-text {
+//   color: var(--textColor);
+// }
+// .color-text--primary {
+//   color: var(--primaryColor);
+// }
+// .color-text--accent {
+//   color: var(--accentColor);
+// }
+// .color-background {
+//   background-color: var(--backgroundColor);
+// }
+// .color-background--muted {
+//   background-color: var(--backgroundMutedColor);
+// }
+// .color-background--accent {
+//   background-color: var(--backgroundAccentColor);
+// }
+// .color-primary {
+//   color: var(--primaryColor);
+// }
+// .border-primary {
+//   border-color: var(--primaryColor);
+// }
 // // Very basic support for a dark color scheme
 // @media (prefers-color-scheme: dark) {
 //   :root {

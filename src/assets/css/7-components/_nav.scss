@@ -1,5 +1,5 @@
 .header-nav {
-  background-color: var(--backgroundMutedColor);
+  @apply bg-muted;
 
   &.pinned {
     // https://lea.verou.me/blog/2020/04/lch-colors-in-css-what-why-and-how/
@@ -8,15 +8,15 @@
     //   var(--backgroundAccentColor),
     //   var(--primaryColor) 1%
     // );
-    background-color: var(--backgroundAccentColor);
+    @apply bg-accent;
     & #search-content {
-      background-color: var(--backgroundAccentColor);
+      @apply bg-accent;
     }
     position: sticky;
     top: 0;
   }
   & #search-content {
-    background-color: var(--backgroundMutedColor);
+    @apply bg-muted;
   }
 }
 
@@ -34,7 +34,7 @@ nav {
   #menu {
     a {
       &:hover {
-        @apply color-text--primary;
+        @apply text-primary;
       }
     }
   }

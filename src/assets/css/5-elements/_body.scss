@@ -1,6 +1,5 @@
 body {
-  color: var(--textColor);
-  background-color: var(--backgroundMutedColor);
+  @apply bg-muted text-text;
   padding-right: var(--scrollbarComp);
   overflow-x: hidden;
 }
