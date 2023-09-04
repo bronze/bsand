@@ -1,5 +1,5 @@
 .header-nav {
-  @apply bg-muted;
+  // @apply bg-muted;
 
   &.pinned {
     // https://lea.verou.me/blog/2020/04/lch-colors-in-css-what-why-and-how/
@@ -16,7 +16,7 @@
     top: 0;
   }
   & #search-content {
-    @apply bg-muted;
+    // @apply bg-muted;
   }
 }
 

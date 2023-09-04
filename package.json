@@ -68,8 +68,8 @@
   },
   "dependencies": {
     "@alpinejs/persist": "^3.13.0",
+    "@fontsource-variable/inter": "^5.0.8",
     "@fontsource-variable/roboto-slab": "^5.0.8",
-    "@fontsource/roboto": "^5.0.8",
     "alpinejs": "^3.13.0"
   }
 }

@@ -4,10 +4,10 @@ dependencies:
   '@alpinejs/persist':
     specifier: ^3.13.0
     version: 3.13.0
-  '@fontsource-variable/roboto-slab':
+  '@fontsource-variable/inter':
     specifier: ^5.0.8
     version: 5.0.8
-  '@fontsource/roboto':
+  '@fontsource-variable/roboto-slab':
     specifier: ^5.0.8
     version: 5.0.8
   alpinejs:
@@ -657,12 +657,12 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@fontsource-variable/roboto-slab@5.0.8:
-    resolution: {integrity: sha512-73p7cfchaJV+HWl50G/XLQlaXutYHkEzbBSxylrRcp3955Jf4revqzdQuoZtaBjPuZU5LPnpK+cIfyX/8wRfBg==}
+  /@fontsource-variable/inter@5.0.8:
+    resolution: {integrity: sha512-WkYfFNccmEIeL2fNg0mYeLWqOoB7xD8MFxFRc4IwbSP2o8ZaBt36v5aW4by4MyrgGRMNk7uNi5LbvYKq6clPjw==}
     dev: false
 
-  /@fontsource/roboto@5.0.8:
-    resolution: {integrity: sha512-XxPltXs5R31D6UZeLIV1td3wTXU3jzd3f2DLsXI8tytMGBkIsGcc9sIyiupRtA8y73HAhuSCeweOoBqf6DbWCA==}
+  /@fontsource-variable/roboto-slab@5.0.8:
+    resolution: {integrity: sha512-73p7cfchaJV+HWl50G/XLQlaXutYHkEzbBSxylrRcp3955Jf4revqzdQuoZtaBjPuZU5LPnpK+cIfyX/8wRfBg==}
     dev: false
 
   /@hapi/hoek@9.3.0:

@@ -6,7 +6,7 @@ import 'focus-visible'
 // Internal Modules
 import './modules/nav'
 import './modules/alpine'
-import '@fontsource/roboto';
+import '@fontsource-variable/inter';
 import '@fontsource-variable/roboto-slab';
 
 // On page load or when changing themes, best to add inline in `head` to avoid FOUC
