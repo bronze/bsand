@@ -1,15 +1,17 @@
+{# https://alpinetoolbox.com/examples/navbar #}
+{# https://stackblitz.com/edit/alpine-js-scroll-detection-with-sticky-nav?file=index.html #}
+{# https://laracasts.com/discuss/channels/guides/multiple-issues-with-building-a-responsive-sticky-navbar-using-tailwind-and-alpinejs #}
+{# https://www.youtube.com/watch?v=vafc43cIUz8 #}
 <a id="primary_nav"></a>
-<header class="header-nav py-4 lg:py-0 lg:h-[125px] bg-muted lg:bg-transparent relative transition-all duration-300 ease-in-out top-0 left-0 z-30 w-full font-lg text-text font-nav uppercase "
-  x-data="scrollToReveal()"
-  @scroll.window="scroll()"
-  x-bind:class="{
-     'pinned': sticky,
-     '': !sticky
-  }">
-  <nav id="navbar"  role="navigation" aria-label="Main"
-    class=" lg:h-[100px] w-full flex place-items-center bg-muted lg:py-0 lg:relative z-20 px-1 sm:px-2 md:px-0">
-    <div x-data="{show: false}" class="container inline-flex flex-wrap justify-between w-full h-full mx-auto text-xl place-items-center max-w-7xl md:text-2xl xl:text-4xl">
-      <div class="relative inline-flex items-center flex-shrink h-full pl-2 lg:pl-0 ">
+<header class="fixed header-nav py-4 lg:py-0 lg:h-[125px] bg-muted lg:bg-transparent transition-all duration-300 ease-in-out top-0 left-0 z-30 w-full font-lg text-text font-nav uppercase"
+x-data="{navOpen: false, scrolledFromTop: false}"
+x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+@scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+>
+  <nav id="navbar"  role="navigation" aria-label="Main" :class="{'lg:h-[100px]': !scrolledFromTop, 'lg:h-[80px]': scrolledFromTop}"
+    class="z-20 flex w-full px-1 transition-all place-items-center bg-muted lg:py-0 lg:relative sm:px-2 md:px-0 lg:shadow">
+    <div class="container inline-flex flex-wrap justify-between w-full h-full mx-auto text-xl place-items-center max-w-7xl md:text-2xl xl:text-4xl" @click.away="navOpen = false" >
+      <div class="relative inline-flex items-center flex-shrink h-full pl-2 xl:pl-0 ">
         <div class="flag lg:h-[125px] lg:w-[55px] -top-1 lg:top-[12px] relative ">
           <svg class="w-8 h-8 right-full lg:w-12 lg:h-12 xl:w-16 xl:h-16" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 271 505">
             <path d="M267.308 295.192c3.231-15.846 4.077-37.308 2-50.693-3.154-19.615-11.385-36.153-23.615-47.615-3.231-3-6.154-5.461-6.539-5.461-.384 0 .154 1.692 1.231 3.846 4.308 8.461 6.538 17.154 6.538 25.154 0 2.23-.153 4.076-.23 4.076-.154 0-3-2.615-6.385-5.846l-6.077-5.769-.385 6c-.615 8.385-1.076 8.846-4.769 4.769-14.461-16.154-31.692-43.923-58.308-94.154-2.23-4.23-7-13.076-10.615-19.615-3.615-6.538-7.077-13.846-7.615-16.154-.616-2.307-1.231-9.923-1.462-16.923l-.384-12.692-6.308-6.385c-12.616-12.846-33.154-30-35.077-29.231-.308.077 1.615 3.539 4.308 7.539 9.077 13.538 18 29 20 34.692 1.538 4.308 2.077 7.693 2.384 14 .154 4.616.077 8.616-.307 9-.924.923-11.616-8.231-16.616-14-9.308-10.923-17.384-25.461-22.154-40l-2.461-7.538-8.616-5.693C70.769 16.422 43.231 1.961 35.769.192c-2.153-.539-2.076-.231 2.539 4.769 21.461 23.692 34.461 42.154 44.385 63 5.307 11.077 7.23 16.308 9.538 25.385 1.692 6.769 3.308 18 2.615 19.077-.23.307-1.153.076-2.153-.539s-8.77-5.231-17.385-10.154c-15.231-8.769-22.077-12.307-22.692-11.692-.154.154 2.538 3.615 5.923 7.615 3.461 4 8.077 9.693 10.384 12.77 7 9.307 12.462 20.846 10.462 22.076-.769.462-7.539-1.769-17.385-5.692-3.231-1.231-6.154-2.308-6.384-2.308-1.077 0 9.615 10.308 17.077 16.539 8.076 6.692 24.769 18.846 25.846 18.846 1.307 0 2.077 3 2.923 11.154 1.615 15.769 5.307 29.923 10.923 41.769 2.538 5.308 3.308 6.308 4.846 6.308 4.231 0 19.846 3.154 26.615 5.384 15.077 5 31.77 14.077 47.154 25.616 11.231 8.461 28.539 25.308 35.154 34.384 2.616 3.616 4.846 6.616 5 6.77.077.154 2.385-3.231 5.077-7.462 2.692-4.308 5.154-7.769 5.385-7.769 1.077 0 13.846 12.692 18.769 18.692 2.923 3.616 5.461 6.462 5.538 6.385.154-.077.77-2.769 1.385-5.923Zm-96.923-105c-10.154-2.308-9.923-2.231-13.385-8-1.769-2.923-5.769-8.693-9-12.769-3.154-4.077-5.615-7.616-5.384-7.847.538-.538 9.538 5.462 15.538 10.308 7.462 6.077 20.231 18.231 19.846 18.923-.538.846-2.077.692-7.615-.615Z" class="head"/>
@@ -24,31 +26,36 @@
         <a href="/" class="logo">Brandon <span>S</span>ander<span>s</span>on</a>
       </div>
       <div class="flex pr-4 ">
-         <button class="flex justify-between px-2 py-4" @click="show = ! show">
+         <button class="flex justify-between px-2 py-4 lg:hidden" @click="navOpen = !navOpen" :class="{ 'transition transform-180': navOpen }">
           <svg
+            class="w-6 h-6 fill-current"
             xmlns="http://www.w3.org/2000/svg"
-            id="menu-button"
-            class="block w-6 h-6 cursor-pointer lg:hidden"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16" />
+            viewBox="0 0 24 24">
+              <path
+                x-show="navOpen"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+              />
+              <path
+                x-show="!navOpen"
+                fill-rule="evenodd"
+                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+              />
           </svg>
         </button>
       </div>
-      <div  x-show="show" class="w-full bg-muted lg:flex lg:items-center lg:w-auto" id="menu">
+      <div class="w-full lg:visible bg-muted lg:flex lg:items-center lg:w-auto" id="menu"
+                :class="{ 'block shadow-3xl': navOpen, 'hidden': !navOpen }"
+        x-show.transition="true">
         <!-- {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }} -->
         {% set navPages = collections.all | eleventyNavigation %}
         <ul class="pt-4 text-base lg:flex lg:justify-between lg:pt-0">
-        {%- for entry in navPages %}
-          <li {% if entry.url == page.url %} class="active"{% endif %}>
-            <a class="block py-2 pl-4 lg:p-4"  href="{{ entry.url }}">{{ entry.title }}</a>
-          </li>
-        {%- endfor %}
+          {%- for entry in navPages %}
+            <li {% if entry.url == page.url %} class="active"{% endif %}>
+              <a class="block py-2 pl-4 lg:p-4"  href="{{ entry.url }}">{{ entry.title }}</a>
+            </li>
+          {%- endfor %}
           <li class="flex items-center hidden block py-2 lg:block lg:p-4">
             <a
               title="Dark Mode Toggle"
@@ -76,30 +83,12 @@
     </div>
   </div>
 </header>
-
+<div class="mt-28"></div>
 
 <script>
-{# // Mobile hamburger menu
-const button = document.querySelector('#menu-button')
-const menu = document.querySelector('#menu')
-
-button.addEventListener('click', () => {
-  event.preventDefault();
-  menu.classList.toggle('hidden')
-}) #}
 
 // Stolen from https://codepen.io/jwssnr/pen/MWVRzap
 // Which is a downstripped version of https://codepen.io/skttl/pen/oNXLObp
-function scrollToReveal() {
-  return {
-    sticky: false,
-    lastPos: window.scrollY,
-    scroll() {
-      this.sticky = window.scrollY > 0 && this.lastPos > window.scrollY;
-      this.lastPos = window.scrollY;
-    }
-  }
-}
 
   /*Toggle dropdown list*/
   /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
