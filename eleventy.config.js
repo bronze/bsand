@@ -13,7 +13,8 @@ const transforms=require('./utils/transforms.js')
 const shortcodes=require('./utils/shortcodes.js')
 
 const pluginImages=require("./eleventy.config.images.js")
-const pluginWebc=require("@11ty/eleventy-plugin-webc");
+const pluginWebc=require('@11ty/eleventy-plugin-webc');
+const {EleventyRenderPlugin}=require("@11ty/eleventy");
 
 const {resolve}=require('path')
 
@@ -23,7 +24,18 @@ module.exports=function (eleventyConfig) {
 
   // Plugins
   eleventyConfig.addPlugin(pluginImages)
-  eleventyConfig.addPlugin(pluginWebc)
+  eleventyConfig.addPlugin(pluginWebc, {
+    // Glob to find no-import global components
+    // This path is relative to the project-root!
+    // The default value is shown:
+    // components: "_components/**/*.webc",
+
+    // or an Array (Eleventy WebC v0.9.2+)
+    components: [
+      "src/_includes/**/*.webc",
+    ]
+  })
+  eleventyConfig.addPlugin(EleventyRenderPlugin)
   eleventyConfig.addPlugin(EleventyPluginNavigation)
   eleventyConfig.addPlugin(EleventyPluginRss)
   eleventyConfig.addPlugin(EleventyPluginSyntaxhighlight)
