@@ -31,7 +31,8 @@ document.addEventListener('alpine:init', () => {
     dark:
       localStorage.theme==='dark'||
       (!('theme' in localStorage)&&
-        window.matchMedia('(prefers-color-scheme: dark)').matches),
+        window.matchMedia('(prefers-color-scheme: dark)').matches)||
+      document.documentElement.getAttribute('data-theme')==='dark',
 
     // Toggle function
     toggleTheme() {
@@ -39,11 +40,12 @@ document.addEventListener('alpine:init', () => {
       event.preventDefault();
       if (window.localStorage.theme!='dark') {
         document.documentElement.classList.add('dark')
+        document.documentElement.setAttribute('data-theme', 'dark')
         localStorage.theme='dark'
       } else {
         document.documentElement.classList.remove('dark')
-        document.body.style.backgroundColor=''
-        window.localStorage.theme=null
+        document.documentElement.setAttribute('data-theme', 'light')
+        window.localStorage.theme='light'
       }
       this.dark=!this.dark
       console.log('storage: '+window.localStorage.theme+' | dark: '+this.dark);

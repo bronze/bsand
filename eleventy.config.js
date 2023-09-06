@@ -59,9 +59,11 @@ module.exports=function (eleventyConfig) {
             criticalUrl: './',
             criticalBase: './dist/',
             criticalPages: [
-              {uri: 'index.html', template: 'index'},
+              {uri: '', template: 'index'},
               {uri: 'blog/index.html', template: 'blog/index'},
               {uri: '404.html', template: '404'},
+              {uri: 'about.html', template: 'about'},
+              {uri: 'contact.html', template: 'contact'},
             ],
             criticalConfig: {
               inline: true,
@@ -80,7 +82,7 @@ module.exports=function (eleventyConfig) {
                 }
               ],
               penthouse: {
-                forceInclude: ['.fonts-loaded-1 body', '.fonts-loaded-2 body'],
+                forceInclude: ['.fonts-loaded-1 body', '.fonts-loaded-2 body', /^\:root.*/],
               }
             }
           })

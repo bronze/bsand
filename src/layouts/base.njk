@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html lang="{{ meta.lang }}">
+<html lang="{{ meta.lang }}" x-data="darkmode">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ meta.title }}</title>
-
+  <script>// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+  try {
+    if (
+      localStorage.theme==='dark'||
+      (!('theme' in localStorage)&&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)||
+      document.documentElement.getAttribute('data-theme')==='dark'
+    ) {
+      document.documentElement.classList.add('dark')
+      document.documentElement.setAttribute('data-theme', 'dark')
+      localStorage.theme='dark'
+    } else {
+      document.documentElement.classList.remove('dark')
+      document.documentElement.setAttribute('data-theme', 'light')
+    }
+  } catch (_) {}
+  </script>
   <link rel="preload" href="/assets/fonts/storysonear/Fontspring-DEMO-ccthestorysonear-regular.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="/assets/fonts/storyends/Fontspring-DEMO-ccthestoryends-regular.woff2" as="font" type="font/woff2" crossorigin="">
 
@@ -17,7 +33,7 @@
     if( "fonts" in document ) {
       // Optimization for Repeat Views
       if( sessionStorage.fontsLoadedCriticalFoftPreload ) {
-        document.documentElement.className += "fonts-loaded-2";
+        document.documentElement.className += " fonts-loaded-2";
         return;
       }
       document.fonts.load("1em 'Inter Variable'").then(function () {
@@ -42,7 +58,7 @@
 
   <link rel="stylesheet" href="/assets/css/main.scss">
 </head>
-<body x-data="darkmode">
+<body >
   <nav aria-label="Skip Links">
     <ul class="off-screen">
       <li>

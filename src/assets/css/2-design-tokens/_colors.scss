@@ -6,25 +6,7 @@
 
 // https://tailwindcss.com/docs/customizing-colors#using-css-variables
 @layer base {
-  :root {
-    --color-primary: 128 0 29;
-    --color-accent: 128 0 29;
-    --color-muted: 236 239 244; // nord 6
-    --color-background-default: 216 222 233; // nord 4
-    --color-background-light: 245 246 250; // nord 4
-    --color-background-dark: 216 222 233; // nord 4
-    --color-background-muted: 216 222 233; // nord 4
-    --color-background-accent: 216 222 233; // nord 4
-    --color-text-default: 76 86 106;
-    --color-text-light: 107 114 128;
-    --color-text-dark: 46 52 64;
-    --color-success: 0 200 81;
-    --color-info: 51 181 229;
-    --color-warn: 255 187 51;
-    --color-error: 254 78 78;
-  }
-
-  :root[class~='dark'] {
+  :root[data-theme~='dark'] {
     --color-primary: 94 129 172;
     --color-accent: 94 129 172;
     --color-muted: 46 52 64;
@@ -36,6 +18,23 @@
     --color-text-default: 236 239 244;
     --color-text-light: 236 239 244;
     --color-text-dark: 236 239 244;
+    --color-success: 0 200 81;
+    --color-info: 51 181 229;
+    --color-warn: 255 187 51;
+    --color-error: 254 78 78;
+  }
+  :root[data-theme~='light'] {
+    --color-primary: 128 0 29;
+    --color-accent: 128 0 29;
+    --color-muted: 236 239 244; // nord 6
+    --color-background-default: 216 222 233; // nord 4
+    --color-background-light: 245 246 250; // nord 4
+    --color-background-dark: 216 222 233; // nord 4
+    --color-background-muted: 216 222 233; // nord 4
+    --color-background-accent: 216 222 233; // nord 4
+    --color-text-default: 76 86 106;
+    --color-text-light: 107 114 128;
+    --color-text-dark: 46 52 64;
     --color-success: 0 200 81;
     --color-info: 51 181 229;
     --color-warn: 255 187 51;
