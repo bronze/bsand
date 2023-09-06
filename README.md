@@ -1,6 +1,7 @@
 # To do:
 - Priority: Dark mode .class to data-theme
 - Check the size of the icon on favicons. Seem to be too small
+  - https://realfavicongenerator.net/favicon_compatibility
 - Full navigation/pages listed on Footer (no need for links, just showing the new architecture)
 - New Hero section. WTF do i do there?
 - Start porting over About and Books
