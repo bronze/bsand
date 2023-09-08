@@ -10,7 +10,7 @@ eleventyNavigation:
 <div class="container max-w-screen-xl mx-auto mt-48">
   <h1 class="text-sm font-bold uppercase inter lineheader-r center">Books</h1>
   <div class="flex flex-col px-8 mt-8 space-y-8 lg:px-0">
-    {% for post in postslist | reverse %}
+    {% for post in postslist  %}
       <article class="card text-text rounded-lg bg-background-light p-8 drop-shadow hover:drop-shadow-lg relative isolate flex flex-col gap-8 lg:flex-row postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
         <div class="relative aspect-[1.78] lg:h-36 lg:shrink-0">
 
