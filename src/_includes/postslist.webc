@@ -5,8 +5,8 @@
 {# cards: #}
 {# https://inclusive-components.design/cards/#theredundantclickevent #}
 {# https://css-tricks.com/block-links-the-search-for-a-perfect-solution/#method-4-sprinkle-javascript-on-the-second-method #}
-<div class="container max-w-screen-lg mx-auto">
-  <h2 class="text-3xl font-bold uppercase inter lineheader-r center">Blog Entries</h2>
+<div class="container max-w-screen-lg mx-auto mt-24">
+  <h2 class="text-sm font-bold uppercase inter lineheader-r center">Blog Entries</h2>
   <div class="flex flex-col px-8 mt-8 space-y-8 lg:px-0">
     {% for post in postslist | reverse %}
       <article class="card text-text rounded-lg bg-background-light p-8 drop-shadow hover:drop-shadow-lg relative isolate flex flex-col gap-8 lg:flex-row postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
@@ -77,10 +77,10 @@
     {% endfor %}
   </div>
 </div>
-<div class="container max-w-screen-xl mx-auto mt-8">
+<div class="container max-w-screen-xl mx-auto mt-24">
 
-  <div class="grid grid-cols-2 gap-4">
-    <div class="div"><h2 class="text-3xl font-bold uppercase inter lineheader center">Blog Entries</h2>
+  <div class="grid grid-cols-2 gap-8">
+    <div class="div"><h2 class="text-sm font-bold uppercase inter lineheader center">Blog Entries</h2>
       <div class="flex flex-col px-8 mt-8 space-y-8 lg:px-0">
         {% for post in postslist | reverse %}
           <article class="card text-text rounded-lg bg-background-light p-8 drop-shadow hover:drop-shadow-lg relative isolate flex flex-col gap-8 lg:flex-row postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
@@ -151,7 +151,7 @@
         {% endfor %}
       </div>
     </div>
-    <div class="div"><h2 class="text-3xl font-bold uppercase inter lineheader center">Blog Entries</h2>
+    <div class="div"><h2 class="text-sm font-bold uppercase inter lineheader center">Blog Entries</h2>
       <div class="flex flex-col px-8 mt-8 space-y-8 lg:px-0">
         {% for post in postslist | reverse %}
           <article class="card text-text rounded-lg bg-background-light p-8 drop-shadow hover:drop-shadow-lg relative isolate flex flex-col gap-8 lg:flex-row postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
@@ -228,8 +228,8 @@
 <style>
   .lines {
       content: " ";
-      border-top: 8px solid;
-      margin-top: -8px;
+      border-top: 6px solid;
+      margin-top: -6px;
       width: 100%;
       flex: 1;
       box-sizing: border-box;
