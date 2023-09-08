@@ -23,7 +23,7 @@ module.exports={
   },
 
   filterTagList(tags) {
-    return (tags||[]).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag)===-1);
+    return (tags||[]).filter(tag => ["all", "nav", "post", "posts", "book", "books"].indexOf(tag)===-1);
   },
   setExt: function (path, ext) {
     if (!ext) {
