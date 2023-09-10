@@ -1,9 +1,9 @@
 ---
-title: The Final Empire
+title: The Hero Of Ages
 permalink: '/books/mistborn/{{ title | slugify }}/'
 description:
-cover: assets/images/books/mistborn_e1_01_tfe_us_3rd_mmpb_cover.jpg
-bookorder: Mistborn Era 1 Book 1
+cover: assets/images/books/mistborn_e1_03_hoa_us_2019_cover.jpg
+bookorder: Mistborn Era 1 Book 3
 tags:
   - Book
   - Cosmere

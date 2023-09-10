@@ -3,6 +3,7 @@ title: Words of Radiance
 permalink: '/books/thestormlightarchives/{{ title | slugify }}/'
 description:
 cover: assets/images/books/tsa_02_words_of_radiance.jpg
+bookorder: Stormlight Archives Book 2
 tags:
   - Cosmere
   - The Stormlight Archive

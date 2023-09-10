@@ -1,4 +1,5 @@
 ---
+eleventyExcludeFromCollections: true
 title: Mistborn Index
 permalink: '/books/mistborn/'
 description:

@@ -59,7 +59,7 @@ module.exports=function (eleventyConfig) {
             criticalUrl: './',
             criticalBase: './dist/',
             criticalPages: [
-              {uri: '', template: 'index'},
+              {uri: 'index.html', template: 'index'},
               {uri: 'blog/index.html', template: 'blog/index'},
               {uri: '404.html', template: '404'},
               {uri: 'about/index.html', template: 'about'},
