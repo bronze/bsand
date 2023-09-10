@@ -3,7 +3,7 @@
 {# https://laracasts.com/discuss/channels/guides/multiple-issues-with-building-a-responsive-sticky-navbar-using-tailwind-and-alpinejs #}
 {# https://www.youtube.com/watch?v=vafc43cIUz8 #}
 <a id="primary_nav"></a>
-<header class="fixed header-nav py-4 lg:py-0 lg:h-[125px] bg-muted lg:bg-transparent  ease-in-out top-0 left-0 z-30 w-full font-lg text-text font-nav uppercase shadow lg:shadow-none"
+<header class="fixed header-nav py-4 lg:py-0 lg:h-[125px] bg-muted lg:bg-transparent  ease-in-out top-0 left-0 z-50 w-full font-lg text-text font-nav uppercase shadow lg:shadow-none"
 x-data="{navOpen: false, scrolledFromTop: false}"
 x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
 @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
