@@ -1,13 +1,12 @@
 ---
-title: Arcanum Unbounded
-permalink: '/books/whitesand/{{ title | slugify }}/'
+title: Firefight
+permalink: '/books/reckoners/{{ title | slugify }}/'
 description:
-cover: assets/images/books/cosmere_arcanum_unbounded.jpg
+cover: assets/images/books/reckoners_firefight.jpg
 bookorder:
 tags:
   - Book
-  - book_collections
-  - Cosmere
+  - book_reckoners
 ---
 
 ## INTRODUCTION

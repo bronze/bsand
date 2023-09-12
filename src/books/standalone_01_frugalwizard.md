@@ -1,13 +1,12 @@
 ---
-title: 'Secret Project #4'
-permalink: '/books/standalone/{{ title | slugify }}/'
+title: The Frugal Wizard’s Handbook for Surviving Medieval England
+permalink: '/books/standalones-non-cosmere/{{ title | slugify }}/'
 description:
-cover: assets/images/books/standalone_sp4-web.png
+cover: assets/images/books/standalone_frugal_wizard_us_dragonsteel_cover.jpg
 bookorder:
 tags:
   - Book
   - book_standalone
-  - Cosmere
 ---
 
 ## INTRODUCTION

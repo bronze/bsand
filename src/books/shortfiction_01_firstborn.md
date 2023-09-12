@@ -1,13 +1,12 @@
 ---
-title: Yumi and the Nightmare Painter
-permalink: '/books/standalone/{{ title | slugify }}/'
+title: First Born
+permalink: '/books/short-fiction-non-cosmere/{{ title | slugify }}/'
 description:
-cover: assets/images/books/standalone_yumi_us_cover.jpg
+cover: assets/images/books/sf_firstborn.jpg
 bookorder:
 tags:
   - Book
-  - book_standalone
-  - Cosmere
+  - book_shortfiction
 ---
 
 ## INTRODUCTION

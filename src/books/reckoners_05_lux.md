@@ -1,13 +1,12 @@
 ---
-title: Elantris
-permalink: '/books/standalone/{{ title | slugify }}/'
+title: Lux
+permalink: '/books/reckoners/{{ title | slugify }}/'
 description:
-cover: assets/images/books/standalone_elantris_thumb.jpg
+cover: assets/images/books/reckoners_lux_cover.jpg
 bookorder:
 tags:
   - Book
-  - book_standalone
-  - Cosmere
+  - book_reckoners
 ---
 
 ## INTRODUCTION

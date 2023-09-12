@@ -1,13 +1,13 @@
 ---
-title: Tress of the Emerald Sea
-permalink: '/books/standalone/{{ title | slugify }}/'
+title: Children of the Nameless
+permalink: false
+external: https://magic.wizards.com/en/story#children
 description:
-cover: assets/images/books/standalone_tress_us_cover.jpg
+cover: assets/images/books/mtg_children_of_the_nameless_cover.png
 bookorder:
 tags:
   - Book
-  - book_standalone
-  - Cosmere
+  - book_mtg
 ---
 
 ## INTRODUCTION

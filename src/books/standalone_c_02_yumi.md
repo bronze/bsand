@@ -1,12 +1,12 @@
 ---
-title: Warbreaker
+title: Yumi and the Nightmare Painter
 permalink: '/books/standalone/{{ title | slugify }}/'
 description:
-cover: assets/images/books/standalone_warbreaker_cover.jpg
+cover: assets/images/books/standalone_yumi_us_cover.jpg
 bookorder:
 tags:
   - Book
-  - book_standalone
+  - book_cosmerestandalone
   - Cosmere
 ---
 
