@@ -5,6 +5,8 @@ description:
 cover: assets/images/books/tsa_01_thewayofkings.png
 bookorder: Stormlight Archives Book 1
 tags:
+  - Book
+  - book_tsa
   - Cosmere
   - The Stormlight Archive
 ---

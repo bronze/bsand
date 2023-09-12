@@ -6,6 +6,7 @@ cover: assets/images/books/mistborn_e1_01_tfe_us_3rd_mmpb_cover.jpg
 bookorder: Mistborn Era 1 Book 1
 tags:
   - Book
+  - book_mistborn1
   - Cosmere
   - Mistborn
   - Mistborn Era 1

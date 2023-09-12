@@ -1,15 +1,15 @@
 ---
-title: The Hero Of Ages
+title: The Alloy Of Law
 permalink: '/books/mistborn/{{ title | slugify }}/'
 description:
-cover: assets/images/books/mistborn_e1_03_hoa_us_2019_cover.jpg
-bookorder: Mistborn Era 1 Book 3
+cover: assets/images/books/mistborn_e2_01_the_alloy_of_law_cover.jpg
+bookorder: Mistborn Era 2 Book 1
 tags:
   - Book
-  - book_mistborn1
+  - book_mistborn2
   - Cosmere
   - Mistborn
-  - Mistborn Era 1
+  - Mistborn Era 2
 ---
 
 ## INTRODUCTION
