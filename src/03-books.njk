@@ -13,17 +13,17 @@ eleventyNavigation:
 <div class="container max-w-screen-xl px-4 mx-auto mt-48 xl:px-0">
   <section id="Projects"
       class="grid justify-center grid-cols-2 mx-auto mt-10 mb-5 lg:grid-cols-4 xl:grid-cols-6 sm:grid-cols-3 justify-items-center gap-y-8 gap-x-8">
-    <div class="inline-flex w-full mt-8 col-span-full">
+    {# <div class="inline-flex w-full mt-8 col-span-full">
       <h2 class="w-full text-sm font-bold uppercase inter lineheader center">Cosmere®</h2>
-    </div>
-    <div class="inline-flex w-full col-span-full">
-      <h2 class="w-full text-sm font-bold uppercase inter lineheader-r center">The Stormlight Archive®</h2>
+    </div> #}
+    <div class="inline-flex w-full mt-8 col-span-full">
+      <h2 class="w-full text-sm font-bold uppercase inter lineheader-r center">Cosmere® - The Stormlight Archive®</h2>
     </div>
     {% set postslist = collections.book_tsa %}
     {% include "booklist.njk" %}
 
     <div class="inline-flex w-full mt-8 col-span-full">
-      <h2 class="w-full text-sm font-bold uppercase inter lineheader-r center">The Mistborn® Saga - The Original Trilogy</h2>
+      <h2 class="w-full text-sm font-bold uppercase inter lineheader-r center">Cosmere® - The Mistborn® Saga - The Original Trilogy</h2>
     </div>
     {% set postslist = collections.book_mistborn1 %}
     {% include "booklist.njk" %}
