@@ -1,0 +1,28 @@
+.lines {
+  content: ' ';
+  border-top: 6px solid;
+  margin-top: -6px;
+  width: 100%;
+  flex: 1;
+  box-sizing: border-box;
+  border-style: solid;
+  transform: translateY(50%);
+}
+.lineheader {
+  display: flex;
+  &-r {
+    display: flex;
+    &::after {
+      @apply lines;
+      margin-left: 1em;
+    }
+  }
+  &::before {
+    @apply lines;
+    margin-right: 1em;
+  }
+  &::after {
+    @apply lines;
+    margin-left: 1em;
+  }
+}

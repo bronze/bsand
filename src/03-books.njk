@@ -1,0 +1,153 @@
+---
+layout: base
+permalink: /books/
+eleventyNavigation:
+  key: Books
+  order: 3
+---
+{# https://tailwindflex.com/arya/responsive-products-grid #}
+{# https://codepen.io/codetimeio/pen/RYMEJe #}
+{# https://tailwind-cards.netlify.app/ #}
+
+<div class="container max-w-screen-xl px-4 mx-auto mt-48 xl:px-0">
+  <section id="Projects"
+      class="grid justify-center grid-cols-2 mx-auto mt-10 mb-5 lg:grid-cols-4 xl:grid-cols-6 sm:grid-cols-3 justify-items-center gap-y-4 gap-x-8">
+    {# <div class="inline-flex w-full col-span-full">
+      <h2 class="w-full text-sm font-bold uppercase inter lineheader center">Cosmere®</h2>
+    </div> #}
+    <!-- Stormlight Archive -->
+    <div class="inline-flex w-full col-span-full">
+      <h2 class="w-full text-sm font-bold uppercase inter lineheader-r center">Cosmere® - The Stormlight Archive®</h2>
+    </div>
+    {% set postslist = collections.book_tsa %}
+    {% include "booklist.njk" %}
+    <div class="mb-8 col-span-full"></div>
+
+
+    <div class="inline-flex w-full col-span-full">
+      <h2 class="w-full text-sm font-bold uppercase inter lineheader-r center">Cosmere® - The Mistborn® Saga - The Original Trilogy</h2>
+    </div>
+    {% set postslist = collections.book_mistborn1 %}
+    {% include "booklist.njk" %}
+    <div class="mb-8 col-span-full"></div>
+
+
+    <div class="inline-flex w-full col-span-full">
+      <h2 class="w-full text-sm font-bold uppercase inter lineheader-r center">The Mistborn® Saga - The Wax & Wayne Series</h2>
+    </div>
+    {% set postslist = collections.book_mistborn2 %}
+    {% include "booklist.njk" %}
+    <div class="mb-8 col-span-full"></div>
+
+
+    <div class="inline-flex w-full col-span-full">
+      <h2 class="w-full text-sm font-bold uppercase inter lineheader-r center">Standalones</h2>
+    </div>
+    {% set postslist = collections.book_cosmerestandalone %}
+    {% include "booklist.njk" %}
+    <div class="mb-8 col-span-full"></div>
+
+
+    <div class="inline-flex w-full col-span-full">
+      <h2 class="w-full text-sm font-bold uppercase inter lineheader-r center">Whitesand</h2>
+    </div>
+    {% set postslist = collections.book_whitesand %}
+    {% include "booklist.njk" %}
+    <div class="mb-8 col-span-full"></div>
+
+    <div class="inline-flex w-full col-span-full">
+      <h2 class="w-full text-sm font-bold uppercase inter lineheader-r center">Collections</h2>
+    </div>
+    {% set postslist = collections.book_cosmerecollections %}
+    {% include "booklist.njk" %}
+    <div class="mb-8 col-span-full"></div>
+
+    <div class="inline-flex w-full col-span-full">
+      <h2 class="w-full text-sm font-bold uppercase inter lineheader center">Cytoverse</h2>
+    </div>
+    <div class="inline-flex w-full col-span-full">
+      <h2 class="w-full text-sm font-bold uppercase inter lineheader-r center">Skyward</h2>
+    </div>
+    {% set postslist = collections.book_skyward %}
+    {% include "booklist.njk" %}
+    <div class="mb-8 col-span-full"></div>
+
+    <div class="inline-flex w-full col-span-full">
+      <h2 class="w-full text-sm font-bold uppercase inter lineheader-r center">Skyward Flight</h2>
+    </div>
+    {% set postslist = collections.book_skywardflight %}
+    {% include "booklist.njk" %}
+    <div class="mb-8 col-span-full"></div>
+
+    <div class="inline-flex w-full col-span-full">
+      <h2 class="w-full text-sm font-bold uppercase inter lineheader-r center">Defending Elysium</h2>
+    </div>
+    {% set postslist = collections.book_skywardseries %}
+    {% include "booklist.njk" %}
+    <div class="mb-8 col-span-full"></div>
+
+
+    <div class="inline-flex w-full col-span-full">
+      <h2 class="w-full text-sm font-bold uppercase inter lineheader center">Other Series</h2>
+    </div>
+    <div class="inline-flex w-full col-span-full">
+      <h2 class="w-full text-sm font-bold uppercase inter lineheader-r center">The Reckoners®</h2>
+    </div>
+    {% set postslist = collections.book_reckoners %}
+    {% include "booklist.njk" %}
+    <div class="mb-8 col-span-full"></div>
+
+    <div class="inline-flex w-full col-span-full">
+      <h2 class="w-full text-sm font-bold uppercase inter lineheader-r center">Alcatraz Vs The Evil Librarians</h2>
+    </div>
+    {% set postslist = collections.book_alcatraz %}
+    {% include "booklist.njk" %}
+    <div class="mb-8 col-span-full"></div>
+
+    <div class="inline-flex w-full col-span-full">
+      <h2 class="w-full text-sm font-bold uppercase inter lineheader-r center">Standalones</h2>
+    </div>
+    {% set postslist = collections.book_standalone %}
+    {% include "booklist.njk" %}
+    <div class="mb-8 col-span-full"></div>
+
+    <div class="inline-flex w-full col-span-full">
+      <h2 class="w-full text-sm font-bold uppercase inter lineheader-r center">Collections</h2>
+    </div>
+    {% set postslist = collections.book_collections %}
+    {% include "booklist.njk" %}
+    <div class="mb-8 col-span-full"></div>
+
+    <div class="inline-flex w-full col-span-full">
+      <h2 class="w-full text-sm font-bold uppercase inter lineheader-r center">Short Fiction</h2>
+    </div>
+    {% set postslist = collections.book_shortfiction %}
+    {% include "booklist.njk" %}
+    <div class="mb-8 col-span-full"></div>
+
+    <div class="inline-flex w-full col-span-full">
+      <h2 class="w-full text-sm font-bold uppercase inter lineheader-r center">The Wheel Of Time®</h2>
+    </div>
+    {% set postslist = collections.book_wot %}
+    {% include "booklist.njk" %}
+    <div class="mb-8 col-span-full"></div>
+
+    <div class="inline-flex w-full col-span-full">
+      <h2 class="w-full text-sm font-bold uppercase inter lineheader-r center">Infinity Blade</h2>
+    </div>
+    {% set postslist = collections.book_infinityblade %}
+    {% include "booklist.njk" %}
+    <div class="mb-8 col-span-full"></div>
+
+    <div class="inline-flex w-full col-span-full">
+      <h2 class="w-full text-sm font-bold uppercase inter lineheader-r center">Magic: The Gathering®</h2>
+    </div>
+    {% set postslist = collections.book_mtg %}
+    {% include "booklist.njk" %}
+    <div class="mb-8 col-span-full"></div>
+
+
+
+  </section>
+</div>
+<!-- 🛑 Grid Section - Ends Here -->

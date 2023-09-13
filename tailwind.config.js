@@ -1,11 +1,51 @@
+const defaultTheme=require('tailwindcss/defaultTheme');
+const colors=require('tailwindcss/colors')
+
 module.exports={
-  content: [
-    "./src/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug}",
-    "./src/_includes/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug}",
-    "./src/blog/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug}",
-    "./src/pages/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug}",
-    "./src/index.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug}",
-    "./src/**/*.svg",
-    "./dist/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug}"
-  ]
-}
+  content: ["./src/**/*.{html,md,11ty.js,liquid,njk,hbs,mustache,ejs,haml,pug,webc}"],
+  darkMode: ['class', '[data-theme="dark"]'],
+  theme: {
+    extend: {
+      // fontFamily: {
+      //   sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      // },
+      colors: {
+        primary: "rgb(var(--color-primary) / <alpha-value>)",
+        accent: "rgb(var(--color-accent) / <alpha-value>)",
+        muted: "rgb(var(--color-muted) / <alpha-value>)",
+        background: {
+          DEFAULT: "rgb(var(--color-background-default) / <alpha-value>)",
+          muted: "rgb(var(--color-background-muted) / <alpha-value>)",
+          accent: "rgb(var(--color-background-accent) / <alpha-value>)",
+          light: "rgb(var(--color-background-light) / <alpha-value>)",
+          dark: "rgb(var(--color-background-dark) / <alpha-value>)",
+        },
+        text: {
+          light: "rgb(var(--color-text-light) / <alpha-value>)",
+          DEFAULT: "rgb(var(--color-text-default) / <alpha-value>)",
+          dark: "rgb(var(--color-text-dark) / <alpha-value>)",
+        },
+        success: "rgb(var(--color-success) / <alpha-value>)",
+        info: "rgb(var(--color-info) / <alpha-value>)",
+        warn: "rgb(var(--color-warn) / <alpha-value>)",
+        error: "rgb(var(--color-error) / <alpha-value>)",
+        transparent: "transparent",
+        current: "currentColor",
+        'tahiti': {
+          light: '#67e8f9',
+          DEFAULT: '#06b6d4',
+          dark: '#0e7490',
+        },
+        // ...
+      },
+    },
+
+  },
+  variants: {},
+  plugins: [
+    // ...
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+  ],
+  // plugins: [require('@tailwindcss/typography')],
+};

@@ -1,50 +1,75 @@
 {
-  "name": "11ty-sass-skeleton",
-  "version": "3.0.1",
-  "description": "Featuring absolutely nothing beyond a base HTML5 template and the essential setup to watch and compile your Sass alongside 11ty.",
-  "main": "index.html",
+  "name": "eleventy-plus-vite",
+  "version": "0.2.2",
+  "description": "A clean and simple Eleventy 2 Starter Kit with Vite",
+  "browserslist": [
+    "> 0.5%",
+    "not IE 11"
+  ],
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
-    "start": "npm-run-all -p dev:*",
-    "dev": "npm-run-all -p dev:*",
-    "build": "run-s build:*",
-    "dev:11ty": "cross-env ELEVENTY_ENV=dev eleventy --serve",
-    "dev:css": "tailwindcss -i src/css/tailwind.css -o dist/css/tailwind.css --watch --postcss",
-    "build:11ty": "cross-env ELEVENTY_ENV=prod eleventy",
-    "build:css": "tailwindcss -i src/css/tailwind.css -o dist/css/tailwind.css --postcss --minify"
+    "start": "npx @11ty/eleventy --serve",
+    "watch": "npx @11ty/eleventy --watch",
+    "serve": "npx @11ty/eleventy --serve",
+    "dev": "npx @11ty/eleventy --serve",
+    "bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
+    "build": "npx @11ty/eleventy",
+    "prod": "npx @11ty/eleventy && jampack ./dist",
+    "clean": "del-cli dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/5t3ph/11ty-sass-skeleton.git"
+    "url": "git+https://matthiasott@github.com/matthiasott/11ty22.git"
   },
-  "author": "5t3ph",
-  "license": "ISC",
-  "dependencies": {
-    "@11ty/eleventy": "^2.0.0",
-    "@11ty/eleventy-img": "^3.1.0",
-    "@11ty/eleventy-plugin-bundle": "^1.0.4",
-    "@11ty/eleventy-plugin-webc": "^0.11.1",
-    "@11ty/is-land": "^4.0.0",
-    "@11tyrocks/eleventy-plugin-sass-lightningcss": "^1.0.3",
-    "clean-css": "^5.3.2",
-    "eleventy-critical-css": "^1.1.0"
+  "author": "Matthias Ott",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matthiasott/11ty22/issues"
   },
-  "browserslist": [
-    "> 0.2%",
-    "not dead"
-  ],
+  "homepage": "https://github.com/matthiasott/11ty22#readme",
   "devDependencies": {
-    "@11ty/eleventy-navigation": "^0.3.5",
-    "autoprefixer": "^10.4.14",
-    "browserslist": "^4.21.5",
-    "cross-env": "^7.0.3",
-    "html-minifier": "^4.0.0",
-    "lightningcss": "^1.20.0",
+    "@11ty/eleventy": "^2.0.0-canary.23",
+    "@11ty/eleventy-img": "^3.1.0",
+    "@11ty/eleventy-navigation": "^0.3.3",
+    "@11ty/eleventy-plugin-rss": "^1.1.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@11ty/eleventy-plugin-vite": "^4.0.0",
+    "@11ty/eleventy-plugin-webc": "^0.11.1",
+    "@divriots/jampack": "^0.15.0",
+    "@netlify/plugin-lighthouse": "^5.0.0",
+    "@shopify/prettier-plugin-liquid": "^1.2.2",
+    "@tailwindcss/forms": "^0.5.6",
+    "@tailwindcss/typography": "^0.5.9",
+    "autoprefixer": "^10.4.15",
+    "cssnano": "^6.0.1",
+    "cssremedy": "^0.1.0-beta.2",
+    "del-cli": "^5.1.0",
+    "eleventy-critical-css": "^1.1.0",
+    "eslint": "^8.48.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-n": "^16.0.2",
+    "eslint-plugin-promise": "^6.0.0",
+    "focus-visible": "^5.2.0",
+    "luxon": "^3.4.2",
+    "markdown-it": "^13.0.1",
+    "markdown-it-anchor": "^8.6.4",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.23",
-    "postcss-loader": "^7.2.4",
-    "rimraf": "^5.0.0",
-    "sass": "^1.62.1",
-    "tailwindcss": "^3.3.2"
+    "postcss": "^8.4.29",
+    "postcss-nesting": "^12.0.1",
+    "prettier": "^3.0.3",
+    "prettier-plugin-organize-attributes": "^1.0.0",
+    "prettier-plugin-tailwindcss": "^0.5.4",
+    "rollup-plugin-critical": "^1.0.12",
+    "sass": "^1.66.1",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.9"
+  },
+  "dependencies": {
+    "@alpinejs/persist": "^3.13.0",
+    "@fontsource-variable/inter": "^5.0.8",
+    "@fontsource-variable/roboto-slab": "^5.0.8",
+    "alpinejs": "^3.13.0"
   }
 }

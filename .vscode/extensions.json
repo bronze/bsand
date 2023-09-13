@@ -1,11 +1,9 @@
 {
   "recommendations": [
-    "astro-build.astro-vscode",
-    "esbenp.prettier-vscode",
-    "editorconfig.editorconfig",
-    "dbaeumer.vscode-eslint",
-    // "adrianwilczynski.alpine-js-intellisense",
-    "pcbowers.alpine-intellisense"
-  ],
-  "unwantedRecommendations": []
+    "anteprimorac.html-end-tag-labels",
+    "dwkns.webc",
+    "ronnidc.nunjucks",
+    "okitavera.vscode-nunjucks-formatter",
+    "vdanchenkov.tailwind-class-sorter"
+  ]
 }

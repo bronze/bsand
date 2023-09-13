@@ -1,0 +1,5 @@
+body {
+  @apply bg-muted text-text;
+  padding-right: var(--scrollbarComp);
+  overflow-x: hidden;
+}

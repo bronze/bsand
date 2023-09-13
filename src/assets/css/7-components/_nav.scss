@@ -1,0 +1,103 @@
+.header-nav {
+  // @apply bg-muted;
+
+  &.pinned {
+    // https://lea.verou.me/blog/2020/04/lch-colors-in-css-what-why-and-how/
+    // background-color: color-mix(
+    //   in oklch,
+    //   var(--backgroundAccentColor),
+    //   var(--primaryColor) 1%
+    // );
+    // @apply bg-background-dark;
+    & #search-content {
+      // @apply bg-background-dark;
+    }
+    position: sticky;
+    top: 0;
+  }
+  & #search-content {
+    // @apply bg-muted;
+  }
+}
+// https://christianoliff.com/blog/styling-external-links-with-an-icon-in-css/
+
+nav {
+  &__container {
+  }
+  .logo {
+    &:hover {
+    }
+    @apply storysonear;
+    & span {
+      @apply storyends;
+    }
+  }
+  #menu {
+    li.active {
+      @apply text-primary;
+      & a::before {
+        top: 0;
+        height: 8px;
+      }
+    }
+    a {
+      &[href^="http"],
+      &[href^="https://"]
+      {
+        &::after {
+          content: '';
+          width: 10px;
+          height: 10px;
+          margin-left: 6px;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'  viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+          @apply bg-text;
+          display: inline-block;
+          &::hover {
+            filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg)
+              brightness(104%) contrast(97%);
+            @apply bg-primary;
+          }
+        }
+        &::after:hover {
+          @apply bg-primary;
+        }
+      }
+
+      &.linknav {
+        &::before {
+          content: '';
+          @apply bg-primary;
+          position: absolute;
+          left: 0;
+          top: 0px;
+          width: 100%;
+          height: 0px;
+          z-index: -1;
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+          &::before {
+            top: 0;
+            height: 8px;
+          }
+          @apply text-primary;
+        }
+      }
+      position: relative;
+      &:hover {
+        @apply text-primary;
+      }
+    }
+  }
+  // .nav--primary {
+  //   ul {
+  //     font-size: var(--fluid-2);
+  //     margin: 0.75rem 0;
+  //   }
+
+  //   a {
+  //     display: block;
+  //     padding: 0.25em 0;
+  //   }
+  // }
+}
