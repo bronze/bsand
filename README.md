@@ -10,3 +10,10 @@
 
 # DONE:
 - Dark mode .class to data-theme
+
+To deploy to production (bsand.vercel.app), run `vercel --prod`
+vercel build --prod
+vercel deploy --prebuilt --prod
+
+vercel --prod
+netlify deploy --prod --build
