@@ -6,9 +6,10 @@ module.exports={
   darkMode: ['class', '[data-theme="dark"]'],
   theme: {
     extend: {
-      // fontFamily: {
-      //   sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-      // },
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        serif: ['Noto Serif Variable', ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         primary: "rgb(var(--color-primary) / <alpha-value>)",
         accent: "rgb(var(--color-accent) / <alpha-value>)",

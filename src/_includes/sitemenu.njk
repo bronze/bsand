@@ -3,14 +3,14 @@
 {# https://laracasts.com/discuss/channels/guides/multiple-issues-with-building-a-responsive-sticky-navbar-using-tailwind-and-alpinejs #}
 {# https://www.youtube.com/watch?v=vafc43cIUz8 #}
 <a id="primary_nav"></a>
-<header class="fixed header-nav py-4 lg:py-0 lg:h-[125px] bg-muted lg:bg-transparent  ease-in-out top-0 left-0 z-50 w-full font-lg text-text font-nav uppercase shadow lg:shadow-none"
+<header class="fixed header-nav py-4 lg:py-0 lg:h-[125px] bg-muted lg:bg-transparent  ease-in-out top-0 left-0 z-50 w-full font-lg text-text font-nav uppercase shadow lg:shadow-none pointer-events-none"
 x-data="{navOpen: false, scrolledFromTop: false}"
 x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
 @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
 >
   <nav id="navbar"  role="navigation" aria-label="Main"
   x-bind:class="{'lg:h-[100px]': !scrolledFromTop, 'lg:h-[80px] lg:shadow': scrolledFromTop}"
-    class="z-20 flex w-full px-1 transition-[height,box-shadow] duration-300 ease-in place-items-center bg-muted lg:py-0 lg:relative sm:px-2 md:px-0">
+    class="z-20 pointer-events-auto flex w-full px-1 transition-[height,box-shadow] duration-300 ease-in place-items-center bg-muted lg:py-0 lg:relative sm:px-2 md:px-0">
     <div class="container inline-flex flex-wrap justify-between w-full h-full mx-auto text-xl place-items-center max-w-7xl md:text-2xl xl:text-4xl" @click.away="navOpen = false" >
       <div class="relative inline-flex items-center flex-shrink h-full pl-2 xl:pl-0 group">
         <div class="lg:drop-shadow-[0_4px_2px_rgba(0,0,0,0.6)] lg:group-hover:drop-shadow-[0_4px_2px_rgba(0,0,0,0.8)] flag-wrap">
