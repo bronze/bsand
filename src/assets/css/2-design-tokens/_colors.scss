@@ -8,7 +8,7 @@
 @layer base {
   :root[data-theme~='dark'] {
     --color-primary: 94 129 172;
-    --color-accent: 94 129 172;
+    --color-accent: 36 1 1;
     --color-muted: 46 52 64;
     --color-background-default: 46 52 64;
     --color-background-light: 59 66 82; // nord 4
@@ -25,7 +25,7 @@
   }
   :root[data-theme~='light'] {
     --color-primary: 128 0 29;
-    --color-accent: 128 0 29;
+    --color-accent: 69 10 10;
     --color-muted: 236 239 244; // nord 6
     --color-background-default: 216 222 233; // nord 4
     --color-background-light: 245 246 250; // nord 4

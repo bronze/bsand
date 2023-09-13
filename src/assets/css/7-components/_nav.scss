@@ -19,6 +19,7 @@
     // @apply bg-muted;
   }
 }
+// https://christianoliff.com/blog/styling-external-links-with-an-icon-in-css/
 nav a[href^="http"]::after,
 nav a[href^="https://"]::after
 {
