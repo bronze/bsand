@@ -2,22 +2,34 @@
 layout: base
 permalink: /
 ---
-<div
-  class="container relative max-w-screen-xl pt-10 pb-6 pl-10 pr-10 mx-auto sm:pl-4 sm:pr-4 align-center">
-  <div>
-    <h1 class="mb-2 font-semibold text-center reveal-on-scroll is-revealing text-7xl inter">
-      Brandon Sanderson
-    </h1>
-    <p
-      class="relative h-3 reveal-on-scroll is-revealing"
-      style="visibility: visible">
-      <span class="inline-block" style="max-width: 500px; line-height: 1.4"
-        ></span
-      >
-    </p>
+<div class="overflow-hidden ">
+  <div class="px-6 mx-auto max-w-7xl lg:px-8">
+    <div class="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+      <div class="lg:pr-8 lg:pt-4">
+        <div class="lg:max-w-lg">
+          <h2 class="text-base font-semibold leading-7 text-primary">Secret Project 3</h2>
+          <p class="mt-2 text-4xl font-bold tracking-tight text-text sm:text-4xl">Limited Premium Hardcore Bundle Now Available</p>
+          <p class="mt-6 text-lg leading-8 text-text">Books in stock, instant digital access upon purchase, book ships after backer fulfillment.</p>
+          <div>
+            <a href="#introducao" class="relative inline-flex items-center h-10 mt-2 px-2.5 py-3 text-lg text-primary transition-all border-2 border-primary rounded-lg group ease duration-400 focus:shadow-outline hover:pr-12 hover:bg-primary hover:text-white">
+              <span class="relative uppercase">Start reading today</span>
+              <span class="absolute pl-4 duration-300 transform opacity-0 right-2 ml-14 ease group-hover:opacity-100">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6l-1.41-1.42Z"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      {# <img src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png" alt="Product screenshot" class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0" width="2432" height="1442"> #}
+      <div class="centerpicture">{% image "assets/images/hero_yumi.png", "Test", [300, 600, 800, 1200], "100vw", "w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0 " %}</div>
+      <style>
+        .centerpicture, .centerpicture picture {
+          @apply grid content-center;
+        }
+      </style>
+    </div>
   </div>
 </div>
-
 
 <div class="container w-full max-w-screen-xl px-4 mx-auto mb-8 ">
   <div class="grid grid-cols-1 gap-5 my-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
