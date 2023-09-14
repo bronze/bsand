@@ -96,6 +96,37 @@ module.exports=function (eleventyConfig) {
   Object.keys(filters).forEach((filterName) => {
     eleventyConfig.addFilter(filterName, filters[filterName])
   })
+  // eleventyConfig.addShortcode("postByBookTitle", function (slug) {
+  //   const posts=this.environments.collections.books;
+  //   const post=posts.find((p) => p.url.endsWith(`/${slug}/`));
+  //   if (post===undefined) {
+  //     throw new Error(`${slug} not found in post collection.`);
+  //   }
+  //   return post.url;
+  // });
+  eleventyConfig.addLiquidTag("post_url", function (liquidEngine) {
+    return {
+      parse(tagToken, remainingTokens=[]) {
+        this.str=tagToken.args;
+      },
+      async render(ctx) {
+        const slug=await liquidEngine.evalValue(this.str, ctx);
+        // const postFilename=`./src/books/${slug}`;
+        const posts=ctx.environments.collections.books;
+        // console.log(posts);
+        // const post=posts.find(p => p.inputPath.startsWith(postFilename));
+        // const post=posts.find(p => p.data.title===slug);
+        const slugLowercase=slug.toLowerCase();
+        const bookName=this.str.replace(/["]/g, '');
+        const post=posts.find(p => p.data.title.toLowerCase()===slugLowercase);
+        if (post) {
+
+          return `<a href="${post.url}">${bookName}</a>`;
+        }
+        throw new Error(`${slug} not found in post collection.`);
+      },
+    };
+  });
 
   // Transforms
   Object.keys(transforms).forEach((transformName) => {

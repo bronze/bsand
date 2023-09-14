@@ -20,7 +20,9 @@
   }
 }
 // https://christianoliff.com/blog/styling-external-links-with-an-icon-in-css/
-
+:root {
+  --menutransition: 0.25s cubic-bezier(0.645, 0.445, 0.355, 1);
+}
 nav {
   &__container {
   }
@@ -37,7 +39,9 @@ nav {
       @apply text-primary;
       & a::before {
         top: 0;
-        height: 8px;
+        height: 4px;
+        visibility: visible !important;
+        transform: scaleX(1) !important;
       }
     }
     a {
@@ -73,14 +77,22 @@ nav {
           left: 0;
           top: 0px;
           width: 100%;
-          height: 0px;
+          // height: 0px;
+          height: 4px;
+          visibility: hidden;
+          transform: scaleX(0);
           z-index: -1;
-          transition: all 0.3s ease-in-out;
+          // transition: all 0.3s ease-in-out;
+          transition:
+            transform var(--menutransition),
+            visibility var(--menutransition);
         }
         &:hover {
           &::before {
-            top: 0;
-            height: 8px;
+            // top: 0;
+            // height: 8px;
+            visibility: visible !important;
+            transform: scaleX(1) !important;
           }
           @apply text-primary;
         }

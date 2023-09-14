@@ -5,6 +5,7 @@ description:
 cover: assets/images/books/standalone_elantris_thumb.jpg
 bookorder:
 tags:
+  - Elantris
   - Book
   - book_cosmerestandalone
   - Cosmere
