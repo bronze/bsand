@@ -104,7 +104,7 @@ module.exports=function (eleventyConfig) {
   //   }
   //   return post.url;
   // });
-  eleventyConfig.addLiquidTag("post_url", function (liquidEngine) {
+  eleventyConfig.addLiquidTag("book_url", function (liquidEngine) {
     return {
       parse(tagToken, remainingTokens=[]) {
         this.str=tagToken.args;
