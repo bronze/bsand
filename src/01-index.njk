@@ -1,0 +1,121 @@
+---
+layout: base
+permalink: /
+---
+<div class="overflow-hidden ">
+  <div class="px-6 mx-auto max-w-7xl lg:px-8">
+    <div class="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+      <div class="lg:pr-8 lg:pt-4">
+        <div class="lg:max-w-lg">
+          <h2 class="text-base font-semibold leading-7 text-primary">Secret Project 3</h2>
+          <p class="mt-2 text-4xl font-bold tracking-tight text-text sm:text-4xl">Limited Premium Hardcore Bundle Now Available</p>
+          <p class="mt-6 text-lg leading-8 text-text">Books in stock, instant digital access upon purchase, book ships after backer fulfillment.</p>
+          <div>
+            <a href="#introducao" class="relative inline-flex items-center h-10 mt-2 px-2.5 py-3 text-lg text-primary transition-all border-2 border-primary rounded-lg group ease duration-400 focus:shadow-outline hover:pr-12 hover:bg-primary hover:text-white">
+              <span class="relative uppercase">Start reading today</span>
+              <span class="absolute pl-4 duration-300 transform opacity-0 right-2 ml-14 ease group-hover:opacity-100">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6l-1.41-1.42Z"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      {# <img src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png" alt="Product screenshot" class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0" width="2432" height="1442"> #}
+      <div class="centerpicture">{% image "assets/images/jessica-ruscello-OQSCtabGkSY-unsplash.jpg", "Test", [300, 600, 800, 1200], "100vw", "w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 xl:w-[57rem] md:-ml-4 lg:-ml-0 hidden lg:block " %}</div>
+      <style>
+        .centerpicture, .centerpicture picture {
+          @apply grid content-center;
+        }
+      </style>
+    </div>
+  </div>
+</div>
+
+<div class="container w-full max-w-screen-xl px-4 mx-auto mt-24 mb-8 ">
+  <div class="grid grid-cols-1 gap-5 my-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
+      <!--Card 1-->
+      <div><h2 class="text-sm font-bold uppercase inter lineheader-r center text-primary">space</h2>
+        <div class="mt-4 border-t-2 border-solid rounded shadow border-primary bg-background-light">
+          <div class="px-6 py-4">
+            <p class="text-base">
+              video: what hes talking
+              progress: what hes writing
+              thinking? recent posts below
+            </p>
+          </div>
+          {# <div class="px-6 pt-4 pb-2">
+            <span class="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full">#photography</span>
+          </div> #}
+        </div>
+      </div>
+      <!--Card 2-->
+      <div><h2 class="text-sm font-bold uppercase inter lineheader-r center text-primary">Latest Video</h2>
+        <div class="mt-4 border-t-2 border-solid rounded shadow bg-background-light border-primary">
+          <div class="">
+            {# <div class="px-6 pt-4 pb-2 mb-2 text-xl font-bold">Latest Video</div> #}
+            {% image "BS_YT_Weekly-Update_08-01-23_V1.png", "Test", [300, 600, 800], "(min-width: 66em) 33vw, (min-width: 44em) 50vw, 100vw", "aspect-[1.78] rounded-lg" %}
+          </div>
+        </div>
+      </div>
+      <!--Card 3-->
+      {# <div class="relative p-8 overflow-auto rounded-xl">
+        <div class="relative text-sm font-medium leading-6">
+          <div class="p-4 border rounded-lg bg-purple-400/20 border-purple-700/10 dark:bg-sky-900/70 dark:border-0">
+            <div class="static h-32 p-4 border bg-purple-400/20 border-purple-700/10 dark:bg-sky-400/20 dark:border-0">
+              <p class="text-purple-700 dark:text-sky-200">Static parent</p>
+              <div class="absolute inset-x-0 p-4 text-white bg-purple-500 rounded-lg shadow-lg -top-4 dark:bg-sky-500">
+                <p>Absolute child</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> #}
+      {# add some iconography behind? top left? #}
+      {# https://icones.js.org/collection/mdi?s=progress #}
+      <div><h2 class="text-sm font-bold uppercase inter lineheader-r center text-primary">Writing Progress</h2>
+        <div class="relative px-6 py-4 mt-4 border-t-2 border-solid rounded shadow bg-background-light border-primary">
+          {# <div class="absolute inset-x-0 flex items-center justify-center rounded-lg -top-2"><h3 class="font-bold center">Progress Bars</h3></div> #}
+          {# <div class="mb-2 text-xl font-bold">Writing Progress</div> #}
+          <div>
+            <div class="grid grid-cols-2">
+              <div class="mb-1 text-base font-medium text-primary">Stormlight 5</div>
+              <div class="mb-1 text-base font-medium text-right text-primary">73%</div>
+            </div>
+            <div class="w-full rounded-full h-2.5 mb-4 bg-muted">
+              <div class="bg-primary h-2.5 rounded-full" style="width: 73%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between w-full">
+              <div class="mb-1 text-base font-medium text-primary">Secret Project #4 Final Draft </div>
+              <div class="mb-1 text-base font-medium text-right text-primary">100%</div>
+            </div>
+            <div class="w-full rounded-full h-2.5 mb-4 bg-muted">
+              <div class="bg-primary h-2.5 rounded-full" style="width: 100%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between w-full">
+              <div class="mb-1 text-base font-medium text-primary">Defiant Final Draft</div>
+              <div class="mb-1 text-base font-medium text-right text-primary">100%</div>
+            </div>
+            <div class="w-full rounded-full h-2.5 mb-4 bg-muted">
+              <div class="bg-primary h-2.5 rounded-full" style="width: 100%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between w-full">
+              <div class="mb-1 text-base font-medium text-primary">Skyward Legacy Book One</div>
+              <div class="mb-1 text-base font-medium text-right text-primary">34%</div>
+            </div>
+            <div class="w-full rounded-full h-2.5 mb-4 bg-muted">
+              <div class="bg-primary h-2.5 rounded-full" style="width: 34%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% set postslist = collections.posts %} {% include "postslist.webc" %}

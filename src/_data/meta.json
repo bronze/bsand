@@ -4,5 +4,17 @@
   "url": "https://cerulean-cupcake-4201a0.netlify.app/",
   "lang": "en",
   "locale": "en_us",
-  "author": "Carlos Bronze"
+  "author": "Carlos Bronze",
+  "instagram": {
+    "url": "https://www.instagram.com/BrandSanderson/"
+  },
+  "facebook": {
+    "url": "https://www.facebook.com/BrandSanderson"
+  },
+  "youtube": {
+    "url": "https://www.youtube.com/brandsanderson"
+  },
+  "tiktok": {
+    "url": "https://www.tiktok.com/@authorbrandonsanderson"
+  }
 }
