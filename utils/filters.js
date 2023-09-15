@@ -3,10 +3,14 @@ const path=require("path");
 
 module.exports={
   getbase: function (value) {
-    // const {dir}=path.parse(value);
-    const dir=path.dirname(value);
-    const firstPath=dir.split('/')[1];
-    return "/"+firstPath+"/";
+    if (value!==false) {
+      const {dir}=path.parse(value);
+      const firstPath=dir.split('/')[1];
+      return "/"+firstPath+"/";
+    } else {
+      // Handle the case where value is a boolean false
+      return "Invalid input: value is false";
+    }
   },
 
   dateToFormat: function (date, format) {
