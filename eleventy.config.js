@@ -62,8 +62,10 @@ module.exports=function (eleventyConfig) {
               {uri: 'index.html', template: 'index'},
               {uri: 'blog/index.html', template: 'blog/index'},
               {uri: '404.html', template: '404'},
-              {uri: 'about/index.html', template: 'about'},
-              {uri: 'contact/index.html', template: 'contact'},
+              {uri: 'about/index.html', template: 'about/index'},
+              {uri: 'books/index.html', template: 'books/index'},
+              {uri: 'adaptations/index.html', template: 'adaptations/index'},
+              {uri: 'contact/index.html', template: 'contact/index'},
             ],
             criticalConfig: {
               inline: true,
