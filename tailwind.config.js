@@ -6,6 +6,35 @@ module.exports={
   darkMode: ['class', '[data-theme="dark"]'],
   theme: {
     extend: {
+      typography: ({theme}) => {
+
+        return {
+          DEFAULT: {
+            css: {
+              '--tw-prose-headings': 'var(--color-text-default)', // opacity
+              '--tw-prose-body': 'var(--color-text-default)',
+              '--tw-prose-links': 'var(--color-text-default)',// opacity
+              a: {
+                // change anchor color and on hover
+                // color: '#03989E',
+                // color: 'rgb(var(--color-primary) / 1)',
+                // https://stackoverflow.com/questions/72831003/tailwind-custom-theme-color-opacity-not-being-applied
+                // https://tailwindcss.com/blog/tailwindcss-v3-1#easier-css-variable-color-configuration
+                // color: withOpacity('--color-accent'),
+                '&:hover': { // could be any. It's like extending css selector
+                  // color: '#03989E',
+                  color: 'rgb(var(--color-primary) / 1)',
+                  // 'color': 'var(--color-primary)',
+                  // color: withOpacity('--color-primary'),
+                  // fill: withOpacity('--color-primary'),
+                },
+              },
+            }
+          },
+        }
+      },
+
+
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         serif: ['Noto Serif Variable', ...defaultTheme.fontFamily.sans],
