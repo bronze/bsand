@@ -58,7 +58,7 @@ x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = fa
         {% set navPages = collections.all | eleventyNavigation %}
         <ul class="pt-4 text-base lg:flex lg:grow lg:max-w-[95%] xl:max-w-[90%] lg:justify-between lg:pt-0">
           {%- for entry in navPages %}
-            <li {% if entry.url == page.url %} class="active"{% endif %}>
+            <li {% if entry.url == page.url OR entry.url == page.url | getbase %} class="active"{% endif %}>
               <a class="block py-2 linknav lg:pt-4 lg:p-2 xl:p-4"  href="{{ entry.url }}">{{ entry.title }}</a>
             </li>
           {%- endfor %}

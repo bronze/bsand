@@ -1,6 +1,14 @@
 const {DateTime}=require('luxon')
+const path=require("path");
 
 module.exports={
+  getbase: function (value) {
+    // const {dir}=path.parse(value);
+    const dir=path.dirname(value);
+    const firstPath=dir.split('/')[1];
+    return "/"+firstPath+"/";
+  },
+
   dateToFormat: function (date, format) {
     return DateTime.fromJSDate(date, {zone: 'utc'}).toFormat(
       String(format)
