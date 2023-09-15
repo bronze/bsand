@@ -159,14 +159,22 @@ permalink: /
   <h2 class="text-sm font-bold uppercase inter lineheader-r center">Check out some of the series</h2>
 </div>
 <div class="w-full mt-4 lg:flex containerfluid">
-  <div class="flex items-center justify-center transition-colors duration-300 bg-green-800 place-content-center item hover:grayscale hover:contrast-200 " data-order="1">
+  <div class="flex items-center justify-center overflow-hidden transition-colors duration-300 bg-black place-content-center item group" data-order="1">
     {% image "assets/images/mistbornsky.jpg", "Test", [300, 600, 800, 1200], "100vw", "absolute w-full h-full object-cover top-0 left-0 " %}
-    <a href="/books/mistborn/" class="absolute inset-0 flex items-center justify-center text-3xl text-white place-content-center">Mistborn</a>
-
+    <a href="/books/mistborn/" class="absolute inset-0 flex items-center justify-center text-3xl text-white place-content-center group-hover:contrast-200">Mistborn</a>
   </div>
-  <div class="flex items-center justify-center item place-content-center bg-cyan-800" data-order="2">Stormlight</div>
-  <div class="flex items-center justify-center item place-content-center bg-amber-800" data-order="3">Cytoverse</div>
-  <div class="flex items-center justify-center bg-yellow-500 item place-content-center" data-order="4">Yumi</div>
+  <div class="flex items-center justify-center overflow-hidden transition-colors duration-300 bg-black place-content-center item group" data-order="2">
+    {% image "assets/images/stormlight.png", "Stormlight", [300, 600, 800, 1200], "100vw", "absolute w-full h-full object-cover top-0 left-0 " %}
+    <a href="/books/mistborn/" class="absolute inset-0 flex items-center justify-center text-3xl text-white place-content-center">Stormlight Archives</a>
+  </div>
+  <div class="flex items-center justify-center overflow-hidden transition-colors duration-300 bg-black place-content-center item group" data-order="2">
+    {% image "assets/images/hoid.jpg", "Stormlight", [300, 600, 800, 1200], "100vw", "absolute w-full h-full object-cover top-0 left-0 " %}
+    <a href="/books/mistborn/" class="absolute inset-0 flex items-center justify-center text-3xl text-white place-content-center">Cosmere</a>
+  </div>
+  <div class="flex items-center justify-center overflow-hidden transition-colors duration-300 bg-black place-content-center item group" data-order="2">
+    {% image "assets/images/cytoverse.jpg", "Stormlight", [300, 600, 800, 1200], "100vw", "absolute w-full h-full object-cover top-0 left-0 " %}
+    <a href="/books/mistborn/" class="absolute inset-0 flex items-center justify-center text-3xl text-white place-content-center">Cytoverse</a>
+  </div>
 </div>
 
 <style lang="scss">
@@ -174,25 +182,19 @@ permalink: /
   align-items: center;
 }
 .item {
-  @apply items-center justify-center  place-content-center;
+  @apply items-center justify-center  place-content-center p-6;
   flex-grow: 1;
   height: 250px;
   position: relative;
   border: 1px solid lighten(black, 10);
   transition: all 300ms ease-in-out;
+  & a {
+    @apply p-8;
+  }
 
   &:hover {
     flex-grow: 4.3;
     background-color: lighten(darkred, 20);
   }
-  &:before {
-    content: attr(data-order);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-  }
-
 }
 </style>
