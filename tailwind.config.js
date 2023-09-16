@@ -8,7 +8,7 @@ module.exports={
     extend: {
       fontFamily: {
         // https://www.tailwindtoolbox.com/guides/adding-fonts-to-tailwind-css
-        'sans': ['Inter var', ...defaultTheme.fontFamily.sans],
+        'sans': ['Inter Variable', ...defaultTheme.fontFamily.sans],
         'serif': ['Noto Serif Variable', ...defaultTheme.fontFamily.sans],
       },
       colors: {
