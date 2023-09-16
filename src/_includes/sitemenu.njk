@@ -10,7 +10,7 @@ x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = fa
 >
   <nav id="navbar"  role="navigation" aria-label="Main"
   x-bind:class="{'lg:h-[100px]': !scrolledFromTop, 'lg:h-[80px] lg:shadow': scrolledFromTop}"
-    class="z-20 relative pointer-events-auto flex w-full px-1 transition-[height,box-shadow] duration-300 ease-in place-items-center bg-muted lg:py-0 lg:relative sm:px-2 md:px-0">
+    class="z-20 relative lg:h-[100px] pointer-events-auto flex w-full px-1 transition-[height,box-shadow] duration-300 ease-in place-items-center bg-muted lg:py-0 lg:relative sm:px-2 md:px-0">
     <div class="container inline-flex flex-wrap justify-between w-full h-full mx-auto text-xl place-items-center max-w-7xl md:text-2xl xl:text-4xl" @click.away="navOpen = false" >
       <div class="relative inline-flex items-center flex-shrink h-full pl-2 xl:pl-0 group">
         <div class="lg:drop-shadow-[0_4px_2px_rgba(0,0,0,0.6)] lg:group-hover:drop-shadow-[0_4px_2px_rgba(0,0,0,0.8)] flag-wrap z-50">

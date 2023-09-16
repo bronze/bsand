@@ -26,14 +26,6 @@
 nav {
   &__container {
   }
-  .logo {
-    &:hover {
-    }
-    @apply storysonear;
-    & span {
-      @apply storyends;
-    }
-  }
   #menu {
     li.active {
       @apply text-primary;
