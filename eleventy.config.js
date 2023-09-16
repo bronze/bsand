@@ -15,7 +15,7 @@ const shortcodes=require('./utils/shortcodes.js')
 const pluginImages=require("./eleventy.config.images.js")
 const pluginWebc=require('@11ty/eleventy-plugin-webc');
 const {EleventyRenderPlugin}=require("@11ty/eleventy");
-
+const embedEverything=require("eleventy-plugin-embed-everything");
 const {resolve}=require('path')
 
 module.exports=function (eleventyConfig) {
@@ -35,6 +35,7 @@ module.exports=function (eleventyConfig) {
       "src/_includes/**/*.webc",
     ]
   })
+  eleventyConfig.addPlugin(embedEverything)
   eleventyConfig.addPlugin(EleventyRenderPlugin)
   eleventyConfig.addPlugin(EleventyPluginNavigation)
   eleventyConfig.addPlugin(EleventyPluginRss)

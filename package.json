@@ -46,6 +46,7 @@
     "cssremedy": "^0.1.0-beta.2",
     "del-cli": "^5.1.0",
     "eleventy-critical-css": "^1.1.0",
+    "eleventy-plugin-embed-everything": "^1.16.0",
     "eslint": "^8.49.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.28.1",
