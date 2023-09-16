@@ -1,12 +1,7 @@
 [build]
   publish = "dist"
   command = "pnpm run prod || ( npm install pnpm && pnpm run prod )"
-
-[context.production]
-  environment = { NODE_VERSION = "16.13.2", RUBY_VERSION = "2.7.1" }
-
-[context.deploy-preview]
-  environment = { NODE_VERSION = "16.13.2", RUBY_VERSION = "2.7.1" }
+  NODE_VERSION = "18.12.0"
 
 [context.dev.environment]
   NODE_ENV = "development"
@@ -28,7 +23,8 @@
 
   # Read more: https://github.com/netlify/netlify-plugin-lighthouse
   package = "@netlify/plugin-lighthouse"
-
+  [[plugins.inputs.audits]]
+    path = "dist"
   # optional, fails build when a category is below a threshold
   [plugins.inputs.thresholds]
     performance = 1.0
