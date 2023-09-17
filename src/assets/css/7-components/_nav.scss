@@ -36,7 +36,8 @@ nav {
         transform: scaleX(1) !important;
       }
     }
-    a {
+    a,
+    button {
       &[href^="http"],
       &[href^="https://"]
       {
@@ -92,6 +93,11 @@ nav {
       position: relative;
       &:hover {
         @apply text-primary;
+      }
+    }
+    button svg {
+      &:hover {
+        @apply fill-primary text-primary;
       }
     }
   }

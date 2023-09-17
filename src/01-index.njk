@@ -3,7 +3,7 @@ layout: base
 permalink: /
 image: assets/images/icon-512x512.png
 ---
-<div class="overflow-hidden ">
+<section class="overflow-hidden ">
   <div class="px-6 mx-auto max-w-7xl lg:px-8">
     <div class="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
       <div class="lg:pr-8 lg:pt-4">
@@ -23,7 +23,7 @@ image: assets/images/icon-512x512.png
         </div>
       </div>
       {# <img src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png" alt="Product screenshot" class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0" width="2432" height="1442"> #}
-      <div class="centerpicture">{% image "assets/images/hero_dragoncon.png", "Test", [300, 600, 800, 1200], "100vw", "w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 xl:w-[57rem] md:-ml-4 lg:-ml-0 hidden lg:block " %}</div>
+      <div class="centerpicture">{% image "assets/images/hero_dragoncon.png", "Test", [300, 600, 800, 1200], "100vw", "w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 xl:w-[57rem] md:-ml-4 lg:-ml-0 hidden lg:block ", "eager" %}</div>
       <style>
         .centerpicture, .centerpicture picture {
           @apply grid content-center;
@@ -31,12 +31,12 @@ image: assets/images/icon-512x512.png
       </style>
     </div>
   </div>
-</div>
+</section>
 
-<div class="container w-full max-w-screen-xl px-4 mx-auto mt-24 mb-8 ">
+<section class="container max-w-screen-xl px-4 mx-auto mt-24 mb-8 ">
   <div class="grid grid-cols-1 gap-5 my-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
       <!--Card 1-->
-      <div><h2 class="text-sm font-bold uppercase inter lineheader-r center text-primary">space</h2>
+      <div><h2 class="text-sm font-bold uppercase lg:pl-4 inter lineheader-r center text-primary">space</h2>
         <div class="mt-4 border-t-2 border-solid rounded shadow border-primary bg-background-light">
           <div class="px-6 py-4">
             <p class="text-base">
@@ -51,7 +51,7 @@ image: assets/images/icon-512x512.png
         </div>
       </div>
       <!--Card 2-->
-      <div><h2 class="text-sm font-bold uppercase inter lineheader-r center text-primary">Latest Video</h2>
+      <div><h2 class="text-sm font-bold uppercase lg:pl-4 inter lineheader-r center text-primary">Latest Video</h2>
         <div class="mt-4 border-t-2 border-solid rounded shadow bg-background-light border-primary">
           <div class="">
             {# <div class="px-6 pt-4 pb-2 mb-2 text-xl font-bold">Latest Video</div> #}
@@ -74,7 +74,7 @@ image: assets/images/icon-512x512.png
       </div> #}
       {# add some iconography behind? top left? #}
       {# https://icones.js.org/collection/mdi?s=progress #}
-      <div><h2 class="text-sm font-bold uppercase inter lineheader-r center text-primary">Writing Progress</h2>
+      <div><h2 class="text-sm font-bold uppercase lg:pl-4 inter lineheader-r center text-primary">Writing Progress</h2>
         <div class="relative px-6 py-4 mt-4 border-t-2 border-solid rounded shadow bg-background-light border-primary">
           {# <div class="absolute inset-x-0 flex items-center justify-center rounded-lg -top-2"><h3 class="font-bold center">Progress Bars</h3></div> #}
           {# <div class="mb-2 text-xl font-bold">Writing Progress</div> #}
@@ -118,31 +118,17 @@ image: assets/images/icon-512x512.png
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!--
-  This example requires some changes to your config:
-
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
--->
-<div class="relative py-16 overflow-hidden bg-slate-200 dark:bg-slate-700 isolate ">
+<section class="relative py-16 overflow-hidden bg-slate-200 dark:bg-slate-700 isolate ">
   <div class="px-6 mx-auto max-w-7xl lg:px-8">
     <div class="max-w-screen-md mx-auto text-center ">
 
         <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Subscribe to our newsletter.</h2>
         <p class="mt-4 text-lg leading-8 ">Stay up to date on new events and videos right in your inbox!</p>
         <div class="flex items-center max-w-screen-sm mx-auto mt-6 mb-3 space-y-4 gap-x-4 sm:flex sm:space-y-0">
-          <label for="email-address" class="sr-only">Email address</label>
-          <input id="email-address" name="email" type="email" autocomplete="email" required class="min-w-0 flex-auto rounded-md border-0 bg-white/20 px-3.5 py-2 text-text shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" placeholder="Enter your email">
+          <label for="midpagesignup" class="sr-only">Email address</label>
+          <input id="midpagesignup" name="email" type="email" autocomplete="email" required class="min-w-0 flex-auto rounded-md border-0 bg-white/20 px-3.5 py-2 text-text shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" placeholder="Enter your email">
           <button type="submit" class="flex-none rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Subscribe</button>
         </div>
 
@@ -152,37 +138,41 @@ image: assets/images/icon-512x512.png
   {# <div class="absolute top-0 -translate-x-1/2 left-1/2 -z-10 blur-3xl xl:-top-6" aria-hidden="true">
     <div class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
   </div> #}
-</div>
+</section>
 
+{% include "postslist.njk" %}
 
-{% include "postslist.webc" %}
+<section class="mt-24">
+  <div class="container max-w-screen-xl mx-auto mt-16">
+    <h2 class="text-sm font-bold uppercase lg:pl-4 inter lineheader-r center">Check out some of the series</h2>
+  </div>
+  <div class="items-center mt-4 md:flex">
+    <div class="flex items-center justify-center overflow-hidden text-center transition-colors duration-300 bg-black place-content-center item group" data-order="1">
+      {% image "assets/images/mistbornsky.jpg", "Test", [300, 600, 800, 1200], "100vw", "absolute w-full h-full object-cover top-0 left-0 " %}
+      <a href="/books/mistborn/" class="absolute inset-0 flex items-center justify-center text-3xl text-white place-content-center group-hover:contrast-200">Mistborn</a>
+    </div>
+    <div class="flex items-center justify-center overflow-hidden text-center transition-colors duration-300 bg-black place-content-center item group" data-order="2">
+      {% image "assets/images/stormlight.png", "Stormlight", [300, 600, 800, 1200], "100vw", "absolute w-full h-full object-cover top-0 left-0 " %}
+      <a href="/books/mistborn/" class="absolute inset-0 flex items-center justify-center text-3xl text-white place-content-center">Stormlight Archives</a>
+    </div>
+    <div class="flex items-center justify-center overflow-hidden text-center transition-colors duration-300 bg-black place-content-center item group" data-order="2">
+      {% image "assets/images/hoid.jpg", "Stormlight", [300, 600, 800, 1200], "100vw", "absolute w-full h-full object-cover top-0 left-0 " %}
+      <a href="/books/mistborn/" class="absolute inset-0 flex items-center justify-center text-3xl text-white place-content-center">Cosmere</a>
+    </div>
+    <div class="flex items-center justify-center overflow-hidden text-center transition-colors duration-300 bg-black place-content-center item group" data-order="2">
+      {% image "assets/images/cytoverse.jpg", "Stormlight", [300, 600, 800, 1200], "100vw", "absolute w-full h-full object-cover top-0 left-0 " %}
+      <a href="/books/mistborn/" class="absolute inset-0 flex items-center justify-center text-3xl text-white place-content-center">Cytoverse</a>
+    </div>
+  </div>
+</section>
 
-<div class="container max-w-screen-xl mx-auto mt-16">
-  <h2 class="text-sm font-bold uppercase inter lineheader-r center">Check out some of the series</h2>
-</div>
-<div class="w-full mt-4 lg:flex containerfluid">
-  <div class="flex items-center justify-center overflow-hidden transition-colors duration-300 bg-black place-content-center item group" data-order="1">
-    {% image "assets/images/mistbornsky.jpg", "Test", [300, 600, 800, 1200], "100vw", "absolute w-full h-full object-cover top-0 left-0 " %}
-    <a href="/books/mistborn/" class="absolute inset-0 flex items-center justify-center text-3xl text-white place-content-center group-hover:contrast-200">Mistborn</a>
+<section class="mt-24 mb-24 min-h-[40vh]">
+  <div class="container max-w-screen-xl mx-auto mt-16">
+    <h2 class="text-sm font-bold uppercase lg:pl-4 inter lineheader-r center">Check out some of the series</h2>
   </div>
-  <div class="flex items-center justify-center overflow-hidden transition-colors duration-300 bg-black place-content-center item group" data-order="2">
-    {% image "assets/images/stormlight.png", "Stormlight", [300, 600, 800, 1200], "100vw", "absolute w-full h-full object-cover top-0 left-0 " %}
-    <a href="/books/mistborn/" class="absolute inset-0 flex items-center justify-center text-3xl text-white place-content-center">Stormlight Archives</a>
-  </div>
-  <div class="flex items-center justify-center overflow-hidden transition-colors duration-300 bg-black place-content-center item group" data-order="2">
-    {% image "assets/images/hoid.jpg", "Stormlight", [300, 600, 800, 1200], "100vw", "absolute w-full h-full object-cover top-0 left-0 " %}
-    <a href="/books/mistborn/" class="absolute inset-0 flex items-center justify-center text-3xl text-white place-content-center">Cosmere</a>
-  </div>
-  <div class="flex items-center justify-center overflow-hidden transition-colors duration-300 bg-black place-content-center item group" data-order="2">
-    {% image "assets/images/cytoverse.jpg", "Stormlight", [300, 600, 800, 1200], "100vw", "absolute w-full h-full object-cover top-0 left-0 " %}
-    <a href="/books/mistborn/" class="absolute inset-0 flex items-center justify-center text-3xl text-white place-content-center">Cytoverse</a>
-  </div>
-</div>
+</section>
 
 <style lang="scss">
-.containerfluid {
-  align-items: center;
-}
 .item {
   @apply items-center justify-center  place-content-center p-6;
   flex-grow: 1;

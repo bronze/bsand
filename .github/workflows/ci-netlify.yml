@@ -32,7 +32,7 @@ jobs:
         uses: jakepartusch/wait-for-netlify-action@v1.4
         id: waitFor200
         with:
-          site_name: 'bsand'
+          site_name: 'cerulean-cupcake-4201a0'
           max_timeout: 60
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v9
