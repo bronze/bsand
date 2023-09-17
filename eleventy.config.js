@@ -45,6 +45,10 @@ module.exports=function (eleventyConfig) {
 
     // Vite options (equal to vite.config.js inside project root)
     viteOptions: {
+      server: {
+        mode: 'development',
+        middlewareMode: true
+      },
       build: {
         emptyOutDir: false,
         mode: 'production',
