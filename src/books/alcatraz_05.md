@@ -1,9 +1,8 @@
 ---
 title: The Dark Talent
 permalink: '/books/alcatraz-vs-the-evil-librarians/{{ title | slugify }}/'
-description:
 cover: assets/images/books/alcatraz_05_dark_talent_us_hardcover.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_alcatraz

@@ -1,9 +1,8 @@
 ---
 title: The Bands Of Mourning
 permalink: '/books/mistborn/{{ title | slugify }}/'
-description:
 cover: assets/images/books/mistborn_e2_03_bands_of_mourning_us_hardcover.jpg
-bookorder: Mistborn Era 2 Book 3
+description: Mistborn Era 2 Book 3
 tags:
   - Book
   - book_mistborn2

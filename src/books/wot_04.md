@@ -1,9 +1,8 @@
 ---
 title: River Of Souls
 permalink: '/books/the-wheel-of-time/{{ title | slugify }}/'
-description:
 cover: assets/images/books/wot_04_river-of-souls-1.png
-bookorder:
+description:
 tags:
   - Book
   - book_wot

@@ -1,9 +1,8 @@
 ---
 title: The Shattered Lens
 permalink: '/books/alcatraz-vs-the-evil-librarians/{{ title | slugify }}/'
-description:
 cover: assets/images/books/alcatraz_04_shattered.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_alcatraz

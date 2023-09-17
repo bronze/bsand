@@ -1,9 +1,8 @@
 ---
 title: Steelheart
 permalink: '/books/reckoners/{{ title | slugify }}/'
-description:
 cover: assets/images/books/reckoners_steelheart.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_reckoners

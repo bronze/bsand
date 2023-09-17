@@ -1,9 +1,8 @@
 ---
 title: The Frugal Wizard’s Handbook for Surviving Medieval England
 permalink: '/books/standalones-non-cosmere/{{ title | slugify }}/'
-description:
 cover: assets/images/books/standalone_frugal_wizard_us_dragonsteel_cover.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_standalone

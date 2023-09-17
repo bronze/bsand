@@ -1,9 +1,8 @@
 ---
 title: The Gathering Storm
 permalink: '/books/the-wheel-of-time/{{ title | slugify }}/'
-description:
 cover: assets/images/books/wot_01_tgs_ebook.png
-bookorder:
+description:
 tags:
   - Book
   - book_wot

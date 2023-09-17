@@ -9,9 +9,9 @@
 <div class="container max-w-screen-xl mx-auto mt-24">
 
     <div class="div"><h2 class="text-sm font-bold uppercase inter lineheader-r center">Latest Blog Entries</h2>
-      <div class="flex flex-col px-8 mt-8 space-y-8 lg:px-0">
+      <div class="flex flex-col max-w-screen-lg px-8 mx-auto mt-8 space-y-8 lg:px-0">
         {% for post in postslist.slice(0,3) %}
-          <article class="card text-text rounded-lg bg-background-light p-8 drop-shadow hover:drop-shadow-lg relative isolate flex flex-col gap-8 lg:flex-row postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+          <article class="card text-text rounded-lg bg-background-light max-w-fit p-8 drop-shadow hover:drop-shadow-lg relative isolate flex flex-col gap-8 sm:flex-row postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
             <div class="relative aspect-[1.78] lg:h-36 lg:shrink-0">
               {#
               {% set imgsrc %}
@@ -22,7 +22,7 @@
 
               <div class="absolute inset-0 rounded-lg ring-1 ring-inset ring-gray-900/10"></div>
             </div>
-            <div>
+            <div class="relative max-w-prose">
               <div class="flex items-center gap-4 text-xs">
                 <time class="text-text-light postlist-date" datetime="{{ post.date | dateToFormat('yyyy-MM-dd') }}">{{ post.date | dateToFormat('LLL dd yyyy') }}</time>
                 {% for tag in post.data.tags | filterTagList %}
@@ -31,7 +31,7 @@
                 {% endfor %}
 
               </div>
-              <div class="relative max-w-xl">
+              <div class="">
                 <h3 class="mt-2 text-xl font-bold leading-6 text-text brn">
                   <a href="{{ post.url | url }}">
                     {#
@@ -44,7 +44,7 @@
                     {% endif %}
                   </a>
                 </h3>
-                <p class="inset-0 pt-2 text-lg leading-6 axs">
+                <p class="inset-0 pt-2 text-lg leading-6 ">
                   {# 1: {{ "test/"+post.url+"cover.png" }}<br/>
                   2: {{ "blog/"+post.fileSlug+"/cover.png" }}<br/>
                   3: {{ post.filePathStem+"/cover.png" }}<br/>

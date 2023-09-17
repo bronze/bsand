@@ -2,9 +2,8 @@
 title: Children of the Nameless
 permalink: false
 external: https://magic.wizards.com/en/story#children
-description:
 cover: assets/images/books/mtg_children_of_the_nameless_cover.png
-bookorder:
+description:
 tags:
   - Book
   - book_mtg

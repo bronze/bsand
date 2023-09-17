@@ -1,9 +1,8 @@
 ---
 title: Snapshot
 permalink: '/books/short-fiction-non-cosmere/{{ title | slugify }}/'
-description:
 cover: assets/images/books/sf_snapshot_dragonsteel_edition.png
-bookorder:
+description:
 tags:
   - Book
   - book_shortfiction

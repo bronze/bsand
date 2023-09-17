@@ -1,9 +1,8 @@
 ---
 title: Arcanum Unbounded
 permalink: '/books/collections-cosmere/{{ title | slugify }}/'
-description:
 cover: assets/images/books/cosmere_arcanum_unbounded.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_cosmerecollections

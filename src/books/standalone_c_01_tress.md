@@ -1,9 +1,8 @@
 ---
 title: Tress of the Emerald Sea
 permalink: '/books/standalone/{{ title | slugify }}/'
-description:
 cover: assets/images/books/standalone_tress_us_cover.jpg
-bookorder:
+description: Secret Project 1
 tags:
   - Book
   - book_cosmerestandalone

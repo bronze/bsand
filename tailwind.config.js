@@ -11,6 +11,17 @@ module.exports={
         'sans': ['Inter Variable', ...defaultTheme.fontFamily.sans],
         'serif': ['Noto Serif Variable', ...defaultTheme.fontFamily.sans],
       },
+      // fontSize: {
+      //   xs: 'var(--font-xs)',
+      //   sm: 'var(--font-sm)',
+      //   base: 'var(--font-base)',
+      //   lg: 'var(--font-lg)',
+      //   xl: 'var(--font-xl)',
+      //   '2xl': 'var(--font-2xl)',
+      //   '3xl': 'var(--font-3xl)',
+      //   '4xl': 'var(--font-4xl)',
+      //   '5xl': 'var(--font-5xl)',
+      // },
       colors: {
         primary: "rgb(var(--color-primary) / <alpha-value>)",
         accent: "rgb(var(--color-accent) / <alpha-value>)",

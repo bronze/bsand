@@ -1,9 +1,8 @@
 ---
 title: Cytonic
 permalink: '/books/skyward/{{ title | slugify }}/'
-description:
 cover: assets/images/books/skyward_03_cytonic_us_cover.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_skyward

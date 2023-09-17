@@ -1,9 +1,8 @@
 ---
 title: Oathbringer
 permalink: '/books/thestormlightarchives/{{ title | slugify }}/'
-description:
 cover: assets/images/books/tsa_03_oathbringer_us_hardcover.jpg
-bookorder: Stormlight Archives Book 3
+description: Stormlight Archives Book 3
 tags:
   - Book
   - book_tsa

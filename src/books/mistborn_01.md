@@ -1,9 +1,8 @@
 ---
 title: The Final Empire
 permalink: '/books/mistborn/{{ title | slugify }}/'
-description:
 cover: assets/images/books/mistborn_e1_01_tfe_us_3rd_mmpb_cover.jpg
-bookorder: Mistborn Era 1 Book 1
+description: Mistborn Era 1 Book 1
 tags:
   - Book
   - book_mistborn1

@@ -1,9 +1,8 @@
 ---
 title: Yumi and the Nightmare Painter
 permalink: '/books/standalone/{{ title | slugify }}/'
-description:
 cover: assets/images/books/standalone_yumi_us_cover.jpg
-bookorder:
+description: Secret Project 3
 tags:
   - Book
   - book_cosmerestandalone

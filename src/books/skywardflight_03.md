@@ -1,9 +1,8 @@
 ---
 title: Evershore
 permalink: '/books/skyward/{{ title | slugify }}/'
-description:
 cover: assets/images/books/skywardflight_03_evershore_us_cover.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_skywardflight

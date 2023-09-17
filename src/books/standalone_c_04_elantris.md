@@ -1,9 +1,8 @@
 ---
 title: Elantris
 permalink: '/books/standalone/{{ title | slugify }}/'
-description:
 cover: assets/images/books/standalone_elantris_thumb.jpg
-bookorder:
+description:
 tags:
   - Elantris
   - Book

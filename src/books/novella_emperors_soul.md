@@ -1,9 +1,8 @@
 ---
 title: The Emperor’s Soul
 permalink: '/books/novella/{{ title | slugify }}/'
-description:
 cover: assets/images/books/novella_the_emperors_soul.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_novella

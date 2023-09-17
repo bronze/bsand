@@ -1,9 +1,8 @@
 ---
 title: Bastille Vs. The Evil Librarians
 permalink: '/books/alcatraz-vs-the-evil-librarians/{{ title | slugify }}/'
-description:
 cover: assets/images/books/alcatraz_06_alcatraz6_us_cover.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_alcatraz

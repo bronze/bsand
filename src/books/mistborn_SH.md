@@ -1,9 +1,8 @@
 ---
 title: Mistborn Secret History
 permalink: '/books/mistborn/{{ title | slugify }}/'
-description:
 cover: assets/images/books/mistborn_e1_04_secret_history_us_hardcover.jpg
-bookorder: Mistborn Secret History
+description: Mistborn Secret History
 tags:
   - Book
   - book_mistborn1

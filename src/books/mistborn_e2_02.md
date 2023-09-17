@@ -1,9 +1,8 @@
 ---
 title: Shadows Of Self
 permalink: '/books/mistborn/{{ title | slugify }}/'
-description:
 cover: assets/images/books/mistborn_e2_02_shadows_of_self_us_hardcover.jpg
-bookorder: Mistborn Era 2 Book 2
+description: Mistborn Era 2 Book 2
 tags:
   - Book
   - book_mistborn2

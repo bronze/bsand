@@ -1,9 +1,8 @@
 ---
 title: 'Infinity Blade: Redemption'
 permalink: '/books/the-wheel-of-time/{{ title | slugify }}/'
-description:
 cover: assets/images/books/infinity-blade-redemption.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_infinityblade

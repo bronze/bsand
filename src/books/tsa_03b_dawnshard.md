@@ -1,9 +1,8 @@
 ---
 title: Dawnshard
 permalink: '/books/thestormlightarchives/{{ title | slugify }}/'
-description:
 cover: assets/images/books/tsa_03b_dawnshard_cover.png
-bookorder: Stormlight Archives Novella 2
+description: Stormlight Archives Novella 2
 tags:
   - Book
   - book_tsa

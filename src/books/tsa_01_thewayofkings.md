@@ -1,9 +1,8 @@
 ---
 title: The Way of Kings
 permalink: '/books/thestormlightarchives/{{ title | slugify }}/'
-description:
 cover: assets/images/books/tsa_01_thewayofkings.png
-bookorder: Stormlight Archives Book 1
+description: Stormlight Archives Book 1
 tags:
   - Book
   - book_tsa

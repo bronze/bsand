@@ -1,9 +1,8 @@
 ---
 title: Alcatraz Vs. The Evil Librarians
 permalink: '/books/alcatraz-vs-the-evil-librarians/{{ title | slugify }}/'
-description:
 cover: assets/images/books/alcatraz_01_versus_the_evil_librarians_tor_hardcover.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_alcatraz

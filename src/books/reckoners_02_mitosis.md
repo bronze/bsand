@@ -1,9 +1,8 @@
 ---
 title: Mitosis
 permalink: '/books/reckoners/{{ title | slugify }}/'
-description:
 cover: assets/images/books/reckoners_mitosis.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_shortfiction
