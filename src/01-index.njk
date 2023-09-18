@@ -3,23 +3,42 @@ layout: base
 permalink: /
 image: assets/images/icon-512x512.png
 ---
-<section class="overflow-hidden ">
+<section class="" role="main">
   <div class="px-6 mx-auto max-w-7xl lg:px-8">
     <div class="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
       <div class="lg:pr-8 lg:pt-4">
         <div class="lg:max-w-prose">
-          <h2 class="text-base font-semibold leading-7 text-primary">Dragonsteel 2023</h2>
-          <p class="mt-2 text-4xl font-bold tracking-tight text-text sm:text-4xl">Be part of the story</p>
+          <h1 class="text-base font-semibold leading-7 text-primary small-caps">
+            latest headline
+          </h1>
+          <p class="text-3xl font-extrabold tracking-[-0.04em] text-text-dark dark:text-text sm:text-5xl sm:leading-[3.5rem]">
+            Dragonsteel 2023
+          </p>
+          {# <p class="text-base font-semibold leading-7 text-primary">Dragonsteel 2023</p> #}
+          <h2 class="mt-2 text-4xl font-bold tracking-tight text-text sm:text-4xl">Be part of the story</h2>
           <p class="mt-6 text-lg leading-8 text-text">Dragonsteel 2023 will be held November 20 & 21 in the Salt Palace Convention Center in downtown Salt Lake City, Utah.</p>
           <p class="mt-6 text-lg leading-8 text-text">Local hotels, restaurants, shopping, and entertainment options are located within walking distance, it is a short ride on public transit from the airport, and UTA’s Free Fare Zone covers many of the near-by areas in Salt Lake City.</p>
-          {# <div>
-            <a href="#introducao" class="relative inline-flex items-center h-10 mt-2 px-2.5 py-3 text-lg text-primary transition-all border-2 border-primary rounded-lg group ease duration-400 focus:shadow-outline hover:pr-12 hover:bg-primary hover:text-white">
-              <span class="relative uppercase">Start reading today</span>
-              <span class="absolute pl-4 duration-300 transform opacity-0 right-2 ml-14 ease group-hover:opacity-100">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6l-1.41-1.42Z"/></svg>
+          <div class="flex gap-4 mt-8">
+            <a class="relative inline-flex justify-center px-4 py-3 text-sm font-semibold text-white transition-all duration-300 ease-in-out rounded-lg dark:text-black hover:pr-12 group bg-primary hover:bg-accent" href="https://tabletop.events/conventions/dragonsteel-2023">
+                Go to event page
+                <span aria-hidden="true" class="absolute pl-4 opacity-0 top-1.5 duration-150 delay-75 sm:inline right-2 ml-14 group-hover:opacity-100">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 12 12"><path fill="currentColor" d="M4.7 10c-.2 0-.4-.1-.5-.2c-.3-.3-.3-.8 0-1.1L6.9 6L4.2 3.3c-.3-.3-.3-.8 0-1.1c.3-.3.8-.3 1.1 0l3.3 3.2c.3.3.3.8 0 1.1L5.3 9.7c-.2.2-.4.3-.6.3Z"/></svg>
               </span>
             </a>
-          </div> #}
+            {# <a class="inline-flex justify-center px-4 py-3 text-sm font-semibold rounded-lg hover:ring-slate-900/15 bg-white/0 text-text ring-1 ring-text/10 hover:bg-white/25"
+              href="/documentation">
+              <span>
+                Documentation
+                <span aria-hidden="true" class="text-black/25 sm:inline">→</span>
+              </span>
+            </a> #}
+            {# <a href="#introducao" class="relative inline-flex items-center h-10 px-5 py-6 text-lg text-green-800 transform border-2 border-green-800 rounded-lg group ease duration-400 focus:shadow-outline hover:pr-12 hover:bg-green-800 hover:text-white">
+              <span class="relative uppercase">Quero saber mais</span>
+              <span class="absolute pl-4 duration-300 transform opacity-0 right-2 ml-14 ease group-hover:opacity-100">
+                <svg viewBox="0 0 24 24" class="h-8" astro-icon="mdi:arrow-right-drop-circle"><path fill="currentColor" d="M2 12A10 10 0 0 1 12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12m8 5 5-5-5-5v10z"></path></svg>
+              </span>
+            </a> #}
+          </div>
         </div>
       </div>
       {# <img src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png" alt="Product screenshot" class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0" width="2432" height="1442"> #}
@@ -36,8 +55,8 @@ image: assets/images/icon-512x512.png
 <section class="container max-w-screen-xl px-4 mx-auto mt-24 mb-8 ">
   <div class="grid grid-cols-1 gap-5 my-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
       <!--Card 1-->
-      <div><h2 class="text-sm font-bold uppercase lg:pl-4 inter lineheader-r center text-primary">space</h2>
-        <div class="mt-4 border-t-2 border-solid rounded shadow border-primary bg-background-light">
+      <div><h2 class="text-sm font-bold uppercase lg:pl-4 inter lineheader-r center text-primary">Space</h2>
+        <div class="mt-4 ">
           <div class="px-6 py-4">
             <p class="text-base">
               video: what hes talking
@@ -52,10 +71,10 @@ image: assets/images/icon-512x512.png
       </div>
       <!--Card 2-->
       <div><h2 class="text-sm font-bold uppercase lg:pl-4 inter lineheader-r center text-primary">Latest Video</h2>
-        <div class="mt-4 border-t-2 border-solid rounded shadow bg-background-light border-primary">
+        <div class="mt-4 ">
           <div class="">
             {# <div class="px-6 pt-4 pb-2 mb-2 text-xl font-bold">Latest Video</div> #}
-            {% image "BS_YT_Weekly-Update_08-01-23_V1.png", "Test", [300, 600, 800], "(min-width: 66em) 33vw, (min-width: 44em) 50vw, 100vw", "aspect-[1.78] rounded-lg" %}
+            {% image "assets/images/latestvideo.jpg", "Test", [300, 600, 800], "(min-width: 66em) 33vw, (min-width: 44em) 50vw, 100vw", "aspect-[1.78] rounded-lg" %}
           </div>
         </div>
       </div>
@@ -75,7 +94,7 @@ image: assets/images/icon-512x512.png
       {# add some iconography behind? top left? #}
       {# https://icones.js.org/collection/mdi?s=progress #}
       <div><h2 class="text-sm font-bold uppercase lg:pl-4 inter lineheader-r center text-primary">Writing Progress</h2>
-        <div class="relative px-6 py-4 mt-4 border-t-2 border-solid rounded shadow bg-background-light border-primary">
+        <div class="relative px-6 py-4">
           {# <div class="absolute inset-x-0 flex items-center justify-center rounded-lg -top-2"><h3 class="font-bold center">Progress Bars</h3></div> #}
           {# <div class="mb-2 text-xl font-bold">Writing Progress</div> #}
           <div>
@@ -83,7 +102,7 @@ image: assets/images/icon-512x512.png
               <div class="mb-1 text-base font-medium text-primary">Stormlight 5</div>
               <div class="mb-1 text-base font-medium text-right text-primary">73%</div>
             </div>
-            <div class="w-full rounded-full h-2.5 mb-4 bg-muted">
+            <div class="w-full rounded-full h-2.5 mb-4 bg-background-dark">
               <div class="bg-primary h-2.5 rounded-full" style="width: 73%"></div>
             </div>
           </div>
@@ -92,7 +111,7 @@ image: assets/images/icon-512x512.png
               <div class="mb-1 text-base font-medium text-primary">Secret Project #4 Final Draft </div>
               <div class="mb-1 text-base font-medium text-right text-primary">100%</div>
             </div>
-            <div class="w-full rounded-full h-2.5 mb-4 bg-muted">
+            <div class="w-full rounded-full h-2.5 mb-4 bg-background-dark">
               <div class="bg-primary h-2.5 rounded-full" style="width: 100%"></div>
             </div>
           </div>
@@ -101,7 +120,7 @@ image: assets/images/icon-512x512.png
               <div class="mb-1 text-base font-medium text-primary">Defiant Final Draft</div>
               <div class="mb-1 text-base font-medium text-right text-primary">100%</div>
             </div>
-            <div class="w-full rounded-full h-2.5 mb-4 bg-muted">
+            <div class="w-full rounded-full h-2.5 mb-4 bg-background-dark">
               <div class="bg-primary h-2.5 rounded-full" style="width: 100%"></div>
             </div>
           </div>
@@ -110,7 +129,7 @@ image: assets/images/icon-512x512.png
               <div class="mb-1 text-base font-medium text-primary">Skyward Legacy Book One</div>
               <div class="mb-1 text-base font-medium text-right text-primary">34%</div>
             </div>
-            <div class="w-full rounded-full h-2.5 mb-4 bg-muted">
+            <div class="w-full rounded-full h-2.5 mb-4 bg-background-dark">
               <div class="bg-primary h-2.5 rounded-full" style="width: 34%"></div>
             </div>
           </div>
@@ -124,8 +143,8 @@ image: assets/images/icon-512x512.png
   <div class="px-6 mx-auto max-w-7xl lg:px-8">
     <div class="max-w-screen-md mx-auto text-center ">
 
-        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Subscribe to our newsletter.</h2>
-        <p class="mt-4 text-lg leading-8 ">Stay up to date on new events and videos right in your inbox!</p>
+        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Get updates on your inbox!</h2>
+        <p class="mt-4 text-lg leading-8 ">Stay up to date on new events and get chapter previews on your email.</p>
         <div class="flex items-center max-w-screen-sm mx-auto mt-6 mb-3 space-y-4 gap-x-4 sm:flex sm:space-y-0">
           <label for="midpagesignup" class="sr-only">Email address</label>
           <input id="midpagesignup" name="email" type="email" autocomplete="email" required class="min-w-0 flex-auto rounded-md border-0 bg-white/20 px-3.5 py-2 text-text shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" placeholder="Enter your email">
@@ -168,7 +187,7 @@ image: assets/images/icon-512x512.png
 
 <section class="mt-24 mb-24 min-h-[40vh]">
   <div class="container max-w-screen-xl mx-auto mt-16">
-    <h2 class="text-sm font-bold uppercase lg:pl-4 inter lineheader-r center">Check out some of the series</h2>
+    <h2 class="text-sm font-bold uppercase lg:pl-4 inter lineheader-r center"></h2>
   </div>
 </section>
 
