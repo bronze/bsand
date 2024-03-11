@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ meta.title }}</title>
+    <title>{{ title or meta.title }}</title>
   <script>// On page load or when changing themes, best to add inline in `head` to avoid FOUC
   try {
     if (
@@ -21,8 +21,8 @@
     }
   } catch (_) {}
   </script>
-  <link rel="preload" href="/assets/fonts/storysonear/Fontspring-DEMO-ccthestorysonear-regular.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="/assets/fonts/storyends/Fontspring-DEMO-ccthestoryends-regular.woff2" as="font" type="font/woff2" crossorigin="">
+  {# <link rel="preload" href="/assets/fonts/storysonear/Fontspring-DEMO-ccthestorysonear-regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="/assets/fonts/storyends/Fontspring-DEMO-ccthestoryends-regular.woff2" as="font" type="font/woff2" crossorigin=""> #}
 
 
     {% include "meta.njk" %}
@@ -40,9 +40,7 @@
         document.documentElement.className += " fonts-loaded-1";
 
         Promise.all([
-          document.fonts.load("1em 'TheStoryEnds'"),
-          document.fonts.load("1em 'TheStorySoNear'"),
-          document.fonts.load("1em 'Roboto Slab Variable'"),
+          document.fonts.load("1em 'Noto Serif Variable'"),
           //document.fonts.load("italic 700 1em 'DM Sans'")
         ]).then(function () {
           document.documentElement.className += " fonts-loaded-2";
@@ -55,7 +53,7 @@
   })();
 
   </script>
-
+  <script defer data-domain="brandonsanderson-redesign.carlosbronze.com.br" src="https://plausible.io/js/script.js"></script>
   <link rel="stylesheet" href="/assets/css/main.scss">
 </head>
 <body >
@@ -76,28 +74,23 @@
   {% include "sitemenu.njk" %}
   <a id="primary_content"></a>
   {# <div class="layout" role="document"> #}
-    {# <main id="main" class="main"> #}
-        {{ content | safe }}
-    {# </main> #}
-    {% include "footer.njk" %}
+  {# <main id="main" class="main"> #}
+  {{ content | safe }}
+  {# </main> #}
+  {% include "footer.njk" %}
   {# </div> #}
   <!-- Back to top button -->
   <button
     type="button"
     class="!fixed bottom-5 right-5 hidden rounded-full bg-primary/60 p-4 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-300 ease-in-out hover:bg-accent/80 hover:shadow-lg focus:bg-accent/80 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-accent active:shadow-lg"
     id="btn-back-to-top">
-    <svg
-      aria-hidden="true"
-      focusable="false"
-      data-prefix="fas"
-      class="w-8 h-8"
-      role="img"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 448 512">
-      <path
-        fill="currentColor"
-        d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path>
-    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    focusable="false"
+    data-prefix="fas"
+    class="relative w-8 h-8 -top-0.5"
+    role="img"
+    viewBox="0 0 12 12"><path fill="currentColor" d="M6 4c-.2 0-.4.1-.5.2L2.2 7.5c-.3.3-.3.8 0 1.1c.3.3.8.3 1.1 0L6 5.9l2.7 2.7c.3.3.8.3 1.1 0c.3-.3.3-.8 0-1.1L6.6 4.3C6.4 4.1 6.2 4 6 4Z"/></svg>
   </button>
   <script>
     const mybutton = document.getElementById("btn-back-to-top");

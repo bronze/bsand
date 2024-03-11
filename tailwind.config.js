@@ -6,8 +6,21 @@ module.exports={
   darkMode: ['class', '[data-theme="dark"]'],
   theme: {
     extend: {
-      // fontFamily: {
-      //   sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      fontFamily: {
+        // https://www.tailwindtoolbox.com/guides/adding-fonts-to-tailwind-css
+        'sans': ['Inter Variable', ...defaultTheme.fontFamily.sans],
+        'serif': ['Noto Serif Variable', ...defaultTheme.fontFamily.sans],
+      },
+      // fontSize: {
+      //   xs: 'var(--font-xs)',
+      //   sm: 'var(--font-sm)',
+      //   base: 'var(--font-base)',
+      //   lg: 'var(--font-lg)',
+      //   xl: 'var(--font-xl)',
+      //   '2xl': 'var(--font-2xl)',
+      //   '3xl': 'var(--font-3xl)',
+      //   '4xl': 'var(--font-4xl)',
+      //   '5xl': 'var(--font-5xl)',
       // },
       colors: {
         primary: "rgb(var(--color-primary) / <alpha-value>)",
@@ -37,6 +50,32 @@ module.exports={
           dark: '#0e7490',
         },
         // ...
+      },
+      typography: ({theme}) => {
+        return {
+          DEFAULT: {
+            css: {
+              '--tw-prose-headings': 'var(--color-text-default)', // opacity
+              '--tw-prose-body': 'var(--color-text-default)',
+              '--tw-prose-links': 'var(--color-text-default)',// opacity
+              a: {
+                // change anchor color and on hover
+                // color: '#03989E',
+                // color: 'rgb(var(--color-primary) / 1)',
+                // https://stackoverflow.com/questions/72831003/tailwind-custom-theme-color-opacity-not-being-applied
+                // https://tailwindcss.com/blog/tailwindcss-v3-1#easier-css-variable-color-configuration
+                // color: withOpacity('--color-accent'),
+                '&:hover': { // could be any. It's like extending css selector
+                  // color: '#03989E',
+                  color: 'rgb(var(--color-primary) / 1)',
+                  // 'color': 'var(--color-primary)',
+                  // color: withOpacity('--color-primary'),
+                  // fill: withOpacity('--color-primary'),
+                },
+              },
+            }
+          },
+        }
       },
     },
 

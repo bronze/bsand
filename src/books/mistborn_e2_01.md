@@ -1,9 +1,8 @@
 ---
 title: The Alloy Of Law
 permalink: '/books/mistborn/{{ title | slugify }}/'
-description:
 cover: assets/images/books/mistborn_e2_01_the_alloy_of_law_cover.jpg
-bookorder: Mistborn Era 2 Book 1
+description: Mistborn Era 2 Book 1
 tags:
   - Book
   - book_mistborn2

@@ -1,9 +1,8 @@
 ---
 title: The Scrivener's Bones
 permalink: '/books/alcatraz-vs-the-evil-librarians/{{ title | slugify }}/'
-description:
 cover: assets/images/books/alcatraz_02_the_scrivener_s_bones_tor_hardcover.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_alcatraz

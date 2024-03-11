@@ -1,9 +1,8 @@
 ---
 title: The Lost Metal
 permalink: '/books/mistborn/{{ title | slugify }}/'
-description:
 cover: assets/images/books/mistborn_e2_04_tlm_us_cover.jpg
-bookorder: Mistborn Era 2 Book 4
+description: Mistborn Era 2 Book 4
 tags:
   - Book
   - book_mistborn2

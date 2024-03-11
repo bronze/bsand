@@ -1,9 +1,8 @@
 ---
 title: 'Dark One: Forgotten'
 permalink: '/books/standalones-non-cosmere/{{ title | slugify }}/'
-description:
 cover: assets/images/books/standalone_dark_one_cover.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_standalone

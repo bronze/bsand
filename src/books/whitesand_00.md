@@ -1,9 +1,8 @@
 ---
 title: Whitesand Omnibus
 permalink: '/books/whitesand/{{ title | slugify }}/'
-description:
 cover: assets/images/books/whitesand_ws_omnibus_cover.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_whitesand

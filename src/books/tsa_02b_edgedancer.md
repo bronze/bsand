@@ -1,9 +1,8 @@
 ---
 title: Edgedancer
 permalink: '/books/thestormlightarchives/{{ title | slugify }}/'
-description:
 cover: assets/images/books/tsa_02b_edgedancer_cover.jpg
-bookorder: Stormlight Archives Novela 1
+description: Stormlight Archives Novela 1
 tags:
   - Book
   - book_tsa

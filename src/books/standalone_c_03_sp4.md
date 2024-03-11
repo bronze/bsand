@@ -1,9 +1,8 @@
 ---
 title: 'Secret Project #4'
 permalink: '/books/standalone/{{ title | slugify }}/'
-description:
 cover: assets/images/books/standalone_sp4-web.png
-bookorder:
+description:
 tags:
   - Book
   - book_cosmerestandalone

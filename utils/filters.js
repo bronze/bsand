@@ -1,6 +1,18 @@
 const {DateTime}=require('luxon')
+const path=require("path");
 
 module.exports={
+  getbase: function (value) {
+    if (value!==false) {
+      const {dir}=path.parse(value);
+      const firstPath=dir.split('/')[1];
+      return "/"+firstPath+"/";
+    } else {
+      // Handle the case where value is a boolean false
+      return "Invalid input: value is false";
+    }
+  },
+
   dateToFormat: function (date, format) {
     return DateTime.fromJSDate(date, {zone: 'utc'}).toFormat(
       String(format)
@@ -23,7 +35,7 @@ module.exports={
   },
 
   filterTagList(tags) {
-    return (tags||[]).filter(tag => ["all", "nav", "post", "posts", "book", "books"].indexOf(tag)===-1);
+    return (tags||[]).filter(tag => ["all", "nav", "post", "posts",].indexOf(tag)===-1);
   },
   setExt: function (path, ext) {
     if (!ext) {

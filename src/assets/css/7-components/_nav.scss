@@ -20,27 +20,24 @@
   }
 }
 // https://christianoliff.com/blog/styling-external-links-with-an-icon-in-css/
-
+:root {
+  --menutransition: 0.25s cubic-bezier(0.645, 0.445, 0.355, 1);
+}
 nav {
   &__container {
-  }
-  .logo {
-    &:hover {
-    }
-    @apply storysonear;
-    & span {
-      @apply storyends;
-    }
   }
   #menu {
     li.active {
       @apply text-primary;
       & a::before {
         top: 0;
-        height: 8px;
+        height: 4px;
+        visibility: visible !important;
+        transform: scaleX(1) !important;
       }
     }
-    a {
+    a,
+    button {
       &[href^="http"],
       &[href^="https://"]
       {
@@ -52,6 +49,8 @@ nav {
           mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'  viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath fill-rule='evenodd' d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
           @apply bg-text;
           display: inline-block;
+          position: relative;
+          top: -1px;
           &::hover {
             filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg)
               brightness(104%) contrast(97%);
@@ -71,14 +70,22 @@ nav {
           left: 0;
           top: 0px;
           width: 100%;
-          height: 0px;
+          // height: 0px;
+          height: 4px;
+          visibility: hidden;
+          transform: scaleX(0);
           z-index: -1;
-          transition: all 0.3s ease-in-out;
+          // transition: all 0.3s ease-in-out;
+          transition:
+            transform var(--menutransition),
+            visibility var(--menutransition);
         }
         &:hover {
           &::before {
-            top: 0;
-            height: 8px;
+            // top: 0;
+            // height: 8px;
+            visibility: visible !important;
+            transform: scaleX(1) !important;
           }
           @apply text-primary;
         }
@@ -86,6 +93,11 @@ nav {
       position: relative;
       &:hover {
         @apply text-primary;
+      }
+    }
+    button svg {
+      &:hover {
+        @apply fill-primary text-primary;
       }
     }
   }

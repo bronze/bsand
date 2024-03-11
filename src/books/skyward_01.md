@@ -1,9 +1,8 @@
 ---
 title: Skyward
 permalink: '/books/skyward/{{ title | slugify }}/'
-description:
 cover: assets/images/books/skyward_01_skyward_us_hardcover.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_skyward

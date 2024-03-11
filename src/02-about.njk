@@ -1,56 +1,91 @@
 ---
 layout: base
+description: About Page
 permalink: /about/
 eleventyNavigation:
   key: About
   order: 2
 ---
 
-<div class="container">
-  <h1>About</h1>
-  {% image "cat.jpg", "Cat pic", [300, 600], "(max-width: 500px) 300px, 600px"
-  %}
-  <h3>old menu</h3>
-      <div class="grid grid-cols-7">
-        <div>
-          <p class="font-bold">Start Here</p>
-          <div>New to Brandon’s Work?</div>
-          <div>Where do I start?</div>
-          <div>What is the Cosmere®?</div>
-          <div>Free Fiction</div>
-        </div>
-        <div><p class="font-bold">Books & Art</p>
-          <div>Cosmere®</div>
-          <div>Cytoverse</div>
-          <div>Other</div>
-        </div>
-        <div><p class="font-bold">Online Library</p>
-          <div>Free Fiction</div>
-          <div>Sample Chapters</div>
-          <div>Deleted Scenes</div>
-          <div>Annotations</div>
-        </div>
-        <div><p class="font-bold">About</p>
+<div class="container max-w-screen-xl mx-auto text-text" role="main">
+  <h1 class="text-4xl font-bold tracking-tight text-center lg:pl-4 lineheader-r">About</h1>
+  <div class="relative mt-8 overflow-auto ">
+    <div class="py-12 bg-background-light">
+      <div class="px-6 mx-auto max-w-7xl lg:px-8">
+        {# <div class="max-w-2xl mx-auto lg:text-center">
+          <h2 class="text-2xl font-semibold leading-7 text-indigo-600">Deploy faster</h2>
+          <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Everything you need to deploy your app</p>
+          <p class="mt-6 text-lg leading-8 ">Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc.</p>
+        </div> #}
+        <div class="max-w-2xl mx-auto lg:max-w-4xl text-text">
+          <dl class="grid max-w-xl grid-cols-1 gap-x-4 gap-y-4 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+            <div class="relative p-4 lg:col-span-2">
+              <dt class="text-2xl font-semibold leading-7">
+                <a href="/about/brandon/" class="">
+                Bio
+                <span class="absolute inset-0" aria-hidden="true"></span>
+                </a>
+              </dt>
+              <dd class="mt-2 text-base leading-7 ">A brief Bio about Brandon and his professional trajectory. </dd>
+            </div>
+            <div class="relative p-4">
+              <dt class="text-2xl font-semibold leading-7">
+                <a href="/about/hello-my-names-brandon/" class="">
+                New to Brandon’s Work?
+                <span class="absolute inset-0" aria-hidden="true"></span>
+                </a>
+              </dt>
+              <dd class="mt-2 text-base leading-7 ">Brandon has a few words to share and a couple books to pitch.</dd>
+            </div>
+            <div class="relative p-4">
+              <dt class="text-2xl font-semibold leading-7">
+                <a href="/about/where-do-i-start/" class="">
+                Where do I start?
+                <span class="absolute inset-0" aria-hidden="true"></span>
+                </a>
+              </dt>
+              <dd class="mt-2 text-base leading-7 ">Having trouble choosing? We have a few ideas to get you started.</dd>
+            </div>
+            <div class="relative p-4">
+              <dt class="text-2xl font-semibold leading-7">
+                <a href="/about/what-is-the-cosmere/" class="">
+                What is the Cosmere®?
+                <span class="absolute inset-0" aria-hidden="true"></span>
+                </a>
+              </dt>
+              <dd class="mt-2 text-base leading-7 ">Confused what it all means? Let's explain it.</dd>
+            </div>
 
-          <div>Bio</div>
-          <div>FAQ</div>
-          <div>Writing Advice</div>
-          <div>Rights Inquiries</div>
-          <div>Fan Art Policy</div>
-          <div>Goodreads Policy</div>
-          <div>Fan Site</div>
-          <div>Contact</div>
-          <div>Jobs</div>
-
-        </div>
-        <div>
-          <div class="font-bold">Shop</div>
-        </div>
-        <div>
-          <div class="font-bold">Secret Novels</div>
-        </div>
-        <div>
-          <div class="font-bold">Book Club</div>
+            <div class="relative p-4">
+              <dt class="text-2xl font-semibold leading-7">
+                <a href="/about/writing-advice/" class="">
+                Writing Advice
+                <span class="absolute inset-0" aria-hidden="true"></span>
+                </a>
+              </dt>
+              <dd class="mt-2 text-base leading-7 ">Many writers ask me for advice, so I’ve created this page of resources to help you achieve your writing goals.</dd>
+            </div>
+            <div class="relative p-4">
+              <dt class="text-2xl font-semibold leading-7">
+                <a href="/about/rights-inquiries/" class="">
+                Rights Inquiries
+                <span class="absolute inset-0" aria-hidden="true"></span>
+                </a>
+              </dt>
+              <dd class="mt-2 text-base leading-7 ">Inquiries about product licensing.</dd>
+            </div>
+            <div class="relative p-4">
+              <dt class="text-2xl font-semibold leading-7">
+                <a href="/about/goodreads-policy/" class="">
+                Goodreads Policy
+                <span class="absolute inset-0" aria-hidden="true"></span>
+                </a>
+              </dt>
+              <dd class="mt-2 text-base leading-7 ">Off-site Book Reviews.</dd>
+            </div>
+          </dl>
         </div>
       </div>
+    </div>
+  </div>
 </div>

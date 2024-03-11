@@ -1,9 +1,8 @@
 ---
 title: The Rithmatist
 permalink: '/books/standalones-non-cosmere/{{ title | slugify }}/'
-description:
 cover: assets/images/books/standalone_rithmatist_us_tor_cover.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_standalone

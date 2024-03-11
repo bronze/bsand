@@ -1,9 +1,8 @@
 ---
 title: Lux
 permalink: '/books/reckoners/{{ title | slugify }}/'
-description:
 cover: assets/images/books/reckoners_lux_cover.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_reckoners

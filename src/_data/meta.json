@@ -1,8 +1,20 @@
 {
   "title": "Brandon Sanderson",
-  "description": "An Eleventy 2 Starter Project with Vite",
+  "description": "Discover the captivating novels and intricate magic systems of the worlds created by Brandon Sanderson, the master of epic fantasy storytelling.",
   "url": "https://cerulean-cupcake-4201a0.netlify.app/",
   "lang": "en",
   "locale": "en_us",
-  "author": "Carlos Bronze"
+  "author": "bronze",
+  "instagram": {
+    "url": "https://www.instagram.com/BrandSanderson/"
+  },
+  "facebook": {
+    "url": "https://www.facebook.com/BrandSanderson"
+  },
+  "youtube": {
+    "url": "https://www.youtube.com/brandsanderson"
+  },
+  "tiktok": {
+    "url": "https://www.tiktok.com/@authorbrandonsanderson"
+  }
 }

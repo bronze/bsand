@@ -1,9 +1,8 @@
 ---
 title: Defending Elysium
 permalink: '/books/skyward/{{ title | slugify }}/'
-description:
 cover: assets/images/books/sf_defendingelysium.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_shortfiction

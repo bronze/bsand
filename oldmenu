@@ -1,0 +1,42 @@
+  <div class="grid grid-cols-7">
+    <div>
+      <p class="font-bold">Start Here</p>
+      <div>New to Brandon’s Work?</div>
+      <div>Where do I start?</div>
+      <div>What is the Cosmere®?</div>
+      <div>Free Fiction</div>
+    </div>
+    <div><p class="font-bold">Books & Art</p>
+      <div>Cosmere®</div>
+      <div>Cytoverse</div>
+      <div>Other</div>
+    </div>
+    <div><p class="font-bold">Online Library</p>
+      <div>Free Fiction</div>
+      <div>Sample Chapters</div>
+      <div>Deleted Scenes</div>
+      <div>Annotations</div>
+    </div>
+    <div><p class="font-bold">About</p>
+
+      <div>Bio</div>
+      <div>FAQ</div>
+      <div>Writing Advice</div>
+      <div>Rights Inquiries</div>
+      <div>Fan Art Policy</div>
+      <div>Goodreads Policy</div>
+      <div>Fan Site</div>
+      <div>Contact</div>
+      <div>Jobs</div>
+
+    </div>
+    <div>
+      <div class="font-bold">Shop</div>
+    </div>
+    <div>
+      <div class="font-bold">Secret Novels</div>
+    </div>
+    <div>
+      <div class="font-bold">Book Club</div>
+    </div>
+  </div>

@@ -1,9 +1,8 @@
 ---
 title: Starsight
 permalink: '/books/skyward/{{ title | slugify }}/'
-description:
 cover: assets/images/books/skyward_02_starsight_us_hardcover.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_skyward

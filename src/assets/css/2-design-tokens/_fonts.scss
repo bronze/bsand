@@ -1,3 +1,53 @@
+.fonts-loaded-2 {
+  nav {
+    font-family: 'Inter Variable', sans-serif;
+    font-weight: 700;
+    font-variation-settings: 'wght' 700;
+  }
+}
+// seteps xs,sm,base,lg,xl,2xl,3xl,4xl,5xl
+/* Fluid font size variables, for browsers that support clamp */
+@supports (font-size: clamp(1rem, 1vw, 1rem)) {
+  :root {
+    --font-xs: clamp(0.79rem, 0.18vw + 0.745rem, 0.889rem);
+    --font-sm: clamp(0.889rem, 0.202vw + 0.838rem, 1rem);
+    --font-base: clamp(1rem, 0.227vw + 0.943rem, 1.125rem);
+    --font-lg: clamp(1.125rem, 0.256vw + 1.061rem, 1.266rem);
+    --font-xl: clamp(1.266rem, 0.288vw + 1.194rem, 1.424rem);
+    --font-2xl: clamp(1.424rem, 0.324vw + 1.343rem, 1.602rem);
+    --font-3xl: clamp(1.602rem, 0.364vw + 1.511rem, 1.802rem);
+    --font-4xl: clamp(1.802rem, 0.41vw + 1.7rem, 2.027rem);
+    --font-5xl: clamp(2.027rem, 0.461vw + 1.912rem, 2.281rem);
+  }
+}
+/* Fallback variables for browsers that don't support clamp */
+@supports not (font-size: clamp(1rem, 1vw, 1rem)) {
+  :root {
+    --font-xs: 0.79rem;
+    --font-sm: 0.889rem;
+    --font-base: 1rem;
+    --font-lg: 1.125rem;
+    --font-xl: 1.266rem;
+    --font-2xl: 1.424rem;
+    --font-3xl: 1.602rem;
+    --font-4xl: 1.802rem;
+    --font-5xl: 2.027rem;
+  }
+  @media screen and (min-width: 1280px) {
+    :root {
+      --font-xs: 0.889rem;
+      --font-sm: 1rem;
+      --font-base: 1.125rem;
+      --font-lg: 1.266rem;
+      --font-xl: 1.424rem;
+      --font-2xl: 1.602rem;
+      --font-3xl: 1.802rem;
+      --font-4xl: 2.027rem;
+      --font-5xl: 2.281rem;
+    }
+  }
+}
+
 // /* inter-latin-ext-wght-normal */
 // @font-face {
 //   font-family: 'Inter Variable';
@@ -26,26 +76,26 @@
 /**
  * Font Face
  */
-@font-face {
-  font-family: 'TheStorySoNear';
-  src:
-    url('/assets/fonts/storysonear/Fontspring-DEMO-ccthestorysonear-regular.woff2')
-      format('woff2'),
-    url('/assets/fonts/storysonear/Fontspring-DEMO-ccthestorysonear-regular.woff')
-      format('woff');
-  unicode-range: U+21-80, U+91-94, U+BF-D6, U+D8-F6, U+F8-122; // U+21-80,U+91-94,U+DF,U+E4,U+F6,U+FC
-  font-display: swap;
-}
-@font-face {
-  font-family: 'TheStoryEnds';
-  src:
-    url('/assets/fonts/storyends/Fontspring-DEMO-ccthestoryends-regular.woff2')
-      format('woff2'),
-    url('/assets/fonts/storyends/Fontspring-DEMO-ccthestoryends-regular.woff')
-      format('woff');
-  unicode-range: U+21-80, U+91-94, U+BF-D6, U+D8-F6, U+F8-122; // U+21-80,U+91-94,U+DF,U+E4,U+F6,U+FC
-  font-display: swap;
-}
+// @font-face {
+//   font-family: 'TheStorySoNear';
+//   src:
+//     url('/assets/fonts/storysonear/Fontspring-DEMO-ccthestorysonear-regular.woff2')
+//       format('woff2'),
+//     url('/assets/fonts/storysonear/Fontspring-DEMO-ccthestorysonear-regular.woff')
+//       format('woff');
+//   unicode-range: U+21-80, U+91-94, U+BF-D6, U+D8-F6, U+F8-122; // U+21-80,U+91-94,U+DF,U+E4,U+F6,U+FC
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: 'TheStoryEnds';
+//   src:
+//     url('/assets/fonts/storyends/Fontspring-DEMO-ccthestoryends-regular.woff2')
+//       format('woff2'),
+//     url('/assets/fonts/storyends/Fontspring-DEMO-ccthestoryends-regular.woff')
+//       format('woff');
+//   unicode-range: U+21-80, U+91-94, U+BF-D6, U+D8-F6, U+F8-122; // U+21-80,U+91-94,U+DF,U+E4,U+F6,U+FC
+//   font-display: swap;
+// }
 
 // /* dm-sans-regular - latin */
 // @font-face {
@@ -89,33 +139,6 @@
 //     /* Chrome 26+, Opera 23+, Firefox 39+ */
 //       url('/assets/fonts/dm-sans/dm-sans-v11-latin-bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 // }
-
-body {
-  font-family: sans-serif;
-}
-
-.fonts-loaded-2 {
-  body {
-    font-family: 'Inter Variable', sans-serif;
-  }
-  nav {
-    font-family: 'Inter Variable', sans-serif;
-    font-weight: 700;
-    font-variation-settings: 'wght' 700;
-  }
-  .roboto {
-    font-family: 'Inter Variable', sans-serif;
-  }
-  .roboto-slab {
-    font-family: 'Roboto Slab Variable', sans-serif;
-  }
-  .storysonear {
-    font-family: 'TheStorySoNear';
-  }
-  .storyends {
-    font-family: 'TheStoryEnds';
-  }
-}
 
 // .fonts-loaded-1 body {
 //   font-family: 'DM Sans Subset';

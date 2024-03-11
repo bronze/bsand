@@ -1,9 +1,8 @@
 ---
 title: Whitesand Vol. II
 permalink: '/books/whitesand/{{ title | slugify }}/'
-description:
 cover: assets/images/books/white_sand_v2_cover_art.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_whitesand

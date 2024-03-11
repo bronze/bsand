@@ -1,9 +1,8 @@
 ---
 title: Redawn
 permalink: '/books/skyward/{{ title | slugify }}/'
-description:
 cover: assets/images/books/skywardflight_02_redawn_us_cover.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_skywardflight

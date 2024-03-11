@@ -1,9 +1,8 @@
 ---
 title: Rhythm of War
 permalink: '/books/thestormlightarchives/{{ title | slugify }}/'
-description:
 cover: assets/images/books/tsa_04_row_us_cover.jpg
-bookorder: Stormlight Archives Book 4
+description: Stormlight Archives Book 4
 tags:
   - Book
   - book_tsa

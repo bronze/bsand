@@ -15,7 +15,7 @@ const shortcodes=require('./utils/shortcodes.js')
 const pluginImages=require("./eleventy.config.images.js")
 const pluginWebc=require('@11ty/eleventy-plugin-webc');
 const {EleventyRenderPlugin}=require("@11ty/eleventy");
-
+const embedEverything=require("eleventy-plugin-embed-everything");
 const {resolve}=require('path')
 
 module.exports=function (eleventyConfig) {
@@ -35,6 +35,7 @@ module.exports=function (eleventyConfig) {
       "src/_includes/**/*.webc",
     ]
   })
+  eleventyConfig.addPlugin(embedEverything)
   eleventyConfig.addPlugin(EleventyRenderPlugin)
   eleventyConfig.addPlugin(EleventyPluginNavigation)
   eleventyConfig.addPlugin(EleventyPluginRss)
@@ -44,7 +45,12 @@ module.exports=function (eleventyConfig) {
 
     // Vite options (equal to vite.config.js inside project root)
     viteOptions: {
+      server: {
+        mode: 'development',
+        middlewareMode: true
+      },
       build: {
+        emptyOutDir: false,
         mode: 'production',
         sourcemap: 'true',
         manifest: true,
@@ -62,8 +68,9 @@ module.exports=function (eleventyConfig) {
               {uri: 'index.html', template: 'index'},
               {uri: 'blog/index.html', template: 'blog/index'},
               {uri: '404.html', template: '404'},
-              {uri: 'about/index.html', template: 'about'},
-              {uri: 'contact/index.html', template: 'contact'},
+              {uri: 'about/index.html', template: 'about/index'},
+              {uri: 'books/index.html', template: 'books/index'},
+              {uri: 'contact/index.html', template: 'contact/index'},
             ],
             criticalConfig: {
               inline: true,
@@ -96,6 +103,37 @@ module.exports=function (eleventyConfig) {
   Object.keys(filters).forEach((filterName) => {
     eleventyConfig.addFilter(filterName, filters[filterName])
   })
+  // eleventyConfig.addShortcode("postByBookTitle", function (slug) {
+  //   const posts=this.environments.collections.books;
+  //   const post=posts.find((p) => p.url.endsWith(`/${slug}/`));
+  //   if (post===undefined) {
+  //     throw new Error(`${slug} not found in post collection.`);
+  //   }
+  //   return post.url;
+  // });
+  eleventyConfig.addLiquidTag("book_url", function (liquidEngine) {
+    return {
+      parse(tagToken, remainingTokens=[]) {
+        this.str=tagToken.args;
+      },
+      async render(ctx) {
+        const slug=await liquidEngine.evalValue(this.str, ctx);
+        // const postFilename=`./src/books/${slug}`;
+        const posts=ctx.environments.collections.books;
+        // console.log(posts);
+        // const post=posts.find(p => p.inputPath.startsWith(postFilename));
+        // const post=posts.find(p => p.data.title===slug);
+        const slugLowercase=slug.toLowerCase();
+        const bookName=this.str.replace(/["]/g, '');
+        const post=posts.find(p => p.data.title.toLowerCase()===slugLowercase);
+        if (post) {
+
+          return `<a href="${post.url}">${bookName}</a>`;
+        }
+        throw new Error(`${slug} not found in post collection.`);
+      },
+    };
+  });
 
   // Transforms
   Object.keys(transforms).forEach((transformName) => {
@@ -132,6 +170,7 @@ module.exports=function (eleventyConfig) {
   // Copy/pass-through files
   eleventyConfig.addPassthroughCopy('src/assets/css')
   eleventyConfig.addPassthroughCopy('src/assets/js')
+  eleventyConfig.addPassthroughCopy('src/assets/images')
 
   return {
     templateFormats: ['md', 'njk', 'html', 'liquid'],

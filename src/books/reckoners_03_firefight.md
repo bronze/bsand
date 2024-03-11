@@ -1,9 +1,8 @@
 ---
 title: Firefight
 permalink: '/books/reckoners/{{ title | slugify }}/'
-description:
 cover: assets/images/books/reckoners_firefight.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_reckoners

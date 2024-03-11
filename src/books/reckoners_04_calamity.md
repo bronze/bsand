@@ -1,9 +1,8 @@
 ---
 title: Calamity
 permalink: '/books/reckoners/{{ title | slugify }}/'
-description:
 cover: assets/images/books/reckoners_calamity_us_hardcover.png
-bookorder:
+description:
 tags:
   - Book
   - book_reckoners

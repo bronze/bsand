@@ -1,9 +1,8 @@
 ---
 title: Legion
 permalink: '/books/collections-non-cosmere/{{ title | slugify }}/'
-description:
 cover: assets/images/books/legion_omnibus_us_hardcover.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_collections

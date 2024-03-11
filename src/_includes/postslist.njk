@@ -1,0 +1,131 @@
+{# image on post list: #}
+{# https://github.com/11ty/eleventy/issues/2428 #}
+{# https://github.com/maxboeck/eleventy-plugin-page-assets #}
+{# https://www.sanity.io/guides/how-to-add-promotional-images-to-the-11ty-blog-starter #}
+{# cards: #}
+{# https://inclusive-components.design/cards/#theredundantclickevent #}
+{# https://css-tricks.com/block-links-the-search-for-a-perfect-solution/#method-4-sprinkle-javascript-on-the-second-method #}
+{% set postslist = collections.posts | reverse %}
+<section class="mt-24">
+  <div class="container max-w-screen-xl mx-auto mt-16">
+    <h2 class="text-sm font-bold uppercase lg:pl-4 inter lineheader-r center">Latest Blog Entries</h2>
+  </div>
+  <div class="">
+    <div class="flex flex-col px-8 mx-auto mt-8 divide-y divide-text max-w-fit l lg:px-0">
+      {% for post in postslist.slice(0,3) %}
+        <article class="card text-text max-w-fit p-8  relative isolate flex flex-col gap-8 sm:flex-row postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+          <div class="relative aspect-[1.78] lg:h-36 lg:shrink-0">
+            {#
+            {% set imgsrc %}
+              {{ post.url | url }}cover.png{% endset %}
+            {{ imgsrc }}
+            {{ post.url+"cover.png" }} #}
+            {% image "blog/"+post.fileSlug+"/cover.png", "Cat pic", [300, 600], "(max-width: 500px) 300px, 600px", "absolute inset-0 h-full w-full rounded-lg bg-grey-50 object-cover" %}
+
+            <div class="absolute inset-0 rounded-lg ring-1 ring-inset ring-gray-900/10"></div>
+          </div>
+          <div class="relative max-w-prose">
+            <div class="flex items-center gap-4 text-xs">
+              <time class="font-semibold text-text-light postlist-date" datetime="{{ post.date | dateToFormat('yyyy-MM-dd') }}">{{ post.date | dateToFormat('LLL dd yyyy') }}</time>
+              {% for tag in post.data.tags | filterTagList %}
+                {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+                <span href="{{ tagUrl | url }}" class="post-tag relative z-10 rounded-full  px-3 py-1.5 font-medium text-gray-600">{{ tag }}</span>
+              {% endfor %}
+
+            </div>
+            <div class="">
+              <h3 class="mt-2 text-xl font-bold leading-6 text-text brn">
+                <a href="{{ post.url | url }}">
+                  {#
+                  <span class="absolute inset-0"></span>
+                  #}
+                  {% if post.data.title %}
+                    {{ post.data.title }}
+                  {% else %}
+                    <code>{{ post.url }}</code>
+                  {% endif %}
+                </a>
+              </h3>
+              <p class="inset-0 pt-2 text-lg leading-6 ">
+                {# 1: {{ "test/"+post.url+"cover.png" }}<br/>
+                2: {{ "blog/"+post.fileSlug+"/cover.png" }}<br/>
+                3: {{ post.filePathStem+"/cover.png" }}<br/>
+                4: {{ post.inputPath+"/cover.png" }}<br/>
+                5: {{ post.outputPath+"/cover.png" }}<br/> #}
+                {% if post.data.description %}
+                  {{ post.data.description }}
+                {% else %}
+                  {{ post.templateContent | excerpt | striptags }}
+                {% endif %}
+              </p>
+            </div>
+            {#
+            <div class="flex pt-6 mt-6 border-t border-gray-900/5">
+              <div class="relative flex items-center gap-4">
+                <img
+                  src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                  alt=""
+                  class="w-10 h-10 rounded-full bg-gray-50" />
+                <div class="text-sm leading-6">
+                  <p class="font-semibold text-gray-900">
+                    <a href="#">
+                      <span class="absolute inset-0"></span>Michael Foster</a>
+                  </p>
+                  <p class="text-gray-600">Co-Founder / CTO</p>
+                </div>
+              </div>
+            </div>
+            #}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<style>
+
+  .card a:focus {
+    text-decoration: underline;
+  }
+
+  .card:focus-within {
+    box-shadow: 0 0 0 0.20rem;
+  }
+
+  .card:focus-within a:focus {
+    text-decoration: none;
+  }
+</style>
+<script>
+  const cards = document.querySelectorAll('.card');
+  Array.prototype.forEach.call(cards, card => {
+    let down,
+      up,
+      link = card.querySelector('h3 a');
+    card.style.cursor = 'pointer';
+    card.onmousedown = () => down = + new Date();
+    card.onmouseup = () => {
+      up = + new Date();
+      if ((up - down) < 200) {
+        link.click();
+      }
+    }
+  });
+
+
+  {# const card = document.querySelector(".card");
+  const mainLink = card.querySelector("h3 a");
+  const clickableElements = Array.from(card.querySelectorAll("a")); // we are using 'a' here for simplicity but ideally you should put a class like 'clickable' on every clicable element inside card(a, button) and use that in query selector
+
+  clickableElements.forEach((ele) => ele.addEventListener("click", (e) => e.stopPropagation()));
+
+  function handleClick(event) {
+    const noTextSelected = !window.getSelection().toString();
+    this.style.cursor = 'pointer';
+    if (noTextSelected) {
+      mainLink.click();
+    }
+  }
+
+  card.addEventListener("click", handleClick); #}
+</script>

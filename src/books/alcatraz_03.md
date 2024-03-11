@@ -1,9 +1,8 @@
 ---
 title: The Knights Of Crystallia
 permalink: '/books/alcatraz-vs-the-evil-librarians/{{ title | slugify }}/'
-description:
 cover: assets/images/books/alcatraz_03_the_knights_of_crystallia_tor_hardcover.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_alcatraz

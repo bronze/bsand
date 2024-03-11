@@ -1,9 +1,8 @@
 ---
 title: The Well Of Ascension
 permalink: '/books/mistborn/{{ title | slugify }}/'
-description:
 cover: assets/images/books/mistborn_e1_02_woa_us_2019mmpb_cover.jpg
-bookorder: Mistborn Era 1 Book 2
+description: Mistborn Era 1 Book 2
 tags:
   - Book
   - book_mistborn1

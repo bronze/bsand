@@ -1,9 +1,8 @@
 ---
 title: The Hero Of Ages
 permalink: '/books/mistborn/{{ title | slugify }}/'
-description:
 cover: assets/images/books/mistborn_e1_03_hoa_us_2019_cover.jpg
-bookorder: Mistborn Era 1 Book 3
+description: Mistborn Era 1 Book 3
 tags:
   - Book
   - book_mistborn1

@@ -1,9 +1,8 @@
 ---
 title: A Fire In The Ways
 permalink: '/books/the-wheel-of-time/{{ title | slugify }}/'
-description:
 cover: assets/images/books/wot_05_a-fire-within-the-ways.png
-bookorder:
+description:
 tags:
   - Book
   - book_wot

@@ -1,9 +1,8 @@
 ---
 title: Perfect State
 permalink: '/books/short-fiction-non-cosmere/{{ title | slugify }}/'
-description:
 cover: assets/images/books/sf_perfect_state_cover_art.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_shortfiction

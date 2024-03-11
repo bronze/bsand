@@ -36,17 +36,31 @@ document.addEventListener('alpine:init', () => {
 
     // Toggle function
     toggleTheme() {
+      // https://stackoverflow.com/questions/65942968/storing-and-retrieving-a-theme-in-javascript-from-a-data-attribute
+      var targetTheme=document.documentElement.getAttribute('data-theme')==='dark'? 'light':'dark';
+      // console.log(targetTheme);
       // https://stackoverflow.com/questions/62913465/how-to-stop-the-window-scrolling-to-the-top-of-the-page-on-my-navbar-toggle
       event.preventDefault();
-      if (window.localStorage.theme!='dark') {
-        document.documentElement.classList.add('dark')
-        document.documentElement.setAttribute('data-theme', 'dark')
-        localStorage.theme='dark'
-      } else {
-        document.documentElement.classList.remove('dark')
-        document.documentElement.setAttribute('data-theme', 'light')
-        window.localStorage.theme='light'
+      if (event.ctrlKey||event.shiftKey) {
+        // localStorage.clear();
+        localStorage.removeItem('theme');
+        console.log('localStorage theme cleared');
       }
+      else {
+        document.documentElement.setAttribute('data-theme', targetTheme)
+        localStorage.theme=targetTheme
+        // if (window.localStorage.theme!='dark') {
+        // if (targetTheme=='dark') {
+        //   // document.documentElement.classList.add('dark')
+        //   document.documentElement.setAttribute('data-theme', 'dark')
+        //   localStorage.theme='dark'
+        // } else {
+        //   // document.documentElement.classList.remove('dark')
+        //   document.documentElement.setAttribute('data-theme', 'light')
+        //   window.localStorage.theme='light'
+        // }
+      }
+
       this.dark=!this.dark
       console.log('storage: '+window.localStorage.theme+' | dark: '+this.dark);
     },

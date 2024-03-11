@@ -7,4 +7,4 @@ import 'focus-visible'
 import './modules/nav'
 import './modules/alpine'
 import '@fontsource-variable/inter';
-import '@fontsource-variable/roboto-slab';
+import '@fontsource-variable/noto-serif';

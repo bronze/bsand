@@ -1,9 +1,8 @@
 ---
 title: 'Infinity Blade: Awakening'
 permalink: '/books/the-wheel-of-time/{{ title | slugify }}/'
-description:
 cover: assets/images/books/infinity-blade-awakening.jpg
-bookorder:
+description:
 tags:
   - Book
   - book_infinityblade
