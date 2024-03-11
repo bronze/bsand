@@ -16,7 +16,12 @@ main {
   @apply container mx-auto max-w-screen-xl;
 }
 input {
-  color: var(--textColor);
+  color: rgb(var(--color-text-default));
+}
+.dark {
+  input {
+    color: rgb(var(--color-text-dark));
+  }
 }
 .hero {
   picture,

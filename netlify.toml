@@ -11,27 +11,6 @@
   targetPort = 8080
   framework = "#custom"
 
-[[plugins]]
-
-  # Opt-in to the Netlify Lighthouse plugin (choose one):
-
-  # 1. Go to your site on https://app.netlify.com and navigate to the Integrations tab, search for the `Lighthouse` plugin
-  # 2. Or via `npm install -D @netlify/plugin-lighthouse`
-
-  # Read more: https://github.com/netlify/netlify-plugin-lighthouse
-  package = "@netlify/plugin-lighthouse"
-  [[plugins.inputs.audits]]
-    path = "dist"
-  # optional, fails build when a category is below a threshold
-  [plugins.inputs.thresholds]
-    performance = 1.0
-    accessibility = 1.0
-    best-practices = 1.0
-    seo = 1.0
-
-  [plugins.inputs]
-    output_path = "reports/lighthouse/index.html"
-
 [[redirects]]
   from = "/*"
   to = "/index.html"
@@ -40,7 +19,7 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self' https://rsms.me https://api.netlify.com; style-src 'self' https://rsms.me 'unsafe-inline'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; worker-src 'self' blob:;"
+    Content-Security-Policy = "default-src 'self' plausible.io https://api.netlify.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; script-src 'self' 'unsafe-eval' 'unsafe-inline' plausible.io; worker-src 'self' blob:; connect-src plausible.io;"
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"

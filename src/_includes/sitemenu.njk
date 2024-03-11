@@ -6,13 +6,13 @@
 <header class="fixed header-nav py-4 lg:py-0 lg:h-[125px] bg-muted lg:bg-transparent  ease-in-out top-0 left-0 z-50 w-full font-lg text-text font-nav uppercase shadow lg:shadow-none pointer-events-none"
 x-data="{navOpen: false, scrolledFromTop: false}"
 x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
-@scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+x-on:scroll.window.throttle="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
 >
   <nav id="navbar"  role="navigation" aria-label="Main"
   x-bind:class="{'lg:h-[100px]': !scrolledFromTop, 'lg:h-[80px] lg:shadow': scrolledFromTop}"
     class="z-20 relative lg:h-[100px] pointer-events-auto flex w-full px-1 transition-[height,box-shadow] duration-300 ease-in place-items-center bg-muted lg:py-0 lg:relative sm:px-2 md:px-0">
-    <div class="container inline-flex flex-wrap justify-between w-full h-full mx-auto text-xl place-items-center max-w-7xl md:text-2xl xl:text-4xl" @click.away="navOpen = false" >
-      <div class="relative inline-flex items-center flex-shrink h-full pl-2 xl:pl-0 group">
+    <div class="container mx-auto inline-flex h-full w-full max-w-7xl flex-wrap place-items-center justify-between text-xl md:text-2xl xl:text-4xl" @click.away="navOpen = false" >
+      <div class="relative inline-flex h-full flex-shrink items-center pl-2 xl:pl-0 group">
         <div class="lg:drop-shadow-[0_4px_2px_rgba(0,0,0,0.6)] lg:group-hover:drop-shadow-[0_4px_2px_rgba(0,0,0,0.8)] flag-wrap z-50">
           <div class="flag lg:h-[125px] lg:w-[55px] -top-1 lg:top-[12px] relative">
             <svg class="w-8 h-8 right-full fill-text group-hover:drop-shadow-[0_1px_2px_rgba(0,0,0,1)] lg:fill-white lg:w-12 lg:h-12 xl:w-16 xl:h-16 relative left-0 lg:top-[-12px]" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 271 505">
@@ -33,7 +33,7 @@ x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = fa
       <div class="flex pr-4 ">
          <button aria-label="Open the menu" class="flex justify-between px-2 py-4 lg:hidden" @click="navOpen = !navOpen"  x-bind:class="{ 'transition transition-180': navOpen }">
           <svg aria-hidden="true"
-            class="w-6 h-6 fill-current"
+            class="h-6 w-6 fill-current"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24">
               <path
@@ -62,7 +62,7 @@ x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = fa
               <a class="block py-2 linknav lg:pt-4 lg:p-2 xl:p-4"  href="{{ entry.url }}">{{ entry.title }}</a>
             </li>
           {%- endfor %}
-          <li class="items-center hidden py-2 lg:flex lg:p-4" x-data="{ shiftPressed: false }">
+          <li class="hidden items-center py-2 lg:flex lg:p-4" x-data="{ shiftPressed: false }">
             <button  class="cursor-pointer"
               title="Dark Mode Toggle"
               x-on:click="toggleTheme()"
@@ -71,9 +71,9 @@ x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = fa
             </button>
           </li>
           <li class="flex items-center">
-            <a id="search-toggle" title="Search" class="inline-flex items-center py-2 cursor-pointer lg:p-2 search-icon">
+            <a id="search-toggle" title="Search" class="inline-flex cursor-pointer items-center py-2 lg:p-2 search-icon">
               <span class="block pr-4 lg:hidden lg:pr-0">Search </span>
-              <svg class="inline w-4 h-4 pointer-events-none fill-current text-grey-darkest" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <svg class="pointer-events-none inline h-4 w-4 fill-current text-grey-darkest" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                 <path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path>
               </svg>
             </a>
@@ -82,9 +82,9 @@ x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = fa
 
       </div>
     </div>
-  <div class="absolute z-10 hidden w-full shadow-xl pointer-events-auto top-full bg-muted" id="search-content">
-    <div class="container px-2 py-4 mx-auto lg:mt-6">
-      <input id="searchfield" type="search" placeholder="Search..." autofocus="autofocus" class="w-full p-2 mx-auto text-xl leading-normal appearance-none header-search text-grey-800 focus:outline-none focus:border-transparent lg:text-2xl">
+  <div class="pointer-events-auto absolute top-full z-10 hidden w-full shadow-xl bg-muted" id="search-content">
+    <div class="container mx-auto px-2 py-4 lg:mt-6">
+      <input id="searchfield" type="search" placeholder="Search..." autofocus="autofocus" class="mx-auto w-full appearance-none p-2 text-xl leading-normal header-search text-grey-800 focus:outline-none focus:border-transparent lg:text-2xl">
     </div>
   </div>
   </nav>
