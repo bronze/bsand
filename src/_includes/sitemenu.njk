@@ -3,13 +3,14 @@
 {# https://laracasts.com/discuss/channels/guides/multiple-issues-with-building-a-responsive-sticky-navbar-using-tailwind-and-alpinejs #}
 {# https://www.youtube.com/watch?v=vafc43cIUz8 #}
 <a id="primary_nav"></a>
-<header class="fixed header-nav py-4 lg:py-0 lg:h-[125px] bg-muted lg:bg-transparent  ease-in-out top-0 left-0 z-50 w-full font-lg text-text font-nav uppercase shadow lg:shadow-none pointer-events-none"
-x-data="{navOpen: false, scrolledFromTop: false}"
-x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
-x-on:scroll.window.throttle="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+<header class="pointer-events-none fixed left-0 top-0 z-50 w-full py-4 uppercase shadow ease-in-out header-nav lg:py-0 bg-muted lg:bg-transparent font-lg text-text font-nav lg:shadow-none"
+x-data="navbar"
+x-init="$nextTick(() => { scroll(); })"
+x-on:scroll.window="atTop = (window.pageYOffset > 90) ? false : true;hideHeader=scrollCheck();"
+x-bind:class="{ 'md:h-16': hideHeader, 'md:h-24': !hideHeader, '': atTop, 'shadow-lg': !atTop }"
 >
   <nav id="navbar"  role="navigation" aria-label="Main"
-  x-bind:class="{'lg:h-[100px]': !scrolledFromTop, 'lg:h-[80px] lg:shadow': scrolledFromTop}"
+  x-bind:class="{'': hideHeader, '': !hideHeader, 'lg:h-[100px]': !atTop, 'lg:h-[80px] lg:shadow': atTop}"
     class="z-20 relative lg:h-[100px] pointer-events-auto flex w-full px-1 transition-[height,box-shadow] duration-300 ease-in place-items-center bg-muted lg:py-0 lg:relative sm:px-2 md:px-0">
     <div class="container mx-auto inline-flex h-full w-full max-w-7xl flex-wrap place-items-center justify-between text-xl md:text-2xl xl:text-4xl" @click.away="navOpen = false" >
       <div class="relative inline-flex h-full flex-shrink items-center pl-2 xl:pl-0 group">
@@ -136,6 +137,32 @@ x-on:scroll.window.throttle="window.pageYOffset >= 50 ? scrolledFromTop = true :
       return false;
   }
 
+</script>
+<script is:inline>
+  document.addEventListener('alpine:init', () => {
+    Alpine.data('navbar', () => ({
+      isOpen: false,
+      atTop: false,
+      hideHeader: false,
+      navOpen: false,
+
+      scrollCheck() {
+        // get current position
+        currentPos = window.pageYOffset
+        // only when we scroll up or we are at the top
+        prevPos > currentPos || currentPos == 0
+          ? (result = false)
+          : (result = true)
+        // current position will become previous position
+        prevPos = currentPos
+        return result
+        // console.log(hideHeader);
+      },
+      init() {
+        prevPos = window.pageYOffset
+      },
+    }))
+  })
 </script>
 
 <style lang="sass">
